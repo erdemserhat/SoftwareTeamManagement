@@ -9,28 +9,28 @@ namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.User
     abstract public class User:IUserContract
     {
         //Attributes for User base class
-        private string fullName;
-        private string email;
-        private string password;
-        private int id;
+        private string _fullName;
+        private string _email;
+        private string _password;
+        private int _id;
 
         //Getters and Setters
         public string FullName
         {
-            get { return fullName; }
-            set { fullName = value; }
+            get { return _fullName; }
+            set { _fullName = value; }
         }
 
         public string Email
         {
-            get { return email; }
-            set { email = value; }
+            get { return _email; }
+            set { _email = value; }
         }
 
         public string Password
         {
-            get { return password; }
-            set { password = value; }
+            get { return _password; }
+            set { _password = value; }
         }
 
         public string EmailInformation()
@@ -45,8 +45,8 @@ namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.User
 
         public int Id
         {
-            get { return id; }
-            set { id = value; }
+            get { return _id; }
+            set { _id = value; }
         }
 
         public int IdInformation()

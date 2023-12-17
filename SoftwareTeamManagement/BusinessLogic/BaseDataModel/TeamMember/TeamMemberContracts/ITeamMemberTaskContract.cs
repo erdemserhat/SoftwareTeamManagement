@@ -15,7 +15,7 @@ namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember.TeamMemb
         void UpdateTask(Task task);
         List<Task> ReadTask();
 
-        string showRole();
+        string showRole();//->handle this issue for general behaviour like ITeamMemberGeneralContract
 
     }
 }

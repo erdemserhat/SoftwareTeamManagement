@@ -1,4 +1,8 @@
-﻿using System;
+﻿using SoftwareTeamManagement.BusinessLogic.DataModel.Announcement;
+using SoftwareTeamManagement.BusinessLogic.DataModel.Meeting;
+using SoftwareTeamManagement.BusinessLogic.Role.Permissions.ProjectPermission;
+using SoftwareTeamManagement.BusinessLogic.Role.Permissions.TaskPermission;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,9 +19,10 @@ namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember.TeamMemb
         void RemoveMember(TeamMember member);
         void DeleteMember(TeamMember member);
         void ResetMemberPassword(string password,int userId);
-       // void Makeannounce(Announcement announcement);
-       // void HoldMeeting(Meeting meeting);
-        void EditMemberPermisions()
+        void MakeAnnouncement(IAnnouncementContract announcement);
+        void HoldMeeting(IMeetingContract meeting);
+        void EditMemberTaskPermisions(ITaskPermissionSetContract permissionSet, int userId);
+        void EditMemberProjectPermissions(IProjectPermissionSetContract permissionSet, int userId);
 
 
 

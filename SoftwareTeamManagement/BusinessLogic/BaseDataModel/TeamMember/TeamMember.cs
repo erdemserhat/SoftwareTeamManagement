@@ -1,6 +1,8 @@
 ﻿using SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember.TeamMemberContracts;
 using SoftwareTeamManagement.BusinessLogic.BaseDataModel.User;
 using SoftwareTeamManagement.BusinessLogic.Configuration.Roles;
+using SoftwareTeamManagement.BusinessLogic.DataModel.Announcement;
+using SoftwareTeamManagement.BusinessLogic.DataModel.Meeting;
 using SoftwareTeamManagement.BusinessLogic.Role.Permissions.ProjectPermission;
 using SoftwareTeamManagement.BusinessLogic.Role.Permissions.TaskPermission;
 using System;
@@ -11,29 +13,31 @@ using System.Threading.Tasks;
 
 namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember
 {
-    public abstract class TeamMember : User.User , ITeamMemberTaskContract
+    public abstract class TeamMember : User.User , ITeamMemberTaskContract, ITeamMemberProjectContract
     {
         //Dependecy Injection as property
-        private IRoleContract roleContract;
-        private ITaskPermissionSetContract taskPermissionSetContract;
-        private IProjectPermissionSetContract projectPermissionSetContract;
+        private IRoleContract _roleContract;
+        private ITaskPermissionSetContract _taskPermissionSetContract;
+        private IProjectPermissionSetContract _projectPermissionSetContract;
 
 
         //Getters and Setters
 
         public IRoleContract RoleContract
         {
-            get { return roleContract; }
-            set { roleContract = value; }
+            get { return _roleContract; }
+            set { _roleContract = value; }
         }
 
         public ITaskPermissionSetContract TaskPermissionSetContract
         {
-            get { return taskPermissionSetContract; }
-            set { taskPermissionSetContract = value; }
+            get { return _taskPermissionSetContract; }
+            set { _taskPermissionSetContract = value; }
         }
 
 
+
+        //Task operation implementations
 
         public void AddTask(Task task)
         {
@@ -89,9 +93,66 @@ namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember
             }
         }
 
+
+         //Task operation implementations
         public string showRole()
         {
-            return roleContract.RoleTypeInformation();
+            return RoleContract.RoleTypeInformation();
+        }
+
+        public void ChangeProjectName(string name)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateDeadline(DateTime? deadline)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateProjectDescription(string description)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void AddMember(TeamMember member)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RemoveMember(TeamMember member)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DeleteMember(TeamMember member)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void ResetMemberPassword(string password, int userId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void MakeAnnouncement(IAnnouncementContract announcement)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void HoldMeeting(IMeetingContract meeting)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void EditMemberTaskPermisions(ITaskPermissionSetContract permissionSet, int userId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void EditMemberProjectPermissions(IProjectPermissionSetContract permissionSet, int userId)
+        {
+            throw new NotImplementedException();
         }
     }
 }
