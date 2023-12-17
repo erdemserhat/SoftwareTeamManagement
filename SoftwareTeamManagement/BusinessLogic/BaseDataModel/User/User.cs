@@ -12,6 +12,7 @@ namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.User
         private string fullName;
         private string email;
         private string password;
+        private int id;
 
         //Getters and Setters
         public string FullName
@@ -42,19 +43,35 @@ namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.User
            return FullName;
         }
 
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
+
+        public int IdInformation()
+        {
+            return Id;
+        }
+
         public string PasswordInformation()
         {
             return Password;
         }
 
+        public void UpdateEmail(string email)
+        {
+            Email = email;
+        }
+
         public void UpdateFullName(string fullName)
         {
-            this.fullName = fullName;
+            FullName = fullName;
         }
 
         public void UpdatePassword(string password)
         {
-            this.UpdatePassword(password);
+            Password = password;
         }
     }
 }

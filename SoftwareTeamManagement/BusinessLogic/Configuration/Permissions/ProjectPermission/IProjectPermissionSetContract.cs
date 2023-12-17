@@ -8,14 +8,14 @@ namespace SoftwareTeamManagement.BusinessLogic.Role.Permissions.ProjectPermissio
 {
     public interface IProjectPermissionSetContract
     {
-        bool CanChangeProjectName { get; set; }
-        bool CanUpdateDeadline { get; set; }
-        bool CanUpdateProjectDescription { get; set; }
-        bool CanAddMember { get; set; }
-        bool CanRemoveMember { get; set; }
-        bool CanResetMemberPassword { get; set; }
-        bool CanAnnounce { get; set; }
-        bool CanHoldMeeting { get; set; }
-        bool CanUpdateMemberPermissionSet { get; set; }
+        bool CanChangeProjectNameInformation();
+        bool CanUpdateDeadlineInformation();
+        bool CanUpdateProjectDescriptionInformation();
+        bool CanAddMemberInformation();
+        bool CanRemoveMemberInformation();
+        bool CanResetMemberPasswordInformation();
+        bool CanAnnounceInformation();
+        bool CanHoldMeetingInformation();
+        bool CanUpdateMemberPermissionSetİnformation();
     }
 }

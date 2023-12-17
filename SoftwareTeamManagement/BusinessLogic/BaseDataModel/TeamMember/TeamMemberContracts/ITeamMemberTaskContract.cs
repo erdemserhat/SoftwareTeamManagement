@@ -6,14 +6,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember
+namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember.TeamMemberContracts
 {
-    public interface ITeamMemberContract
+    public interface ITeamMemberTaskContract
     {
         void AddTask(Task task);
         void DeleteTask(Task task);
         void UpdateTask(Task task);
         List<Task> ReadTask();
+
+        string showRole();
 
     }
 }

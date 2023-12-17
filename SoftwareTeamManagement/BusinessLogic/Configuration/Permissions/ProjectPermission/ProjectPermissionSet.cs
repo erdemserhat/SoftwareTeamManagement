@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SoftwareTeamManagement.BusinessLogic.Role.Permissions.ProjectPermission
 {
-    public class ProjectPermissionSet
+    public class ProjectPermissionSet: IProjectPermissionSetContract
     {
         // Properties
         private bool canChangeProjectName;
@@ -95,6 +95,54 @@ namespace SoftwareTeamManagement.BusinessLogic.Role.Permissions.ProjectPermissio
         {
             get { return canUpdateMemberPermissionSet; }
             set { canUpdateMemberPermissionSet = value; }
+        }
+
+        //Implementations
+
+        public bool CanAddMemberInformation()
+        {
+
+            return CanAddMember;
+        }
+
+        public bool CanAnnounceInformation()
+        {
+            return CanAnnounce;
+        }
+
+        public bool CanChangeProjectNameInformation()
+        {
+            return CanChangeProjectName;
+        }
+
+        public bool CanHoldMeetingInformation()
+        {
+            return CanHoldMeeting;
+        }
+
+        public bool CanRemoveMemberInformation()
+        {
+            return CanRemoveMember;
+        }
+
+        public bool CanResetMemberPasswordInformation()
+        {
+            return CanResetMemberPassword;
+        }
+
+        public bool CanUpdateDeadlineInformation()
+        {
+            return CanUpdateDeadline;
+        }
+
+        public bool CanUpdateMemberPermissionSetİnformation()
+        {
+            return CanUpdateDeadline;
+        }
+
+        public bool CanUpdateProjectDescriptionInformation()
+        {
+            return CanUpdateDeadline;
         }
     }
 }
