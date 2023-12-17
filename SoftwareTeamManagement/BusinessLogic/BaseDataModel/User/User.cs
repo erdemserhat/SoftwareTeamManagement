@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SoftwareTeamManagement.bussiness.baseDataModel.user
+namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.User
 {
     abstract public class User:IUserContract
     {

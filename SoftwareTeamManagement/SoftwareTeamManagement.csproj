@@ -33,7 +33,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="data\dataModels\" />
+    <Folder Include="Data\DataModels\" />
   </ItemGroup>
 
 </Project>
