@@ -16,6 +16,6 @@ namespace SoftwareTeamManagement.BusinessLogic.Role.Permissions.ProjectPermissio
         bool CanResetMemberPasswordInformation();
         bool CanAnnounceInformation();
         bool CanHoldMeetingInformation();
-        bool CanUpdateMemberPermissionSetİnformation();
+        bool CanUpdateMemberPermissionSetInformation();
     }
 }

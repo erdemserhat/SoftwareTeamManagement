@@ -35,6 +35,12 @@ namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember
             set { _taskPermissionSetContract = value; }
         }
 
+        public IProjectPermissionSetContract ProjectPermissionSet
+        {
+            get { return _projectPermissionSetContract;}
+            set { _projectPermissionSetContract = value;}
+        }
+
 
 
         //Task operation implementations
@@ -102,57 +108,131 @@ namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember
 
         public void ChangeProjectName(string name)
         {
-            throw new NotImplementedException();
+            if (ProjectPermissionSet.CanChangeProjectNameInformation())
+            {
+                //implement db op.
+            }
+            else
+            {
+                //handle else proc.
+            }
         }
 
         public void UpdateDeadline(DateTime? deadline)
         {
-            throw new NotImplementedException();
+            if (ProjectPermissionSet.CanUpdateDeadlineInformation())
+            {
+                //implement db. op.
+            }
+            else
+            {
+                //handle else op.
+            }
         }
 
         public void UpdateProjectDescription(string description)
         {
-            throw new NotImplementedException();
+            if (ProjectPermissionSet.CanUpdateProjectDescriptionInformation())
+            {
+
+            }
+            else
+            {
+
+            }
         }
 
         public void AddMember(TeamMember member)
         {
-            throw new NotImplementedException();
+            if (ProjectPermissionSet.CanAddMemberInformation())
+            {
+
+            }
+            else
+            {
+
+            }
         }
 
         public void RemoveMember(TeamMember member)
         {
-            throw new NotImplementedException();
+            if (ProjectPermissionSet.CanRemoveMemberInformation())
+            {
+
+            }
+            else
+            {
+
+            }
         }
 
         public void DeleteMember(TeamMember member)
         {
-            throw new NotImplementedException();
+            if (ProjectPermissionSet.CanRemoveMemberInformation())
+            {
+
+
+            }
+            else
+            {
+
+            }
         }
 
         public void ResetMemberPassword(string password, int userId)
         {
-            throw new NotImplementedException();
+            if(ProjectPermissionSet.CanResetMemberPasswordInformation())
+            {
+
+            }
+            else
+            {
+
+            }
         }
 
         public void MakeAnnouncement(IAnnouncementContract announcement)
         {
-            throw new NotImplementedException();
+            if (ProjectPermissionSet.CanAnnounceInformation())
+            {
+
+            }
+            else
+            {
+
+            }
         }
 
         public void HoldMeeting(IMeetingContract meeting)
         {
-            throw new NotImplementedException();
+            if (ProjectPermissionSet.CanHoldMeetingInformation())
+            {
+
+            }
+            else
+            {
+
+            }
         }
 
         public void EditMemberTaskPermisions(ITaskPermissionSetContract permissionSet, int userId)
         {
-            throw new NotImplementedException();
+            if (ProjectPermissionSet.CanUpdateMemberPermissionSetInformation())
+            {
+
+            }
+            else
+            {
+
+            }
         }
 
         public void EditMemberProjectPermissions(IProjectPermissionSetContract permissionSet, int userId)
         {
-            throw new NotImplementedException();
+            if (ProjectPermissionSet.CanUpdateMemberPermissionSetInformation())
+            {
+
+            }
         }
     }
 }
