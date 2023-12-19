@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember
 {
-    public abstract class TeamMember : User.User , ITeamMemberTaskContract, ITeamMemberProjectContract
+    public abstract class TeamMember : User.User , ITeamMemberTaskContract, ITeamMemberProjectContract,ITeamMemberGeneralContract
     {
         //Dependecy Injection as property
         private IRoleContract _roleContract;
@@ -101,10 +101,7 @@ namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember
 
 
          //Task operation implementations
-        public string showRole()
-        {
-            return RoleContract.RoleTypeInformation();
-        }
+       
 
         public void ChangeProjectName(string name)
         {
@@ -233,6 +230,12 @@ namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember
             {
 
             }
+        }
+
+        //Generak contract imp.
+        public string showRole()
+        {
+            return RoleContract.RoleTypeInformation();
         }
     }
 }
