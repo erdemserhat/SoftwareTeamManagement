@@ -15,7 +15,7 @@ namespace SoftwareTeamManagement.DataAccess
             private static MySqlConnection _connection;
 
             //consant connection text
-            private static readonly string ConnectionString = DatabaseCredentials.ConnectionString;
+            private static readonly string ConnectionString = DatabaseCredentials.CONNECTION_STRING;
 
 
             //Implementation of Singleton Design Pattern

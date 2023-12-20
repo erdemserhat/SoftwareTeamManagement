@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace SoftwareTeamManagement.DataAccess.Dao.TaskDao
 {
-    internal class ITaskDaoContract
+    public interface ITaskDaoContract
     {
+        void AddTask(Task task);
+        void DeleteTask(Task task);
+        void UpdateTask(Task task);
     }
 }
+

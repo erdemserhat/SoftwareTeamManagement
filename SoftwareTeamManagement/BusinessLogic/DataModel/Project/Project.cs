@@ -8,10 +8,10 @@ namespace SoftwareTeamManagement.BusinessLogic.DataModel.Project
 {
     public class Project :IProjectContract
     {
-        private string _id;
+        private int _id;
         private string _name;
         private string _description;
-        private List<Task.Task> _tasks;
+   
 
         public string Name
         {
@@ -24,16 +24,17 @@ namespace SoftwareTeamManagement.BusinessLogic.DataModel.Project
             set => _description = value; 
         }
 
-        public List<Task.Task> Tasks
-        {
-            get => _tasks;
-            set => _tasks=value;
-        }
+    
 
-        public string Id
+        public int Id
         {
             get => _id;
             set => _id = value;
+        }
+
+        internal void Deconstruct(out object projectId, out object projectName, out object projectDescription)
+        {
+            throw new NotImplementedException();
         }
     }
 }
