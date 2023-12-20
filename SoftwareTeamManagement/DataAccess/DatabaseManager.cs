@@ -9,7 +9,7 @@ namespace SoftwareTeamManagement.DataAccess
 
     namespace DataAccess
     {
-        public class DatabaseManager
+        public  class DatabaseManager
         {
             //Backing field property (underlying property)
             private static MySqlConnection _connection;
