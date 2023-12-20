@@ -1,5 +1,4 @@
-﻿using SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,8 +14,8 @@ namespace SoftwareTeamManagement.BusinessLogic.DataModel.Meeting
         private DateTime _startTime;
         private DateTime _endTime;
         private string _location;
-        private TeamMember _organizator;
-        private TeamMember[] _participants;
+        private BaseDataModel.TeamMember.TeamMember _organizator;
+        private BaseDataModel.TeamMember.TeamMember[] _participants;
 
 
   
@@ -47,16 +46,18 @@ namespace SoftwareTeamManagement.BusinessLogic.DataModel.Meeting
             get { return _location; }
             set { _location = value; }
         }
-        public TeamMember Organizer
+        public BaseDataModel.TeamMember.TeamMember Organizer
         {
             get { return _organizator; }
             set { _organizator = value; }
         }
-        public TeamMember[] Participants
+        public BaseDataModel.TeamMember.TeamMember[] Participants
         {
             get { return _participants; }
             set { _participants = value; } 
         }
+
+      
 
         // ... other properties
 

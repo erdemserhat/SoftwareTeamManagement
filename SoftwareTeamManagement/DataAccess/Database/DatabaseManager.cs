@@ -9,13 +9,13 @@ namespace SoftwareTeamManagement.DataAccess
 
     namespace DataAccess
     {
-        public  class DatabaseManager
+        public class DatabaseManager
         {
             //Backing field property (underlying property)
             private static MySqlConnection _connection;
 
             //consant connection text
-            private static readonly string ConnectionString = $"Server={DatabaseCredentials.Server};Database={DatabaseCredentials.DatabaseName};Uid={DatabaseCredentials.Username};Pwd={DatabaseCredentials.Password};";
+            private static readonly string ConnectionString = DatabaseCredentials.ConnectionString;
 
 
             //Implementation of Singleton Design Pattern
@@ -63,7 +63,30 @@ namespace SoftwareTeamManagement.DataAccess
 
                 }
             }
+
+            //
+            public static void ExecuteQuery(string query)
+            {
+                MySqlConnection connection = GetConnection();
+                if (connection != null)
+                {
+                    try
+                    {
+                        MySqlCommand cmd = new MySqlCommand(query, connection);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Query executed successfully ✓");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("An error occurred while executing the query: " + ex.Message);
+                    }
+                    finally
+                    {
+                        CloseConnection();
+                    }
+                }
+            }
         }
     }
-
 }
+

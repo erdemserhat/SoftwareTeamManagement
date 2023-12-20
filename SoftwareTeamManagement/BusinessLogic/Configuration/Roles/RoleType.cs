@@ -6,6 +6,7 @@ namespace SoftwareTeamManagement.BusinessLogic.Configuration.Roles
     public enum RoleType
     {
         SoftwareEngineer,
+        TeamLeader,
         FrontendEngineer,
         BackendEngineer,
         FullStackEngineer,

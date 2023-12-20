@@ -9,8 +9,7 @@ namespace SoftwareTeamManagement.BusinessLogic.DataModel.Announcement
         private string _title;
         private string _content;
         private DateTime _dateCreated;
-        private DateTime _dateModified;
-        private bool _isPublished;
+ 
 
         // Properties
         public int AnnouncementId
@@ -37,18 +36,7 @@ namespace SoftwareTeamManagement.BusinessLogic.DataModel.Announcement
             set { _dateCreated = value; }
         }
 
-        public DateTime DateModified
-        {
-            get { return _dateModified; }
-            set { _dateModified = value; }
-        }
-
-        public bool IsPublished
-        {
-            get { return _isPublished; }
-            set { _isPublished = value; }
-        }
-
+       
         // ... other properties
 
         // Constructor

@@ -18,7 +18,7 @@ namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember.TeamMemb
         void AddMember(TeamMember member);
         void RemoveMember(TeamMember member);
         void DeleteMember(TeamMember member);
-        void ResetMemberPassword(string password,int userId);
+        void ResetMemberPassword(string password, int userId);
         void MakeAnnouncement(IAnnouncementContract announcement);
         void HoldMeeting(IMeetingContract meeting);
         void EditMemberTaskPermisions(ITaskPermissionSetContract permissionSet, int userId);

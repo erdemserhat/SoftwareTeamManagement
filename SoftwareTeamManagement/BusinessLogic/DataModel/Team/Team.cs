@@ -1,5 +1,4 @@
-﻿using SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember;
-using SoftwareTeamManagement.BusinessLogic.Role.Permissions.ProjectPermission;
+﻿using SoftwareTeamManagement.BusinessLogic.Role.Permissions.ProjectPermission;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,11 +10,12 @@ namespace SoftwareTeamManagement.BusinessLogic.DataModel.Team
 {
     public class Team :ITeamContract
     {
+        private string _id;
         private string _name;
         private string _description;
         private int _size;
-        private TeamMember _teamLeader;
-        private List<TeamMember>  _members;
+        private BaseDataModel.TeamMember.TeamMember _teamLeader;
+        private List<BaseDataModel.TeamMember.TeamMember>  _members;
         // private Project project;
 
         //Getters and setters
@@ -38,16 +38,22 @@ namespace SoftwareTeamManagement.BusinessLogic.DataModel.Team
             set { _size = value; }
         }
 
-        public TeamMember TeamLeader
+        public BaseDataModel.TeamMember.TeamMember TeamLeader
         {
             get { return _teamLeader; }
             set { _teamLeader = value; }
         }
 
-        public List<TeamMember> Members
+        public List<BaseDataModel.TeamMember.TeamMember> Members
         {
             get { return _members; }
             set { _members = value; }
+        }
+
+        public string Id
+        {
+            get { return _id; }
+            set { _id = value; }
         }
 
 

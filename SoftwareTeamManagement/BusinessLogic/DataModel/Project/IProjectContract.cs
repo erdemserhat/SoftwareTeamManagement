@@ -11,6 +11,7 @@ namespace SoftwareTeamManagement.BusinessLogic.DataModel.Project
         string Description { get; set; }
 
         List<SoftwareTeamManagement.BusinessLogic.DataModel.Task.Task> Tasks { get; set; }
+        string Id {  get; set; }
 
 
     }

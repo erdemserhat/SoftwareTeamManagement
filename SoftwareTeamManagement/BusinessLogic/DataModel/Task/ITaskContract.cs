@@ -1,5 +1,4 @@
-﻿using SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember;
-using SoftwareTeamManagement.BusinessLogic.DataModel.Enums;
+﻿using SoftwareTeamManagement.BusinessLogic.DataModel.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,11 +11,12 @@ namespace SoftwareTeamManagement.BusinessLogic.DataModel.Task
     {
         string Title { get; set; }
         string Description { get; set; }
-        List<TeamMember> ResponsibleMembers { get; set; }
         PriorityLevel PriorityLevel { get; set; }
         DateTime CreatedTime { get; set; }
 
         TaskCatagory TaskCatagory {  get; set; }
+
+        string Id {  get; set; }
 
 
 

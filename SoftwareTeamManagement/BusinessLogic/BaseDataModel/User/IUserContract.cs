@@ -17,5 +17,6 @@ namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.User
         public string EmailInformation();
 
         public int IdInformation();
+  
     }
 }

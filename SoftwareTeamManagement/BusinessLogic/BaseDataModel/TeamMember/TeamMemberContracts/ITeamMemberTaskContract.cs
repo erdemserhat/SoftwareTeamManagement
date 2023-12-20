@@ -10,12 +10,11 @@ namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember.TeamMemb
 {
     public interface ITeamMemberTaskContract
     {
-        void AddTask(Task task);
-        void DeleteTask(Task task);
-        void UpdateTask(Task task);
-        List<Task> ReadTask();
+        void AddTask(DataModel.Task.Task task);
+        void DeleteTask(DataModel.Task.Task task);
+        void UpdateTask(DataModel.Task.Task task);
 
-       
+
 
     }
 }

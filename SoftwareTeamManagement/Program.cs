@@ -9,6 +9,8 @@ using MySql.Data.MySqlClient;
 using SoftwareTeamManagement.Constants.DatabaseConstants;
 using SoftwareTeamManagement.DataAccess.DataAccess;
 
+using SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember;
+
 namespace SoftwareTeamManagement
 {
     internal static class Program
@@ -21,8 +23,16 @@ namespace SoftwareTeamManagement
         {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
-            DatabaseManager.GetConnection();
+
             
+            
+         
+
+           
+          
+
+
+
 
             // ApplicationConfiguration.Initialize();
             //Application.Run(new WelcomeForm());

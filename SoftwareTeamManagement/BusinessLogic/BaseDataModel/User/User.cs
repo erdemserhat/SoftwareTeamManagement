@@ -73,5 +73,7 @@ namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.User
         {
             Password = password;
         }
+
+      
     }
 }

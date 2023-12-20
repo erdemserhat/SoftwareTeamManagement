@@ -8,6 +8,7 @@ namespace SoftwareTeamManagement.BusinessLogic.DataModel.Project
 {
     public class Project :IProjectContract
     {
+        private string _id;
         private string _name;
         private string _description;
         private List<Task.Task> _tasks;
@@ -27,6 +28,12 @@ namespace SoftwareTeamManagement.BusinessLogic.DataModel.Project
         {
             get => _tasks;
             set => _tasks=value;
+        }
+
+        public string Id
+        {
+            get => _id;
+            set => _id = value;
         }
     }
 }

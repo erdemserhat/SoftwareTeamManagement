@@ -33,13 +33,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="BusinessLogic\DataModel\OrdinaryMember\" />
-    <Folder Include="BusinessLogic\DataModel\TeamLeader\" />
-    <Folder Include="Data\DataModels\" />
+    <Folder Include="DataAccess\Repository\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="MySql.Data" Version="8.2.0" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="7.0.0" />
   </ItemGroup>
 
 </Project>

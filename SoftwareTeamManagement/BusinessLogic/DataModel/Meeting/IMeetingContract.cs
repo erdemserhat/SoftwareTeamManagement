@@ -1,5 +1,4 @@
-﻿using SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember;
-using System;
+﻿using System;
 
 namespace SoftwareTeamManagement.BusinessLogic.DataModel.Meeting
 {
@@ -10,8 +9,8 @@ namespace SoftwareTeamManagement.BusinessLogic.DataModel.Meeting
         DateTime StartTime { get; set; }
         DateTime EndTime { get; set; }
         string Location { get; set; }
-        TeamMember Organizer { get; set; }
-        TeamMember[] Participants { get; set; }
+        BaseDataModel.TeamMember.TeamMember Organizer { get; set; }
+        BaseDataModel.TeamMember.TeamMember[] Participants { get; set; }
         // ... other properties or methods related to meetings
     }
 }

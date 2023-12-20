@@ -3,8 +3,10 @@ using SoftwareTeamManagement.BusinessLogic.BaseDataModel.User;
 using SoftwareTeamManagement.BusinessLogic.Configuration.Roles;
 using SoftwareTeamManagement.BusinessLogic.DataModel.Announcement;
 using SoftwareTeamManagement.BusinessLogic.DataModel.Meeting;
+using SoftwareTeamManagement.BusinessLogic.DataModel.Task;
 using SoftwareTeamManagement.BusinessLogic.Role.Permissions.ProjectPermission;
 using SoftwareTeamManagement.BusinessLogic.Role.Permissions.TaskPermission;
+using SoftwareTeamManagement.BusinessLogic.DataModel.Task;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +15,7 @@ using System.Threading.Tasks;
 
 namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember
 {
-    public abstract class TeamMember : User.User , ITeamMemberTaskContract, ITeamMemberProjectContract,ITeamMemberGeneralContract
+    public abstract class TeamMember : User.User, ITeamMemberTaskContract, ITeamMemberProjectContract, ITeamMemberGeneralContract
     {
         //Dependecy Injection as property
         private IRoleContract _roleContract;
@@ -37,15 +39,15 @@ namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember
 
         public IProjectPermissionSetContract ProjectPermissionSet
         {
-            get { return _projectPermissionSetContract;}
-            set { _projectPermissionSetContract = value;}
+            get { return _projectPermissionSetContract; }
+            set { _projectPermissionSetContract = value; }
         }
 
 
 
         //Task operation implementations
 
-        public void AddTask(Task task)
+        public void AddTask(DataModel.Task.Task task)
         {
             //If user can add task
             if (TaskPermissionSetContract.canAddTaskInformation())
@@ -59,13 +61,13 @@ namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember
                 //else, throw an exception
                 throw new NotImplementedException();
             }
-           
+
         }
 
-        public void DeleteTask(Task task)
+        public void DeleteTask(DataModel.Task.Task task)
         {
-           //If user can add task,
-           if(TaskPermissionSetContract.canRemoveTaskInformation())
+            //If user can add task,
+            if (TaskPermissionSetContract.canRemoveTaskInformation())
             {
                 //execute database operations.
                 throw new NotImplementedException();
@@ -78,16 +80,16 @@ namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember
             }
         }
 
-        public List<Task> ReadTask()
+        public List<DataModel.Task.Task> ReadTask()
         {
             //There is no condition, all type of users can read tasks
             throw new NotImplementedException();
         }
 
-        public void UpdateTask(Task task)
+        public void UpdateTask(DataModel.Task.Task task)
         {
             //If user can edit task,
-            if(TaskPermissionSetContract.canEditTaskInformation())
+            if (TaskPermissionSetContract.canEditTaskInformation())
             {
                 //execute database operations
                 throw new NotImplementedException();
@@ -100,8 +102,8 @@ namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember
         }
 
 
-         //Task operation implementations
-       
+        //Task operation implementations
+
 
         public void ChangeProjectName(string name)
         {
@@ -178,7 +180,7 @@ namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember
 
         public void ResetMemberPassword(string password, int userId)
         {
-            if(ProjectPermissionSet.CanResetMemberPasswordInformation())
+            if (ProjectPermissionSet.CanResetMemberPasswordInformation())
             {
 
             }
