@@ -19,7 +19,7 @@ namespace SoftwareTeamManagement.BusinessLogic.DataModel.Task
 
         public string Title { get=>_title; set=>_title=value; }
         public string Description { get=>_description; set=>_description=value; }
-        public List<TeamMember> ResponsibleMembers { get=>_responsibleMembers; set=>_responsibleMembers=value }
+        public List<TeamMember> ResponsibleMembers { get => _responsibleMembers; set => _responsibleMembers = value; }
         public PriorityLevel PriorityLevel { get=>_priorityLevel; set=>_priorityLevel=value; }
         public DateTime CreatedTime { get=>_createdTime; set=>_createdTime=value; }
 

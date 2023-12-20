@@ -135,6 +135,11 @@ namespace SoftwareTeamManagement.BusinessLogic.Role.Permissions.ProjectPermissio
             return CanUpdateDeadline;
         }
 
+        public bool CanUpdateMemberPermissionSetInformation()
+        {
+            throw new NotImplementedException();
+        }
+
         public bool CanUpdateMemberPermissionSetİnformation()
         {
             return CanUpdateDeadline;

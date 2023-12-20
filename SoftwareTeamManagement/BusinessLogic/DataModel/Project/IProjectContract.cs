@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace SoftwareTeamManagement.BusinessLogic.DataModel.Project
 {
@@ -11,7 +10,7 @@ namespace SoftwareTeamManagement.BusinessLogic.DataModel.Project
         string Name { get; set; }
         string Description { get; set; }
 
-        List<Task> Tasks { get; set; }
+        List<SoftwareTeamManagement.BusinessLogic.DataModel.Task.Task> Tasks { get; set; }
 
 
     }
