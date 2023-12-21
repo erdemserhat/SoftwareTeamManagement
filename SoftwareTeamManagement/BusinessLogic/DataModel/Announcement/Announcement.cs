@@ -5,11 +5,52 @@ namespace SoftwareTeamManagement.BusinessLogic.DataModel.Announcement
     public class Announcement : IAnnouncementContract
     {
         // backing fields
-        private int _announcementId;
+        private int _announcementId = 0;
         private string _title;
         private string _content;
         private DateTime _dateCreated;
- 
+
+
+        //to delete adata
+        public Announcement(int announcementId)
+        {
+            _announcementId = announcementId;
+           
+        }
+
+
+        //to insert data
+        public Announcement(string title, string content, DateTime dateCreated)
+        {
+
+            _title = title;
+            _content = content;
+            _dateCreated = dateCreated;
+        }
+
+
+        //to read and update data
+        public Announcement(int announcementId, string title, string content, DateTime dateCreated) : this(announcementId)
+        {
+            _title = title;
+            _content = content;
+            _dateCreated = dateCreated;
+        }
+
+        public Announcement(int announcementId, string title, string content) : this(announcementId)
+        {
+            _title = title;
+            _content = content;
+
+        }
+
+
+
+
+
+
+
+
 
         // Properties
         public int AnnouncementId
@@ -37,12 +78,6 @@ namespace SoftwareTeamManagement.BusinessLogic.DataModel.Announcement
         }
 
        
-        // ... other properties
-
-        // Constructor
-        public Announcement()
-        {
-            // Constructor logic if needed
-        }
+      
     }
 }

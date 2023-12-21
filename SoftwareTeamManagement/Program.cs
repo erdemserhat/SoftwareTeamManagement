@@ -10,6 +10,11 @@ using SoftwareTeamManagement.Constants.DatabaseConstants;
 using SoftwareTeamManagement.DataAccess.DataAccess;
 
 using SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember;
+using SoftwareTeamManagement.DataAccess.Dao.AnnouncementDao;
+using SoftwareTeamManagement.BusinessLogic.DataModel.Announcement;
+using SoftwareTeamManagement.DataAccess.Repository;
+using SoftwareTeamManagement.BusinessLogic.DataModel.Meeting;
+using SoftwareTeamManagement.DataAccess.Dao.MeetingDao;
 
 namespace SoftwareTeamManagement
 {
@@ -24,12 +29,14 @@ namespace SoftwareTeamManagement
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
 
-            
-            
-         
 
-           
-          
+            IMeetingContract meeting = new Meeting("Serhatın Toplantısı", new DateTime(2022, 1, 1, 12, 30, 00), new DateTime(2023, 12, 12, 12, 00, 00), "Fırat Üniversitesi",2);
+            MeetingDao dao = new MeetingDao(meeting);
+            dao.AddMeeting();
+
+
+
+
 
 
 

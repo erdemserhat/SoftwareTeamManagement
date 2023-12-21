@@ -9,8 +9,8 @@ namespace SoftwareTeamManagement.BusinessLogic.DataModel.Meeting
         DateTime StartTime { get; set; }
         DateTime EndTime { get; set; }
         string Location { get; set; }
-        BaseDataModel.TeamMember.TeamMember Organizer { get; set; }
-        BaseDataModel.TeamMember.TeamMember[] Participants { get; set; }
+
+        int OrganizatorId {  get; set; }
         // ... other properties or methods related to meetings
     }
 }

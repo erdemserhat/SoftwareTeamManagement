@@ -9,9 +9,11 @@ namespace SoftwareTeamManagement.DataAccess.Dao.AnnouncementDao
 {
     public interface IAnnouncementDaoContract
     {
-        void AddAnnouncement(Announcement announcement);
-        void DeleteAnnouncement(Announcement announcement);
-        void UpdateAnnouncement(Announcement announcement);
+        void AddAnnouncement();
+        void DeleteAnnouncement();
+        void UpdateAnnouncement();
+
+        List<IAnnouncementContract> GetAllAnnouncements();
 
     }
 }

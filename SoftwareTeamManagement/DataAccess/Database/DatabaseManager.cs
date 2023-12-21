@@ -86,6 +86,34 @@ namespace SoftwareTeamManagement.DataAccess
                     }
                 }
             }
+
+
+            public static MySqlDataReader? GetReader(string selectQuery)
+            {
+                MySqlConnection connection = GetConnection();
+                MySqlDataReader reader = null;
+                if (connection != null)
+                {
+                    try
+                    {
+                        MySqlCommand command = new MySqlCommand(selectQuery, connection);
+                         reader= command.ExecuteReader();
+                        MessageBox.Show("Reader is created successfully ✓");
+                       
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally
+                    {
+                       
+
+                    }
+                }
+                return reader;
+
+            }
         }
     }
 }
