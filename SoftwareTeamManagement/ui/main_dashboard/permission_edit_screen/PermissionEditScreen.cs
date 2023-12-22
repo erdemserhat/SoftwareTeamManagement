@@ -8,18 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SoftwareTeamManagement.ui.dashboards.leaderDashboard
+namespace SoftwareTeamManagement.ui.main_dashboard.permission_edit_screen
 {
-    public partial class LeaderDashboardForm : Form
+    public partial class PermissionEditScreen : UserControl
     {
-        public LeaderDashboardForm()
+        public PermissionEditScreen()
         {
             InitializeComponent();
         }
 
-        private void LeaderDashboardForm_Load(object sender, EventArgs e)
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            listBox1.Items.Add("121dasd");
         }
     }
 }
