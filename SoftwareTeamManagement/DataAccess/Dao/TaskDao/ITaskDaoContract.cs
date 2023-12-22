@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SoftwareTeamManagement.BusinessLogic.DataModel.Task;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,9 +9,13 @@ namespace SoftwareTeamManagement.DataAccess.Dao.TaskDao
 {
     public interface ITaskDaoContract
     {
-        void AddTask(Task task);
-        void DeleteTask(Task task);
-        void UpdateTask(Task task);
+        void AddTask();
+        void DeleteTask();
+        void UpdateTask();
+
+        public List<ITaskContract> GetAllTasks();
+
+
     }
 }
 

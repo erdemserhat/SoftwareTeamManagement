@@ -114,6 +114,35 @@ namespace SoftwareTeamManagement.DataAccess
                 return reader;
 
             }
+
+            public static MySqlCommand? GetCommand(string query)
+            {
+                MySqlConnection connection = GetConnection();
+                MySqlCommand? command = null;
+
+
+                if (connection != null)
+                {
+                    try
+                    {
+                        command = new MySqlCommand(query, connection);
+                       
+                        MessageBox.Show("Command  is created successfully ✓");
+                       
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally
+                    {
+                       
+
+                    }
+                }
+                return command;
+
+            }
         }
     }
 }

@@ -11,10 +11,8 @@ namespace SoftwareTeamManagement.BusinessLogic.DataModel.Team
 
         string Name { get; set; }
         string Description { get; set; }
-        int Size { get; set; }
-        BaseDataModel.TeamMember.TeamMember TeamLeader { get; set; }
-        List<BaseDataModel.TeamMember.TeamMember> Members { get; set; }
+  
 
-        string Id {  get; set; }
+        int Id {  get; set; }
     }
 }

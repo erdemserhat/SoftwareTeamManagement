@@ -11,12 +11,12 @@ namespace SoftwareTeamManagement.BusinessLogic.DataModel.Task
     {
         string Title { get; set; }
         string Description { get; set; }
-        PriorityLevel PriorityLevel { get; set; }
+        string PriorityLevel { get; set; }
         DateTime CreatedTime { get; set; }
 
-        TaskCatagory TaskCatagory {  get; set; }
-
-        string Id {  get; set; }
+        string TaskCatagory {  get; set; }
+        
+        int Id {  get; set; }
 
 
 

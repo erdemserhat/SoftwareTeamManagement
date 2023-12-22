@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SoftwareTeamManagement.BusinessLogic.DataModel.Meeting
 {
-    public class Meeting : IMeetingContract
+    public record class Meeting : IMeetingContract
     {
         // Properties
         private int _meetingId = 0;

@@ -63,7 +63,7 @@ namespace SoftwareTeamManagement.BusinessLogic.Configuration.Roles
     }
 }
 
-//how to use this class
+//how to use this class make read in case of need
 
 //RoleType selectedRole = RoleType.SoftwareEngineer;
 //string roleName = RoleTypeHelper.GetRoleName(selectedRole);

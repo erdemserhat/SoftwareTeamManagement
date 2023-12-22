@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 
 namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember
 {
-    public abstract class TeamMember : User.User, ITeamMemberTaskContract, ITeamMemberProjectContract, ITeamMemberGeneralContract
+    public  class TeamMember : User.User, ITeamMemberTaskContract, ITeamMemberProjectContract, ITeamMemberGeneralContract
     {
         //Dependecy Injection as property
         private IRoleContract _roleContract;

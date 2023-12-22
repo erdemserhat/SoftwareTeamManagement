@@ -8,17 +8,28 @@ using System.Threading.Tasks;
 
 namespace SoftwareTeamManagement.BusinessLogic.DataModel.Team
 {
-    public class Team :ITeamContract
+    public record class Team :ITeamContract
     {
-        private string _id;
+        private int _id;
         private string _name;
         private string _description;
-        private int _size;
-        private BaseDataModel.TeamMember.TeamMember _teamLeader;
-        private List<BaseDataModel.TeamMember.TeamMember>  _members;
-        // private Project project;
 
-        //Getters and setters
+        public Team(int id, string name, string description)
+        {
+            _id = id;
+            _name = name;
+            _description = description;
+        }
+
+        public Team(string name, string description)
+        {
+            _name = name;
+            _description = description;
+        }
+
+        public Team()
+        {
+        }
 
         public string Name
         {
@@ -32,25 +43,7 @@ namespace SoftwareTeamManagement.BusinessLogic.DataModel.Team
             set { _description = value; }
         }
 
-        public int Size
-        {
-            get { return _size; }
-            set { _size = value; }
-        }
-
-        public BaseDataModel.TeamMember.TeamMember TeamLeader
-        {
-            get { return _teamLeader; }
-            set { _teamLeader = value; }
-        }
-
-        public List<BaseDataModel.TeamMember.TeamMember> Members
-        {
-            get { return _members; }
-            set { _members = value; }
-        }
-
-        public string Id
+        public int Id
         {
             get { return _id; }
             set { _id = value; }

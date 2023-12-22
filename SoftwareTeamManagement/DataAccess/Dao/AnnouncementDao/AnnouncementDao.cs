@@ -9,20 +9,27 @@ using System.Text;
 using System.Threading.Tasks;
 using SoftwareTeamManagement.Constants.DatabaseTableConstants;
 using DatabaseTable = SoftwareTeamManagement.Constants.DatabaseTableConstants.DatabaseTable;
-using SoftwareTeamManagement.Constants.Queries;
 using MySql.Data.MySqlClient;
+using static Google.Protobuf.Reflection.SourceCodeInfo.Types;
 
 namespace SoftwareTeamManagement.DataAccess.Dao.AnnouncementDao
 {
     public class AnnouncementDao : IAnnouncementDaoContract
     {
-        private AnnouncementQueries generator;
+        private int? id;
+        private string title;
+        private string content;
+        private DateTime dateCreated;
 
 
         //Dependency injection as param.
         public AnnouncementDao(IAnnouncementContract announcement)
         {
-            generator = new AnnouncementQueries(announcement);
+            //desctructiring values
+            id = announcement.AnnouncementId;
+            title = announcement.Title;
+            content = announcement.Content;
+            dateCreated = announcement.DateCreated;
 
 
 
@@ -30,24 +37,39 @@ namespace SoftwareTeamManagement.DataAccess.Dao.AnnouncementDao
 
         public AnnouncementDao()
         {
-            generator = new AnnouncementQueries();
+
         }
         public void AddAnnouncement()
         {
-            string addQuery = generator.GenerateInsertQuery();
-            DatabaseManager.ExecuteQuery(addQuery);
+            string addQuery = $"INSERT INTO {DatabaseTable.TABLE_ANNOUNCEMENT} " +
+                      $"({AnnouncementColumn.TITLE}, {AnnouncementColumn.CONTENT}, {AnnouncementColumn.DATE_CREATED}) " +
+                      $"VALUES (@title, @content, @dateCreated)";
+
+
+            MySqlCommand? command = DatabaseManager.GetCommand(addQuery);
+            command.Parameters.AddWithValue("@title", title);
+            command.Parameters.AddWithValue("@content", content);
+            command.Parameters.AddWithValue("@dateCreated", dateCreated.ToString("yyyy-MM-dd HH:mm:ss"));
+
+            command.ExecuteNonQuery();
+            DatabaseManager.CloseConnection();
         }
 
         public void DeleteAnnouncement()
         {
-            string deleteQuery = generator.GenerateDeleteQuery();
-            DatabaseManager.ExecuteQuery(deleteQuery);
+            string deleteQuery = $"DELETE FROM {DatabaseTable.TABLE_ANNOUNCEMENT} WHERE {AnnouncementColumn.ANNOUNCEMENT_ID} = @id";
+
+            MySqlCommand? command = DatabaseManager.GetCommand(deleteQuery);
+            command.Parameters.AddWithValue("@id", id);
+            command.ExecuteNonQuery();
+            DatabaseManager.CloseConnection();
+
 
         }
 
         public List<IAnnouncementContract> GetAllAnnouncements()
         {
-            string selectQuery = generator.GenerateSelectQuery();
+            string selectQuery = $"SELECT * FROM {DatabaseTable.TABLE_ANNOUNCEMENT}";
             MySqlDataReader? reader = DatabaseManager.GetReader(selectQuery);
             List<IAnnouncementContract> announcements = new List<IAnnouncementContract>();
 
@@ -76,8 +98,20 @@ namespace SoftwareTeamManagement.DataAccess.Dao.AnnouncementDao
 
         public void UpdateAnnouncement()
         {
-            string updateQuery = generator.GenerateUpdateQuery();
-            DatabaseManager.ExecuteQuery(updateQuery);
+            string updateQuery = $"UPDATE {DatabaseTable.TABLE_ANNOUNCEMENT} " +
+                        $"SET {AnnouncementColumn.TITLE} = @title, {AnnouncementColumn.CONTENT} = @content " +
+                        $"WHERE {AnnouncementColumn.ANNOUNCEMENT_ID} = @id";
+
+
+            MySqlCommand? command = DatabaseManager.GetCommand(updateQuery);
+            command.Parameters.AddWithValue("@title", title);
+            command.Parameters.AddWithValue("@content", content);
+            command.Parameters.AddWithValue("@id", id);
+            command.ExecuteNonQuery();
+            DatabaseManager.CloseConnection();
+
+
+
 
         }
 

@@ -9,9 +9,10 @@ namespace SoftwareTeamManagement.DataAccess.Dao.TeamDao
 {
     public interface ITeamDaoContract
     {
-        void AddTeam(Team team);
-        void DeleteTeam(Team team);
-        void UpdateTeam(Team team);
+        void AddTeam();
+        void DeleteTeam();
+        void UpdateTeam();
+        List<ITeamContract> GetTeams();
     }
 
 }

@@ -9,9 +9,10 @@ namespace SoftwareTeamManagement.DataAccess.Dao.ProjectDao
 {
     public interface IProjectDaoContract
     {
-        public void InsertProject(Project Project);
-        public void UpdateProject(Project Project);
-        public void DeleteProject(Project Project);
+        public void InsertProject();
+        public void UpdateProject();
+        public void DeleteProject();
+        public List<IProjectContract> GetAllProjects();
 
     }
 }

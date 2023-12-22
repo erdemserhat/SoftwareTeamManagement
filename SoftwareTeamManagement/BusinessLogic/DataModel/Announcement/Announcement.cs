@@ -2,7 +2,7 @@
 
 namespace SoftwareTeamManagement.BusinessLogic.DataModel.Announcement
 {
-    public class Announcement : IAnnouncementContract
+    public record class Announcement : IAnnouncementContract
     {
         // backing fields
         private int _announcementId = 0;
@@ -11,7 +11,7 @@ namespace SoftwareTeamManagement.BusinessLogic.DataModel.Announcement
         private DateTime _dateCreated;
 
 
-        //to delete adata
+        //to dee
         public Announcement(int announcementId)
         {
             _announcementId = announcementId;
