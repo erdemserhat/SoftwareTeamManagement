@@ -41,5 +41,18 @@ namespace SoftwareTeamManagement.BusinessLogic.Configuration.Roles
         {
             return RoleDepartmentNames[roleDepartment];
         }
+
+        public static RoleDepartment getTypeAsEnum(string department)
+        {
+            foreach (var entry in RoleDepartmentHelper.RoleDepartmentNames)
+            {
+                if (entry.Value.Equals(department, StringComparison.OrdinalIgnoreCase))
+                {
+                    return entry.Key;
+                }
+            }
+
+            throw new ArgumentException("Cannot find specified department", nameof(department));
+        }
     }
 }

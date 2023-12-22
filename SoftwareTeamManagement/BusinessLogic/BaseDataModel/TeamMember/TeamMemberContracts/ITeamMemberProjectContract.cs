@@ -13,7 +13,6 @@ namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember.TeamMemb
     public interface ITeamMemberProjectContract
     {
         void ChangeProjectName(string name);
-        void UpdateDeadline(DateTime? deadline);
         void UpdateProjectDescription(string description);
         void AddMember(TeamMember member);
         void RemoveMember(TeamMember member);

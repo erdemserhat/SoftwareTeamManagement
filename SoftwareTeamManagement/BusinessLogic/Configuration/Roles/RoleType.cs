@@ -60,6 +60,18 @@ namespace SoftwareTeamManagement.BusinessLogic.Configuration.Roles
         {
             return RoleTypeNames[roleType];
         }
+        public static RoleType getTypeAsEnum(string type)
+        {
+            foreach (var entry in RoleTypeNames)
+            {
+                if (entry.Value.Equals(type, StringComparison.OrdinalIgnoreCase))
+                {
+                    return entry.Key;
+                }
+            }
+
+            throw new ArgumentException("Belirtilen role tipi bulunamadı.", nameof(type));
+        }
     }
 }
 

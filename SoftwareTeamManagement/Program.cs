@@ -20,6 +20,9 @@ using SoftwareTeamManagement.BusinessLogic.DataModel.Task;
 using Task = SoftwareTeamManagement.BusinessLogic.DataModel.Task.Task;
 using SoftwareTeamManagement.BusinessLogic.DataModel.Enums;
 using SoftwareTeamManagement.BusinessLogic.DataModel.Team;
+using SoftwareTeamManagement.BusinessLogic.Configuration.Roles;
+using SoftwareTeamManagement.BusinessLogic.Role.Permissions.TaskPermission;
+using SoftwareTeamManagement.BusinessLogic.Role.Permissions.ProjectPermission;
 
 namespace SoftwareTeamManagement
 {
@@ -78,7 +81,31 @@ namespace SoftwareTeamManagement
             //List<ITeamContract> a = repository.GetTeams();
             //MessageBox.Show(a[0].Name);
 
-           
+           // TeamMember teamMember = new TeamMember("serhat","me.serhaterdem@gmail.com","erdem3451",new Role(RoleType.SoftwareProjectManager,RoleDepartment.ITInfrastructure),new TaskPermissionSet(false, false,false),new ProjectPermissionSet(false, false, false,false,false,false,false,false));
+
+           // TeamMemberRepository repo = new TeamMemberRepository();
+            //repo.AddTeamMember(teamMember with { FullName="samet berkant koca", Email="example@gmail.com"});
+            //repo.EditTeamMember(teamMember with { Id = 3, TaskPermissionSetContract = new TaskPermissionSet(true, true, true) });
+            // repo.EditTeamMember(teamMember with { Id = 2, ProjectPermissionSet =new ProjectPermissionSet(true, true, true, true, true, true, true, true) });
+            //repo.RemoveTeamMember(teamMember with { Id=1});
+           // List<TeamMember> members = repo.GetTeamMembers();
+           // foreach (TeamMember member in members)
+           // {
+                
+           //     {
+               //     MessageBox.Show($"{member.ProjectPermissionSet.CanUpdateMemberPermissionSetInformation}");  
+            //    }
+          //  }
+
+
+
+
+
+
+
+
+
+
 
 
 

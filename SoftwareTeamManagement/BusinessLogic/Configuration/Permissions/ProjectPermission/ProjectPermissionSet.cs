@@ -10,7 +10,6 @@ namespace SoftwareTeamManagement.BusinessLogic.Role.Permissions.ProjectPermissio
     {
         // Properties
         private bool canChangeProjectName;
-        private bool canUpdateDeadline;
         private bool canUpdateProjectDescription;
         private bool canAddMember;
         private bool canRemoveMember;
@@ -19,28 +18,19 @@ namespace SoftwareTeamManagement.BusinessLogic.Role.Permissions.ProjectPermissio
         private bool canHoldMeeting;
         private bool canUpdateMemberPermissionSet;
 
-        // Constructor
-        public ProjectPermissionSet(
-            bool changeProjectName,
-            bool updateDeadline,
-            bool updateProjectDescription,
-            bool addMember,
-            bool removeMember,
-            bool resetMemberPassword,
-            bool announce,
-            bool holdMeeting,
-            bool updateMemberPermissionSet)
+        public ProjectPermissionSet(bool canChangeProjectName, bool canUpdateProjectDescription, bool canAddMember, bool canRemoveMember, bool canResetMemberPassword, bool canAnnounce, bool canHoldMeeting, bool canUpdateMemberPermissionSet)
         {
-            this.canChangeProjectName = changeProjectName;
-            this.canUpdateDeadline = updateDeadline;
-            this.canUpdateProjectDescription = updateProjectDescription;
-            this.canAddMember = addMember;
-            this.canRemoveMember = removeMember;
-            this.canResetMemberPassword = resetMemberPassword;
-            this.canAnnounce = announce;
-            this.canHoldMeeting = holdMeeting;
-            this.canUpdateMemberPermissionSet = updateMemberPermissionSet;
+            this.canChangeProjectName = canChangeProjectName;
+            this.canUpdateProjectDescription = canUpdateProjectDescription;
+            this.canAddMember = canAddMember;
+            this.canRemoveMember = canRemoveMember;
+            this.canResetMemberPassword = canResetMemberPassword;
+            this.canAnnounce = canAnnounce;
+            this.canHoldMeeting = canHoldMeeting;
+            this.canUpdateMemberPermissionSet = canUpdateMemberPermissionSet;
         }
+
+        
 
         // Getters and Setters
         public bool CanChangeProjectName
@@ -49,12 +39,7 @@ namespace SoftwareTeamManagement.BusinessLogic.Role.Permissions.ProjectPermissio
             set { canChangeProjectName = value; }
         }
 
-        public bool CanUpdateDeadline
-        {
-            get { return canUpdateDeadline; }
-            set { canUpdateDeadline = value; }
-        }
-
+     
         public bool CanUpdateProjectDescription
         {
             get { return canUpdateProjectDescription; }
@@ -130,24 +115,21 @@ namespace SoftwareTeamManagement.BusinessLogic.Role.Permissions.ProjectPermissio
             return CanResetMemberPassword;
         }
 
-        public bool CanUpdateDeadlineInformation()
-        {
-            return CanUpdateDeadline;
-        }
+
 
         public bool CanUpdateMemberPermissionSetInformation()
         {
-            throw new NotImplementedException();
+            return canUpdateMemberPermissionSet;
         }
 
         public bool CanUpdateMemberPermissionSetİnformation()
         {
-            return CanUpdateDeadline;
+            return CanUpdateMemberPermissionSet;
         }
 
         public bool CanUpdateProjectDescriptionInformation()
         {
-            return CanUpdateDeadline;
+            return CanUpdateProjectDescription;
         }
     }
 }

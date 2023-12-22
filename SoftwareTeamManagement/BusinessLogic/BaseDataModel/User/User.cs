@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.User
 {
-    abstract public class User:IUserContract
+    abstract public record class User:IUserContract
     {
         //Attributes for User base class
         private string _fullName;

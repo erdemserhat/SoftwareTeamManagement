@@ -6,21 +6,49 @@ using SoftwareTeamManagement.BusinessLogic.DataModel.Meeting;
 using SoftwareTeamManagement.BusinessLogic.DataModel.Task;
 using SoftwareTeamManagement.BusinessLogic.Role.Permissions.ProjectPermission;
 using SoftwareTeamManagement.BusinessLogic.Role.Permissions.TaskPermission;
-using SoftwareTeamManagement.BusinessLogic.DataModel.Task;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using User = SoftwareTeamManagement.BusinessLogic.BaseDataModel.User.User;
 
 namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember
 {
-    public  class TeamMember : User.User, ITeamMemberTaskContract, ITeamMemberProjectContract, ITeamMemberGeneralContract
+    public  record class TeamMember : User.User, ITeamMemberTaskContract, ITeamMemberProjectContract, ITeamMemberGeneralContract
     {
         //Dependecy Injection as property
         private IRoleContract _roleContract;
         private ITaskPermissionSetContract _taskPermissionSetContract;
         private IProjectPermissionSetContract _projectPermissionSetContract;
+
+        public TeamMember(int id, string fullName,string email, string password, IRoleContract roleContract, ITaskPermissionSetContract taskPermissionSetContract, IProjectPermissionSetContract projectPermissionSetContract)
+        {
+            Id = id;
+            FullName = fullName;
+            Email = email;          
+            Password = password;
+
+            _roleContract = roleContract;
+            _taskPermissionSetContract = taskPermissionSetContract;
+            _projectPermissionSetContract = projectPermissionSetContract;
+        }
+
+        public TeamMember(string fullName, string email, string password, IRoleContract roleContract, ITaskPermissionSetContract taskPermissionSetContract, IProjectPermissionSetContract projectPermissionSetContract)
+        {
+            Id = 0;
+            FullName = fullName;
+            Email = email;
+            Password = password;
+
+            _roleContract = roleContract;
+            _taskPermissionSetContract = taskPermissionSetContract;
+            _projectPermissionSetContract = projectPermissionSetContract;
+        }
+
+        public TeamMember(int id)
+        {
+            Id = id;
+           
+        }
+
+
+
 
 
         //Getters and Setters
@@ -117,17 +145,6 @@ namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember
             }
         }
 
-        public void UpdateDeadline(DateTime? deadline)
-        {
-            if (ProjectPermissionSet.CanUpdateDeadlineInformation())
-            {
-                //implement db. op.
-            }
-            else
-            {
-                //handle else op.
-            }
-        }
 
         public void UpdateProjectDescription(string description)
         {

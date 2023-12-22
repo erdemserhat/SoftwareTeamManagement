@@ -9,7 +9,6 @@ namespace SoftwareTeamManagement.BusinessLogic.Role.Permissions.ProjectPermissio
     public interface IProjectPermissionSetContract
     {
         bool CanChangeProjectNameInformation();
-        bool CanUpdateDeadlineInformation();
         bool CanUpdateProjectDescriptionInformation();
         bool CanAddMemberInformation();
         bool CanRemoveMemberInformation();
