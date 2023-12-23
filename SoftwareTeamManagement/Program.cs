@@ -80,21 +80,21 @@ namespace SoftwareTeamManagement
             //List<ITeamContract> a = repository.GetTeams();
             //MessageBox.Show(a[0].Name);
 
-            TeamMember teamMember = new TeamMember("serhat", "me.serhaterdem@gmail.com", "erdem3451", new Role("rol tipi", "rol departmanı"), new TaskPermissionSet(false, false, false), new ProjectPermissionSet(false, false, false, false, false, false, false, false));
+            //TeamMember teamMember = new TeamMember("serhat", "me.serhaterdem@gmail.com", "erdem3451", new Role("rol tipi", "rol departmanı"), new TaskPermissionSet(false, false, false), new ProjectPermissionSet(false, false, false, false, false, false, false, false));
 
-            TeamMemberRepository repo = new TeamMemberRepository();
+            //TeamMemberRepository repo = new TeamMemberRepository();
             //repo.AddTeamMember(teamMember with { FullName="samet berkant koca", Email="example@gmail.com"});
             // repo.EditTeamMember(teamMember with { Id = 3, RoleContract=new Role("a","b") });
             // repo.EditTeamMember(teamMember with { Id = 2, ProjectPermissionSet =new ProjectPermissionSet(true, true, true, true, true, true, true, true) });
             //repo.RemoveTeamMember(teamMember with { Id=1});
-            List<TeamMember> members = repo.GetTeamMembers();
-            foreach (TeamMember member in members)
-            {
+            //List<TeamMember> members = repo.GetTeamMembers();
+            //foreach (TeamMember member in members)
+            //{
 
-                {
-                    MessageBox.Show($"{member.RoleContract.RoleTypeInformation()}");
-                    MessageBox.Show($"{member.RoleContract.RoleDepartmentInformation()}");
-                }
+               // {
+                   // MessageBox.Show($"{member.RoleContract.RoleTypeInformation()}");
+                  //  MessageBox.Show($"{member.RoleContract.RoleDepartmentInformation()}");
+                //}
                 //  
 
 
@@ -120,10 +120,9 @@ namespace SoftwareTeamManagement
 
 
 
-                //ApplicationConfiguration.Initialize();
-                ///Application.Run(new LoginForm());
+                ApplicationConfiguration.Initialize();
+                Application.Run(new LoginForm());
             }
 
         }
     }
-}

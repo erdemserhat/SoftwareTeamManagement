@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore.Storage;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 using SoftwareTeamManagement.BusinessLogic.DataModel.Project;
 using SoftwareTeamManagement.Constants.DatabaseColumnConstants;
 using SoftwareTeamManagement.Constants.DatabaseTableConstants;

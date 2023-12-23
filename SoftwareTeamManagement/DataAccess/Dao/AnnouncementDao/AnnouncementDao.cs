@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore.Scaffolding.Metadata;
-using SoftwareTeamManagement.BusinessLogic.DataModel.Announcement;
+﻿using SoftwareTeamManagement.BusinessLogic.DataModel.Announcement;
 using SoftwareTeamManagement.Constants.DatabaseColumnConstants;
 using SoftwareTeamManagement.DataAccess.DataAccess;
 using System;
