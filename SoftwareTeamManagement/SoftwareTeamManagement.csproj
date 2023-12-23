@@ -40,7 +40,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ui\login_register\" />
+    <Folder Include="Resources\" />
   </ItemGroup>
 
 </Project>

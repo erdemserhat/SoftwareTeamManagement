@@ -20,6 +20,7 @@ using SoftwareTeamManagement.BusinessLogic.Configuration.Roles;
 using SoftwareTeamManagement.BusinessLogic.Role.Permissions.TaskPermission;
 
 using SoftwareTeamManagement.ui.main_dashboard;
+using SoftwareTeamManagement.ui.login;
 
 namespace SoftwareTeamManagement
 {
@@ -70,9 +71,9 @@ namespace SoftwareTeamManagement
             // List<ITaskContract> a = repository.GetTasks();
             // MessageBox.Show(a[0].CreatedTime.ToString());
 
-            //Team team = new Team("X Takımı", "Projemya !");
-            //TeamRepository repository = new TeamRepository();
-            // repository.AddTeam(team);
+           // Team team = new Team("X Takımı", "Projemya !");
+           // TeamRepository repository = new TeamRepository();
+           //  repository.AddTeam(team);
             //repository.EditTeam(team with {Id=1, Description="upddd"});
             // repository.RemoveTeam(team with { Id=1});
             //List<ITeamContract> a = repository.GetTeams();
@@ -115,8 +116,10 @@ namespace SoftwareTeamManagement
 
 
 
+
+
              ApplicationConfiguration.Initialize();
-            Application.Run(new Dashboard());
+            Application.Run(new LoginForm());
         }
     }
 }
