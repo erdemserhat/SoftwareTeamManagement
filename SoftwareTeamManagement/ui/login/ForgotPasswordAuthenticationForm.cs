@@ -16,10 +16,10 @@ namespace SoftwareTeamManagement.ui.login
 
         public static ForgotPasswordAuthenticationForm? GetInstance()
         {
-            if(instance == null || instance.IsDisposed)
+            if (instance == null || instance.IsDisposed)
             {
                 instance = new ForgotPasswordAuthenticationForm();
-              
+
             }
             return instance;
         }
@@ -44,9 +44,15 @@ namespace SoftwareTeamManagement.ui.login
             Application.Exit();
         }
 
-        private void goBackToLoginBtn_Paint(object sender, PaintEventArgs e)
+        private void goBackToLoginBtn_Click(object sender, EventArgs e)
         {
             LoginForm.GetInstance().Show();
+            this.Hide();
+        }
+
+        private void confirmButton_Click(object sender, EventArgs e)
+        {
+            ResetPasswordForm.GetInstance().Show();
             this.Hide();
         }
     }

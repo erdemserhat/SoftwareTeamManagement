@@ -9,12 +9,12 @@ namespace SoftwareTeamManagement.BusinessLogic.Configuration.Roles
     public class Role : IRoleContract
     {
         //Properties
-        private RoleType _roleType;
-        private RoleDepartment _roleDepartment;
+        private string _roleType;
+        private string _roleDepartment;
 
 
         //Constructor
-        public Role(RoleType roleType, RoleDepartment roleDepartment)
+        public Role(string roleType, string roleDepartment)
         {
             _roleType = roleType;
             _roleDepartment = roleDepartment;
@@ -22,14 +22,14 @@ namespace SoftwareTeamManagement.BusinessLogic.Configuration.Roles
 
         //Getters and Setters
 
-        public RoleType RoleType
+        public string RoleType
         {
             get { return _roleType; }
             set { _roleType = value; }
 
         }
 
-        public RoleDepartment RoleDepartment
+        public string RoleDepartment
         {
             get { return _roleDepartment; }
             set { _roleDepartment = value; }
@@ -39,24 +39,24 @@ namespace SoftwareTeamManagement.BusinessLogic.Configuration.Roles
 
         //Implementation of role class
 
-        public void changeRoleDepartmentInformation(RoleDepartment roleDepartment)
+        public void changeRoleDepartmentInformation(string roleDepartment)
         {
             _roleDepartment = roleDepartment;
         }
 
-        public void changeRoleType(RoleType roleType)
+        public void changeRoleType(string roleType)
         {
             _roleType = roleType;
         }
 
         public string RoleDepartmentInformation()
         {
-            return RoleDepartmentHelper.GetRoleDepartment(RoleDepartment);
+            return RoleDepartment;
         }
 
         public string RoleTypeInformation()
         {
-            return RoleTypeHelper.GetRoleName(_roleType);
+            return RoleType;
         }
     }
 }

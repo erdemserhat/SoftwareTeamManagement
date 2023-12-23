@@ -10,19 +10,19 @@ using System.Windows.Forms;
 
 namespace SoftwareTeamManagement.ui.login
 {
-    public partial class ForgotPasswordForm : Form
+    public partial class ResetPasswordForm : Form
     {
-        public static ForgotPasswordForm instance;
+        private static ResetPasswordForm? instance;
 
-        public static ForgotPasswordForm GetInstance()
+        public static ResetPasswordForm GetInstance()
         {
             if (instance == null || instance.IsDisposed)
             {
-                instance = new ForgotPasswordForm();
+                instance = new ResetPasswordForm();
             }
             return instance;
         }
-        public ForgotPasswordForm()
+        public ResetPasswordForm()
         {
             InitializeComponent();
             instance = this;
@@ -33,17 +33,22 @@ namespace SoftwareTeamManagement.ui.login
             Application.Exit();
         }
 
-        private void goBackToLoginBtn_Click(object sender, EventArgs e)
+        private void resetPasswordButton_Click(object sender, EventArgs e)
+        {
+            //handle process
+
+            ////.....
+            ///
+            //
+            LoginForm.GetInstance().Show();
+            this.Hide();
+
+        }
+
+        private void registerBtn_Click(object sender, EventArgs e)
         {
             LoginForm.GetInstance().Show();
             this.Hide();
-        }
-
-        private void searchBtn_Click(object sender, EventArgs e)
-        {
-            ForgotPasswordAuthenticationForm.GetInstance().Show();
-            this.Hide();
-
         }
     }
 }

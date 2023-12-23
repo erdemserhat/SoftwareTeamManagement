@@ -10,7 +10,7 @@ namespace SoftwareTeamManagement.BusinessLogic.Configuration.Roles
     {
         string RoleTypeInformation();
         string RoleDepartmentInformation();
-        void changeRoleType(RoleType roleType);
-        void changeRoleDepartmentInformation(RoleDepartment roleDepartment);
+        void changeRoleType(string roleType);
+        void changeRoleDepartmentInformation(string roleDepartment);
     }
 }

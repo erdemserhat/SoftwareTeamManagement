@@ -187,7 +187,7 @@ namespace SoftwareTeamManagement.DataAccess.Dao.TeamMemberDao
                         memberEmail,
                         memberPassword,
 
-                        new Role(RoleTypeHelper.getTypeAsEnum(roleType), RoleDepartmentHelper.getTypeAsEnum(roleDepartment)),
+                        new Role(roleType,roleDepartment),
                         new TaskPermissionSet(canAddTask, canRemoveTask, canEditTask),
                         new ProjectPermissionSet(canChangeProjectName, canUpdateProjectDescription, canAddMember, canRemoveMember, canResetMemberPassword, canAnnounce, canHoldMeeting, canUpdateMemberPermissionSet)
                     );

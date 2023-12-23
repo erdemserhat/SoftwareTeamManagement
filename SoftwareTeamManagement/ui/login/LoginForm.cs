@@ -18,7 +18,7 @@ namespace SoftwareTeamManagement.ui.login
         private System.Timers.Timer opacityTimer;
 
         ///Singleton
-        private static LoginForm instance;
+        private static LoginForm? instance;
         public static LoginForm GetInstance()
         {
             if (instance == null || instance.IsDisposed)
@@ -63,6 +63,8 @@ namespace SoftwareTeamManagement.ui.login
         private void forgotPasswordBtn_Click(object sender, EventArgs e)
         {
             //when forget password is clicked handle the process.
+            ForgotPasswordForm.GetInstance().Show();
+            this.Hide();
         }
     }
 
