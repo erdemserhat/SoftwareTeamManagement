@@ -1,4 +1,4 @@
-﻿namespace SoftwareTeamManagement.ui.login
+﻿namespace SoftwareTeamManagement.UI.ResetPassword.View
 {
     partial class ResetPasswordForm
     {

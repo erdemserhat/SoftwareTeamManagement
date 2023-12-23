@@ -9,11 +9,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="ui\NewFolder1\**" />
+    <Compile Remove="UI\NewFolder1\**" />
     <Compile Remove="view\**" />
-    <EmbeddedResource Remove="ui\NewFolder1\**" />
+    <EmbeddedResource Remove="UI\NewFolder1\**" />
     <EmbeddedResource Remove="view\**" />
-    <None Remove="ui\NewFolder1\**" />
+    <None Remove="UI\NewFolder1\**" />
     <None Remove="view\**" />
   </ItemGroup>
 
@@ -38,6 +38,10 @@
 
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="UI\Login\Controller\" />
+    <Folder Include="UI\Register\Controller\" />
+    <Folder Include="UI\ResetPassword\Controller\" />
+    <Folder Include="UI\SprintMateDashboard\Controller\" />
   </ItemGroup>
 
 </Project>

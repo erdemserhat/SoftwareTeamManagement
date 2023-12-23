@@ -1,6 +1,6 @@
-﻿namespace SoftwareTeamManagement.ui.login
+﻿namespace SoftwareTeamManagement.UI.ResetPassword.View
 {
-    partial class ForgotPasswordAuthenticationForm
+    partial class ForgotPasswordForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,24 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ForgotPasswordAuthenticationForm));
-            authenticationCodeTextBox = new TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ForgotPasswordForm));
+            fullNameTextBox = new TextBox();
             exitBtn = new Panel();
-            confirmButton = new Panel();
             goBackToLoginBtn = new Panel();
+            searchBtn = new Panel();
             SuspendLayout();
             // 
-            // authenticationCodeTextBox
+            // fullNameTextBox
             // 
-            authenticationCodeTextBox.BackColor = Color.FromArgb(95, 111, 115);
-            authenticationCodeTextBox.BorderStyle = BorderStyle.None;
-            authenticationCodeTextBox.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            authenticationCodeTextBox.ForeColor = Color.White;
-            authenticationCodeTextBox.Location = new Point(704, 298);
-            authenticationCodeTextBox.Name = "authenticationCodeTextBox";
-            authenticationCodeTextBox.Size = new Size(405, 36);
-            authenticationCodeTextBox.TabIndex = 3;
-            authenticationCodeTextBox.KeyPress += authenticationCodeTextBox_KeyPress;
+            fullNameTextBox.BackColor = Color.FromArgb(95, 111, 115);
+            fullNameTextBox.BorderStyle = BorderStyle.None;
+            fullNameTextBox.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            fullNameTextBox.ForeColor = Color.White;
+            fullNameTextBox.Location = new Point(703, 268);
+            fullNameTextBox.Name = "fullNameTextBox";
+            fullNameTextBox.Size = new Size(409, 36);
+            fullNameTextBox.TabIndex = 5;
             // 
             // exitBtn
             // 
@@ -54,52 +53,53 @@
             exitBtn.Location = new Point(1144, 1);
             exitBtn.Name = "exitBtn";
             exitBtn.Size = new Size(55, 46);
-            exitBtn.TabIndex = 4;
+            exitBtn.TabIndex = 6;
             exitBtn.Click += exitBtn_Click;
-            // 
-            // confirmButton
-            // 
-            confirmButton.BackColor = Color.Transparent;
-            confirmButton.Cursor = Cursors.Hand;
-            confirmButton.Location = new Point(704, 360);
-            confirmButton.Name = "confirmButton";
-            confirmButton.Size = new Size(424, 51);
-            confirmButton.TabIndex = 5;
-            confirmButton.Click += confirmButton_Click;
             // 
             // goBackToLoginBtn
             // 
             goBackToLoginBtn.BackColor = Color.Transparent;
             goBackToLoginBtn.Cursor = Cursors.Hand;
-            goBackToLoginBtn.Location = new Point(912, 546);
+            goBackToLoginBtn.Location = new Point(902, 548);
             goBackToLoginBtn.Name = "goBackToLoginBtn";
-            goBackToLoginBtn.Size = new Size(88, 24);
-            goBackToLoginBtn.TabIndex = 6;
+            goBackToLoginBtn.Size = new Size(98, 19);
+            goBackToLoginBtn.TabIndex = 7;
             goBackToLoginBtn.Click += goBackToLoginBtn_Click;
             // 
-            // ForgotPasswordAuthenticationForm
+            // searchBtn
+            // 
+            searchBtn.BackColor = Color.Transparent;
+            searchBtn.Cursor = Cursors.Hand;
+            searchBtn.Location = new Point(703, 361);
+            searchBtn.Name = "searchBtn";
+            searchBtn.Size = new Size(420, 51);
+            searchBtn.TabIndex = 8;
+            searchBtn.Click += searchBtn_Click;
+            // 
+            // ForgotPasswordForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1200, 650);
+            Controls.Add(searchBtn);
             Controls.Add(goBackToLoginBtn);
-            Controls.Add(confirmButton);
             Controls.Add(exitBtn);
-            Controls.Add(authenticationCodeTextBox);
+            Controls.Add(fullNameTextBox);
+            ForeColor = SystemColors.ControlText;
             FormBorderStyle = FormBorderStyle.None;
-            Name = "ForgotPasswordAuthenticationForm";
+            Name = "ForgotPasswordForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "ForgotPasswordAuthenticationForm";
+            Text = "ForgotPasswordForm";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private TextBox authenticationCodeTextBox;
+        private TextBox fullNameTextBox;
         private Panel exitBtn;
-        private Panel confirmButton;
         private Panel goBackToLoginBtn;
+        private Panel searchBtn;
     }
 }

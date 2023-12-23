@@ -1,4 +1,4 @@
-﻿namespace SoftwareTeamManagement.ui.register
+﻿namespace SoftwareTeamManagement.UI.Register.View
 {
     partial class RegisterRoleForm
     {

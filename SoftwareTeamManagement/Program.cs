@@ -18,9 +18,6 @@ using SoftwareTeamManagement.BusinessLogic.DataModel.Enums;
 using SoftwareTeamManagement.BusinessLogic.DataModel.Team;
 using SoftwareTeamManagement.BusinessLogic.Configuration.Roles;
 using SoftwareTeamManagement.BusinessLogic.Role.Permissions.TaskPermission;
-
-using SoftwareTeamManagement.ui.main_dashboard;
-using SoftwareTeamManagement.ui.login;
 using SoftwareTeamManagement.BusinessLogic.Role.Permissions.ProjectPermission;
 
 namespace SoftwareTeamManagement
@@ -121,7 +118,7 @@ namespace SoftwareTeamManagement
 
 
                 ApplicationConfiguration.Initialize();
-                Application.Run(new LoginForm());
+                Application.Run(new UI.Login.View.LoginForm());
             }
 
         }

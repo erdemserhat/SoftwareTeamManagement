@@ -1,6 +1,6 @@
-﻿namespace SoftwareTeamManagement.ui.register
+﻿namespace SoftwareTeamManagement.UI.Login.View
 {
-    partial class RegisterForm
+    partial class LoginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,57 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
-            goBackToLoginBtn = new Panel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
+            loginBtn = new Panel();
             exitBtn = new Panel();
-            fullNameTextBox = new TextBox();
             registerBtn = new Panel();
             emailTextBox = new TextBox();
             passwordTextBox = new TextBox();
-            confirmPasswordTextBox = new TextBox();
+            forgotPasswordBtn = new Panel();
             SuspendLayout();
             // 
-            // goBackToLoginBtn
+            // loginBtn
             // 
-            goBackToLoginBtn.BackColor = Color.Transparent;
-            goBackToLoginBtn.Cursor = Cursors.Hand;
-            goBackToLoginBtn.Location = new Point(941, 604);
-            goBackToLoginBtn.Name = "goBackToLoginBtn";
-            goBackToLoginBtn.Size = new Size(98, 19);
-            goBackToLoginBtn.TabIndex = 2;
-            goBackToLoginBtn.Click += goBackToLoginBtn_Click;
+            loginBtn.BackColor = Color.Transparent;
+            loginBtn.Cursor = Cursors.Hand;
+            loginBtn.Location = new Point(701, 467);
+            loginBtn.Name = "loginBtn";
+            loginBtn.Size = new Size(420, 51);
+            loginBtn.TabIndex = 0;
+            loginBtn.Click += loginBtn_Click;
             // 
             // exitBtn
             // 
             exitBtn.BackColor = Color.Transparent;
             exitBtn.Cursor = Cursors.Hand;
-            exitBtn.Location = new Point(1145, 2);
+            exitBtn.Location = new Point(1144, 0);
             exitBtn.Name = "exitBtn";
-            exitBtn.Size = new Size(53, 43);
-            exitBtn.TabIndex = 3;
+            exitBtn.Size = new Size(55, 46);
+            exitBtn.TabIndex = 1;
             exitBtn.Click += exitBtn_Click;
-            // 
-            // fullNameTextBox
-            // 
-            fullNameTextBox.BackColor = Color.FromArgb(95, 111, 115);
-            fullNameTextBox.BorderStyle = BorderStyle.None;
-            fullNameTextBox.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            fullNameTextBox.ForeColor = Color.White;
-            fullNameTextBox.Location = new Point(704, 231);
-            fullNameTextBox.Name = "fullNameTextBox";
-            fullNameTextBox.Size = new Size(409, 36);
-            fullNameTextBox.TabIndex = 4;
             // 
             // registerBtn
             // 
             registerBtn.BackColor = Color.Transparent;
             registerBtn.Cursor = Cursors.Hand;
-            registerBtn.Location = new Point(704, 537);
+            registerBtn.Location = new Point(939, 537);
             registerBtn.Name = "registerBtn";
-            registerBtn.Size = new Size(420, 51);
-            registerBtn.TabIndex = 8;
+            registerBtn.Size = new Size(113, 20);
+            registerBtn.TabIndex = 1;
             registerBtn.Click += registerBtn_Click;
-
             // 
             // emailTextBox
             // 
@@ -86,10 +73,10 @@
             emailTextBox.BorderStyle = BorderStyle.None;
             emailTextBox.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             emailTextBox.ForeColor = Color.White;
-            emailTextBox.Location = new Point(704, 320);
+            emailTextBox.Location = new Point(701, 266);
             emailTextBox.Name = "emailTextBox";
-            emailTextBox.Size = new Size(409, 36);
-            emailTextBox.TabIndex = 9;
+            emailTextBox.Size = new Size(405, 36);
+            emailTextBox.TabIndex = 2;
             // 
             // passwordTextBox
             // 
@@ -97,53 +84,50 @@
             passwordTextBox.BorderStyle = BorderStyle.None;
             passwordTextBox.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             passwordTextBox.ForeColor = Color.White;
-            passwordTextBox.Location = new Point(704, 404);
+            passwordTextBox.Location = new Point(701, 374);
             passwordTextBox.Name = "passwordTextBox";
             passwordTextBox.PasswordChar = '*';
-            passwordTextBox.Size = new Size(409, 36);
-            passwordTextBox.TabIndex = 10;
+            passwordTextBox.Size = new Size(405, 36);
+            passwordTextBox.TabIndex = 3;
             // 
-            // confirmPasswordTextBox
+            // forgotPasswordBtn
             // 
-            confirmPasswordTextBox.BackColor = Color.FromArgb(95, 111, 115);
-            confirmPasswordTextBox.BorderStyle = BorderStyle.None;
-            confirmPasswordTextBox.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            confirmPasswordTextBox.ForeColor = Color.White;
-            confirmPasswordTextBox.Location = new Point(704, 482);
-            confirmPasswordTextBox.Name = "confirmPasswordTextBox";
-            confirmPasswordTextBox.PasswordChar = '*';
-            confirmPasswordTextBox.Size = new Size(409, 36);
-            confirmPasswordTextBox.TabIndex = 11;
+            forgotPasswordBtn.BackColor = Color.Transparent;
+            forgotPasswordBtn.Cursor = Cursors.Hand;
+            forgotPasswordBtn.Location = new Point(1008, 416);
+            forgotPasswordBtn.Name = "forgotPasswordBtn";
+            forgotPasswordBtn.Size = new Size(113, 27);
+            forgotPasswordBtn.TabIndex = 2;
+            forgotPasswordBtn.Click += forgotPasswordBtn_Click;
             // 
-            // RegisterForm
+            // LoginForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoValidate = AutoValidate.EnablePreventFocusChange;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1200, 650);
-            Controls.Add(confirmPasswordTextBox);
+            Controls.Add(forgotPasswordBtn);
             Controls.Add(passwordTextBox);
             Controls.Add(emailTextBox);
             Controls.Add(registerBtn);
-            Controls.Add(fullNameTextBox);
             Controls.Add(exitBtn);
-            Controls.Add(goBackToLoginBtn);
+            Controls.Add(loginBtn);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "RegisterForm";
+            Name = "LoginForm";
+            ShowInTaskbar = false;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "RegisterForm";
+            Text = "Login";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Panel goBackToLoginBtn;
+        private Panel loginBtn;
         private Panel exitBtn;
-        private TextBox fullNameTextBox;
         private Panel registerBtn;
         private TextBox emailTextBox;
         private TextBox passwordTextBox;
-        private TextBox confirmPasswordTextBox;
+        private Panel forgotPasswordBtn;
     }
 }

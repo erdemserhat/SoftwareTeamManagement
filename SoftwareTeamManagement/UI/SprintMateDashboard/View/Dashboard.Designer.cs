@@ -1,4 +1,4 @@
-﻿namespace SoftwareTeamManagement.ui.main_dashboard
+﻿namespace SoftwareTeamManagement.UI.SprintMateDashboard.View
 {
     partial class Dashboard
     {

@@ -1,21 +1,13 @@
-﻿using SoftwareTeamManagement.ui.register;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using SoftwareTeamManagement.UI.Register.View;
+using SoftwareTeamManagement.UI.ResetPassword.View;
 
-namespace SoftwareTeamManagement.ui.login
+namespace SoftwareTeamManagement.UI.Login.View
 {
 
 
     public partial class LoginForm : Form
     {
-        private System.Timers.Timer opacityTimer;
+       
 
         ///Singleton
         private static LoginForm? instance;

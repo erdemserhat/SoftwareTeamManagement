@@ -1,15 +1,6 @@
-﻿using SoftwareTeamManagement.ui.login;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using SoftwareTeamManagement.UI.Login.View;
 
-namespace SoftwareTeamManagement.ui.register
+namespace SoftwareTeamManagement.UI.Register.View
 {
     public partial class RegisterForm : Form
     {
@@ -50,7 +41,7 @@ namespace SoftwareTeamManagement.ui.register
             RegisterRoleForm.GetInstance().Show();
             this.Hide();
 
-            
+
         }
 
     }
