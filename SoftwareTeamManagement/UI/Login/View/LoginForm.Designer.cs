@@ -45,7 +45,6 @@
             loginBtn.Name = "loginBtn";
             loginBtn.Size = new Size(420, 51);
             loginBtn.TabIndex = 0;
-            loginBtn.Click += loginBtn_Click;
             // 
             // exitBtn
             // 
@@ -55,7 +54,6 @@
             exitBtn.Name = "exitBtn";
             exitBtn.Size = new Size(55, 46);
             exitBtn.TabIndex = 1;
-            exitBtn.Click += exitBtn_Click;
             // 
             // registerBtn
             // 
@@ -65,7 +63,6 @@
             registerBtn.Name = "registerBtn";
             registerBtn.Size = new Size(113, 20);
             registerBtn.TabIndex = 1;
-            registerBtn.Click += registerBtn_Click;
             // 
             // emailTextBox
             // 
@@ -98,7 +95,6 @@
             forgotPasswordBtn.Name = "forgotPasswordBtn";
             forgotPasswordBtn.Size = new Size(113, 27);
             forgotPasswordBtn.TabIndex = 2;
-            forgotPasswordBtn.Click += forgotPasswordBtn_Click;
             // 
             // LoginForm
             // 

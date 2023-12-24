@@ -46,7 +46,7 @@
             goBackToLoginBtn.Name = "goBackToLoginBtn";
             goBackToLoginBtn.Size = new Size(98, 19);
             goBackToLoginBtn.TabIndex = 2;
-            goBackToLoginBtn.Click += goBackToLoginBtn_Click;
+
             // 
             // exitBtn
             // 
@@ -56,7 +56,6 @@
             exitBtn.Name = "exitBtn";
             exitBtn.Size = new Size(53, 43);
             exitBtn.TabIndex = 3;
-            exitBtn.Click += exitBtn_Click;
             // 
             // fullNameTextBox
             // 
@@ -77,7 +76,7 @@
             registerBtn.Name = "registerBtn";
             registerBtn.Size = new Size(420, 51);
             registerBtn.TabIndex = 8;
-            registerBtn.Click += registerBtn_Click;
+  
 
             // 
             // emailTextBox

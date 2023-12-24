@@ -1,10 +1,21 @@
 ﻿using SoftwareTeamManagement.UI.Login.View;
+using SoftwareTeamManagement.UI.Register.Presenter;
 
 namespace SoftwareTeamManagement.UI.Register.View
 {
-    public partial class RegisterForm : Form
+    public partial class RegisterForm : Form, IRegisterForm
     {
         private static RegisterForm instance;
+
+        public event EventHandler RegisterButtonClicked;
+        public event EventHandler GoBackButtonClicked;
+        public event EventHandler ExitButtonClicked;
+
+        public string Email => emailTextBox.Text;
+
+        public string Password => passwordTextBox.Text;
+
+        public string ConfirmPassword => confirmPasswordTextBox.Text;
 
         public static RegisterForm GetInstance()
         {
@@ -18,31 +29,13 @@ namespace SoftwareTeamManagement.UI.Register.View
         {
             InitializeComponent();
             instance = this;
-        }
-
-        private void exitBtn_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void goBackToLoginBtn_Click(object sender, EventArgs e)
-        {
-            LoginForm.GetInstance().Show();
-            instance.Hide();
-
-
+            RegisterController controller = new RegisterController();
+            exitBtn.Click += ExitButtonClicked;
+            goBackToLoginBtn.Click += (sender, e) => GoBackButtonClicked?.Invoke(this, EventArgs.Empty);
+            registerBtn.Click += (sender, e) => RegisterButtonClicked?.Invoke(this, EventArgs.Empty);
 
         }
 
-        private void registerBtn_Click(object sender, EventArgs e)
-        {
-            /// handle controls
-            /// 
-            RegisterRoleForm.GetInstance().Show();
-            this.Hide();
-
-
-        }
 
     }
 }

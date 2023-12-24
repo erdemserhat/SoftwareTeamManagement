@@ -43,7 +43,6 @@
             exitBtn.Name = "exitBtn";
             exitBtn.Size = new Size(53, 43);
             exitBtn.TabIndex = 4;
-            exitBtn.Click += exitBtn_Click;
             // 
             // nextBtn
             // 
@@ -53,7 +52,6 @@
             nextBtn.Name = "nextBtn";
             nextBtn.Size = new Size(420, 51);
             nextBtn.TabIndex = 9;
-            nextBtn.Click += nextBtn_Click;
             // 
             // departmentTextBox
             // 

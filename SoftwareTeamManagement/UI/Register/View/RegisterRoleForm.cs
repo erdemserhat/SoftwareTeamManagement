@@ -1,14 +1,29 @@
-﻿namespace SoftwareTeamManagement.UI.Register.View
+﻿using SoftwareTeamManagement.UI.Register.Presenter;
+using System;
+using System.Windows.Forms;
+
+namespace SoftwareTeamManagement.UI.Register.View
 {
-    public partial class RegisterRoleForm : Form
+    public partial class RegisterRoleForm : Form, IRegisterRoleForm
     {
+        private static RegisterRoleForm instance;
+
+        public event EventHandler NextButtonClicked;
+        public event EventHandler ExitButtonClicked;
+
+        public string Role => roleTextBox.Text;
+        public string Department => departmentTextBox.Text;
+
         public RegisterRoleForm()
         {
             InitializeComponent();
             instance = this;
-        }
 
-        private static RegisterRoleForm instance;
+            RegisterRoleController controller = new RegisterRoleController();
+
+            nextBtn.Click += (sender, e) => NextButtonClicked?.Invoke(this, EventArgs.Empty);
+            exitBtn.Click += (sender, e) => ExitButtonClicked?.Invoke(this, EventArgs.Empty);
+        }
 
         public static RegisterRoleForm GetInstance()
         {
@@ -17,18 +32,6 @@
                 instance = new RegisterRoleForm();
             }
             return instance;
-
-        }
-
-        private void exitBtn_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-
-        }
-
-        private void nextBtn_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

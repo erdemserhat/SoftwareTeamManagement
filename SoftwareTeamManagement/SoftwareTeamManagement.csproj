@@ -38,10 +38,7 @@
 
   <ItemGroup>
     <Folder Include="Resources\" />
-    <Folder Include="UI\Login\Controller\" />
-    <Folder Include="UI\Register\Controller\" />
-    <Folder Include="UI\ResetPassword\Controller\" />
-    <Folder Include="UI\SprintMateDashboard\Controller\" />
+    <Folder Include="UI\ResetPassword\Presenter\" />
   </ItemGroup>
 
 </Project>
