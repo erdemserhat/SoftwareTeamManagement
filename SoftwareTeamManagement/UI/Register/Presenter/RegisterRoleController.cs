@@ -1,10 +1,10 @@
-﻿using SoftwareTeamManagement.UI.CustomMessageBox;
+﻿using SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember;
+using SoftwareTeamManagement.BusinessLogic.Configuration.Roles;
+using SoftwareTeamManagement.DataAccess.Dao.TeamMemberDao;
+using SoftwareTeamManagement.DataAccess.Repository;
+using SoftwareTeamManagement.UI.CustomMessageBox;
+using SoftwareTeamManagement.UI.Login.View;
 using SoftwareTeamManagement.UI.Register.View;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SoftwareTeamManagement.UI.Register.Presenter
 {
@@ -25,7 +25,34 @@ namespace SoftwareTeamManagement.UI.Register.Presenter
         {
             if(AreStringsNullOrWhiteSpace(_view.Role, _view.Department))
             {
-                CustomSuccessMessageBoxForm messageBox = new CustomSuccessMessageBoxForm("Sucsess");
+                
+                string fullName = RegisterForm.GetInstance().fullName;
+                string email= RegisterForm.GetInstance().email;
+                string password = RegisterForm.GetInstance().password;
+                string role= _view.Role;
+                string department = _view.Department;
+
+                TeamMember member = new TeamMember(fullName, email, password, new Role(role, department));
+                TeamMemberRepository repo = new TeamMemberRepository();
+                repo.AddTeamMember(member);
+
+
+                LoginForm.GetInstance().Show();
+                RegisterRoleForm.GetInstance().Hide();
+
+                CustomSuccessMessageBoxForm messageBox = new CustomSuccessMessageBoxForm("You have successfully registered in our system. Welcome to Sprint Mate!");
+                LoginForm.GetInstance().Email = email;
+                LoginForm.GetInstance().Password = password;
+
+                
+
+                
+
+
+
+
+
+
 
             }
             else

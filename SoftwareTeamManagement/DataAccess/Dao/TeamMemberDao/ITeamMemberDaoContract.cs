@@ -13,6 +13,9 @@ namespace SoftwareTeamManagement.DataAccess.Dao.TeamMemberDao
         void UpdateMember();
         void DeleteMember();
         List<TeamMember> getAllMembers();
+        bool IsAlreadyRegistered(string email);
+
+        bool IsValidUser(string email, string password);
 
     }
 }

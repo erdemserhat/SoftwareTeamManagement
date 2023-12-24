@@ -15,6 +15,7 @@ namespace SoftwareTeamManagement.DataAccess.Dao.MeetingDao
         void UpdateMeeting();
 
         List<IMeetingContract> GetAllMeetings();
+     
     }
 
 }

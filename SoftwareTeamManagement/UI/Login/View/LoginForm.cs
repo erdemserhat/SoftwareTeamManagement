@@ -11,9 +11,9 @@ namespace SoftwareTeamManagement.UI.Login.View
         ///Singleton
         private static LoginForm? instance;
 
-        public string Email => emailTextBox.Text;
 
-        public string Password => passwordTextBox.Text;
+        public string Email { get => emailTextBox.Text; set => emailTextBox.Text = value; }
+        public string Password { get => passwordTextBox.Text; set => passwordTextBox.Text = value; }
 
         public event EventHandler ExitButtonClicked;
         public event EventHandler RegisterButtonClicked;

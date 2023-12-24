@@ -29,7 +29,7 @@ namespace SoftwareTeamManagement.DataAccess
                     {
                         _connection = new MySqlConnection(ConnectionString);
                         _connection.Open();
-                        MessageBox.Show("Connection ✓");
+                        //MessageBox.Show("Connection ✓");
 
                     }
                     catch (Exception ex)
@@ -52,7 +52,7 @@ namespace SoftwareTeamManagement.DataAccess
                     try
                     {
                         _connection.Close();
-                        MessageBox.Show("Connection is closed ✓");
+                        //MessageBox.Show("Connection is closed ✓");
                         _connection = null;
                     }
                     catch (Exception ex)
@@ -74,7 +74,7 @@ namespace SoftwareTeamManagement.DataAccess
                     {
                         MySqlCommand cmd = new MySqlCommand(query, connection);
                         cmd.ExecuteNonQuery();
-                        MessageBox.Show("Query executed successfully ✓");
+                       // MessageBox.Show("Query executed successfully ✓");
                     }
                     catch (Exception ex)
                     {
@@ -98,7 +98,7 @@ namespace SoftwareTeamManagement.DataAccess
                     {
                         MySqlCommand command = new MySqlCommand(selectQuery, connection);
                          reader= command.ExecuteReader();
-                        MessageBox.Show("Reader is created successfully ✓");
+                       // MessageBox.Show("Reader is created successfully ✓");
                        
                     }
                     catch (Exception ex)
@@ -127,7 +127,7 @@ namespace SoftwareTeamManagement.DataAccess
                     {
                         command = new MySqlCommand(query, connection);
                        
-                        MessageBox.Show("Command  is created successfully ✓");
+                       // MessageBox.Show("Command  is created successfully ✓");
                        
                     }
                     catch (Exception ex)

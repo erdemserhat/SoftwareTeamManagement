@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ForgotPasswordForm));
-            fullNameTextBox = new TextBox();
+            emailTextBox = new TextBox();
             exitBtn = new Panel();
             goBackToLoginBtn = new Panel();
             searchBtn = new Panel();
             SuspendLayout();
             // 
-            // fullNameTextBox
+            // emailTextBox
             // 
-            fullNameTextBox.BackColor = Color.FromArgb(95, 111, 115);
-            fullNameTextBox.BorderStyle = BorderStyle.None;
-            fullNameTextBox.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            fullNameTextBox.ForeColor = Color.White;
-            fullNameTextBox.Location = new Point(703, 268);
-            fullNameTextBox.Name = "fullNameTextBox";
-            fullNameTextBox.Size = new Size(409, 36);
-            fullNameTextBox.TabIndex = 5;
+            emailTextBox.BackColor = Color.FromArgb(95, 111, 115);
+            emailTextBox.BorderStyle = BorderStyle.None;
+            emailTextBox.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            emailTextBox.ForeColor = Color.White;
+            emailTextBox.Location = new Point(703, 268);
+            emailTextBox.Name = "emailTextBox";
+            emailTextBox.Size = new Size(409, 36);
+            emailTextBox.TabIndex = 5;
             // 
             // exitBtn
             // 
@@ -54,7 +54,7 @@
             exitBtn.Name = "exitBtn";
             exitBtn.Size = new Size(55, 46);
             exitBtn.TabIndex = 6;
-            exitBtn.Click += exitBtn_Click;
+     
             // 
             // goBackToLoginBtn
             // 
@@ -64,7 +64,7 @@
             goBackToLoginBtn.Name = "goBackToLoginBtn";
             goBackToLoginBtn.Size = new Size(98, 19);
             goBackToLoginBtn.TabIndex = 7;
-            goBackToLoginBtn.Click += goBackToLoginBtn_Click;
+
             // 
             // searchBtn
             // 
@@ -74,7 +74,7 @@
             searchBtn.Name = "searchBtn";
             searchBtn.Size = new Size(420, 51);
             searchBtn.TabIndex = 8;
-            searchBtn.Click += searchBtn_Click;
+   
             // 
             // ForgotPasswordForm
             // 
@@ -85,7 +85,7 @@
             Controls.Add(searchBtn);
             Controls.Add(goBackToLoginBtn);
             Controls.Add(exitBtn);
-            Controls.Add(fullNameTextBox);
+            Controls.Add(emailTextBox);
             ForeColor = SystemColors.ControlText;
             FormBorderStyle = FormBorderStyle.None;
             Name = "ForgotPasswordForm";
@@ -97,7 +97,7 @@
 
         #endregion
 
-        private TextBox fullNameTextBox;
+        private TextBox emailTextBox;
         private Panel exitBtn;
         private Panel goBackToLoginBtn;
         private Panel searchBtn;

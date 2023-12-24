@@ -1,4 +1,6 @@
-﻿using SoftwareTeamManagement.UI.CustomMessageBox;
+﻿using SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember;
+using SoftwareTeamManagement.DataAccess.Repository;
+using SoftwareTeamManagement.UI.CustomMessageBox;
 using SoftwareTeamManagement.UI.Login.View;
 using SoftwareTeamManagement.UI.Register.View;
 using System;
@@ -44,16 +46,27 @@ namespace SoftwareTeamManagement.UI.Register.Presenter
 
             if (validationResult == "Success")
             {
-                // Process user registration
-                // MessageBox.Show("User successfully registered.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //CustomSuccessMessageBoxForm customMesage = new CustomSuccessMessageBoxForm("OK");
-                RegisterRoleForm.GetInstance().Show();  
-                RegisterForm.GetInstance().Hide();
+                RegisterForm.GetInstance().fullName = _view.Name;
+                RegisterForm.GetInstance().email = _view.Email;
+                RegisterForm.GetInstance().password = _view.Password;
+                TeamMemberRepository repo = new TeamMemberRepository();
+                if (!repo.IsEmailAlreadyRegistered(_view.Email))
+                {
+
+                    RegisterRoleForm.GetInstance().Show();
+                    RegisterForm.GetInstance().Hide();
+                }
+                else
+                {
+                    CustomErrorMessageBoxForm messageBox = new CustomErrorMessageBoxForm("E-posta address is already registered in the system.");
+
+
+                }
+
             }
             else
             {
-                // Show error message
-               // MessageBox.Show(validationResult, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 CustomErrorMessageBoxForm customMesage = new CustomErrorMessageBoxForm(validationResult);
             }
 
@@ -86,9 +99,7 @@ namespace SoftwareTeamManagement.UI.Register.Presenter
                 return "Password must be at least 6 characters long.";
             }
 
-            // You can add additional custom validations here.
 
-            // Specify success status
             return "Success";
         }
 

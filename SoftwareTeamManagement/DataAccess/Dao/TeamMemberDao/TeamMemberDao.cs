@@ -76,10 +76,10 @@ namespace SoftwareTeamManagement.DataAccess.Dao.TeamMemberDao
 
         //to read data
         public TeamMemberDao()
-        { 
+        {
         }
 
-            public void AddMember()
+        public void AddMember()
         {
             string addQuery = $"INSERT INTO {DatabaseTable.TABLE_TEAM_MEMBER}" +
                                           $"({TeamMemberColumn.ID}, {TeamMemberColumn.FULL_NAME}, {TeamMemberColumn.EMAIL}, {TeamMemberColumn.PASSWORD}, {TeamMemberColumn.ROLE_DEPARTMENT}, {TeamMemberColumn.ROLE_TYPE}, {TeamMemberColumn.CAN_ADD_TASK}, {TeamMemberColumn.CAN_REMOVE_TASK}, {TeamMemberColumn.CAN_EDIT_TASK}, {TeamMemberColumn.CAN_CHANGE_PROJECT_NAME}, {TeamMemberColumn.CAN_UPDATE_PROJECT_DESCRIPTION}, {TeamMemberColumn.CAN_ADD_MEMBER}, {TeamMemberColumn.CAN_REMOVE_MEMBER}, {TeamMemberColumn.CAN_RESET_MEMBER_PASSWORD}, {TeamMemberColumn.CAN_ANNOUNCE}, {TeamMemberColumn.CAN_HOLD_MEETING}, {TeamMemberColumn.CAN_UPDATE_MEMBER_PERMISSION_SET})" +
@@ -89,7 +89,7 @@ namespace SoftwareTeamManagement.DataAccess.Dao.TeamMemberDao
             {
                 using (MySqlCommand? command = DatabaseManager.GetCommand(addQuery))
                 {
-                    
+
                     command?.Parameters.AddWithValue("@Id", id);
                     command?.Parameters.AddWithValue("@FullName", fullName);
                     command?.Parameters.AddWithValue("@Email", email);
@@ -113,7 +113,7 @@ namespace SoftwareTeamManagement.DataAccess.Dao.TeamMemberDao
             }
             catch (Exception ex)
             {
-                
+
                 Console.WriteLine($"Hata oluştu: {ex.Message}");
             }
             finally
@@ -127,12 +127,12 @@ namespace SoftwareTeamManagement.DataAccess.Dao.TeamMemberDao
 
         public void DeleteMember()
         {
-           string deleteQuery = $"DELETE FROM {DatabaseTable.TABLE_TEAM_MEMBER} WHERE {TeamMemberColumn.ID} = @Id;";
+            string deleteQuery = $"DELETE FROM {DatabaseTable.TABLE_TEAM_MEMBER} WHERE {TeamMemberColumn.ID} = @Id;";
             try
             {
                 using (MySqlCommand? command = DatabaseManager.GetCommand(deleteQuery))
                 {
-                   
+
                     command?.Parameters.AddWithValue("@Id", id);
 
                     command?.ExecuteNonQuery();
@@ -140,7 +140,7 @@ namespace SoftwareTeamManagement.DataAccess.Dao.TeamMemberDao
             }
             catch (Exception ex)
             {
-              
+
                 MessageBox.Show($"Hata oluştu: {ex.Message}");
             }
             finally
@@ -187,7 +187,7 @@ namespace SoftwareTeamManagement.DataAccess.Dao.TeamMemberDao
                         memberEmail,
                         memberPassword,
 
-                        new Role(roleType,roleDepartment),
+                        new Role(roleType, roleDepartment),
                         new TaskPermissionSet(canAddTask, canRemoveTask, canEditTask),
                         new ProjectPermissionSet(canChangeProjectName, canUpdateProjectDescription, canAddMember, canRemoveMember, canResetMemberPassword, canAnnounce, canHoldMeeting, canUpdateMemberPermissionSet)
                     );
@@ -230,7 +230,7 @@ namespace SoftwareTeamManagement.DataAccess.Dao.TeamMemberDao
             {
                 using (MySqlCommand? command = DatabaseManager.GetCommand(updateQuery))
                 {
-                    
+
 
                     command?.Parameters.AddWithValue("@Id", id);
                     command?.Parameters.AddWithValue("@FullName", fullName);
@@ -255,7 +255,7 @@ namespace SoftwareTeamManagement.DataAccess.Dao.TeamMemberDao
             }
             catch (Exception ex)
             {
-                
+
                 MessageBox.Show($"Hata oluştu: {ex.Message}");
             }
             finally
@@ -264,5 +264,37 @@ namespace SoftwareTeamManagement.DataAccess.Dao.TeamMemberDao
             }
         }
 
+        public bool IsAlreadyRegistered(string email)
+        {
+            List<TeamMember> _list = getAllMembers();
+
+            foreach (var member in _list)
+            {
+                if (member.Email == email)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        public bool IsValidUser(string email, string password)
+        {
+            List<TeamMember> memberList = getAllMembers();
+
+            foreach (var member in memberList)
+            {
+                if (member.Email == email && member.Password == password)
+                {
+
+                    return true;
+                }
+
+
+            }
+
+            return false;
+        }
     }
 }

@@ -38,7 +38,6 @@
 
   <ItemGroup>
     <Folder Include="Resources\" />
-    <Folder Include="UI\ResetPassword\Presenter\" />
   </ItemGroup>
 
 </Project>

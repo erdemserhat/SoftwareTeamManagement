@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SoftwareTeamManagement.UI.CustomMessageBox;
 using System.Text.RegularExpressions;
+using SoftwareTeamManagement.DataAccess.Repository;
 
 namespace SoftwareTeamManagement.UI.Login.Controller
 {
@@ -46,8 +47,18 @@ namespace SoftwareTeamManagement.UI.Login.Controller
             }
             else
             {
-                //Control Database
-                CustomErrorMessageBoxForm messageBox = new CustomErrorMessageBoxForm("OK");
+                TeamMemberRepository repository = new TeamMemberRepository();
+                if (repository.IsValidUser(_view.Email, _view.Password))
+                {
+                    CustomSuccessMessageBoxForm message = new CustomSuccessMessageBoxForm("Succesfully logged in. Welcome!");
+
+
+                }
+                else
+                {
+                    CustomErrorMessageBoxForm message = new CustomErrorMessageBoxForm("Invalid email address or password. Please check your credentials and try again.");
+                }
+
             }
 
 

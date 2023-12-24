@@ -5,6 +5,10 @@ namespace SoftwareTeamManagement.UI.Register.View
 {
     public partial class RegisterForm : Form, IRegisterForm
     {
+        public string fullName;
+        public string email;
+        public string password;
+
         private static RegisterForm instance;
 
         public event EventHandler RegisterButtonClicked;
@@ -16,6 +20,10 @@ namespace SoftwareTeamManagement.UI.Register.View
         public string Password => passwordTextBox.Text;
 
         public string ConfirmPassword => confirmPasswordTextBox.Text;
+
+        public string Name=>fullNameTextBox.Text;
+
+
 
         public static RegisterForm GetInstance()
         {

@@ -128,7 +128,6 @@
             Controls.Add(exitBtn);
             Controls.Add(goBackToLoginBtn);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "RegisterForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "RegisterForm";
             ResumeLayout(false);

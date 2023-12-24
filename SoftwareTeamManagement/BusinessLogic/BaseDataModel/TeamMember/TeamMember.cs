@@ -14,8 +14,8 @@ namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember
     {
         //Dependecy Injection as property
         private IRoleContract _roleContract;
-        private ITaskPermissionSetContract _taskPermissionSetContract;
-        private IProjectPermissionSetContract _projectPermissionSetContract;
+        private ITaskPermissionSetContract _taskPermissionSetContract = new TaskPermissionSet(true, true, true);
+        private IProjectPermissionSetContract _projectPermissionSetContract= new ProjectPermissionSet(true, true, true,true,true,true,true,true);
 
         public TeamMember(int id, string fullName,string email, string password, IRoleContract roleContract, ITaskPermissionSetContract taskPermissionSetContract, IProjectPermissionSetContract projectPermissionSetContract)
         {
@@ -39,6 +39,17 @@ namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember
             _roleContract = roleContract;
             _taskPermissionSetContract = taskPermissionSetContract;
             _projectPermissionSetContract = projectPermissionSetContract;
+        }
+
+        public TeamMember(string fullName, string email, string password, IRoleContract roleContract)
+        {
+            Id = 0;
+            FullName = fullName;
+            Email = email;
+            Password = password;
+
+            _roleContract = roleContract;
+          
         }
 
         public TeamMember(int id)

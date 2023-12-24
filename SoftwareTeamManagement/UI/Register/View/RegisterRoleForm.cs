@@ -6,6 +6,8 @@ namespace SoftwareTeamManagement.UI.Register.View
 {
     public partial class RegisterRoleForm : Form, IRegisterRoleForm
     {
+   
+
         private static RegisterRoleForm instance;
 
         public event EventHandler NextButtonClicked;
