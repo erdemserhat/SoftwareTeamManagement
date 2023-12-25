@@ -33,7 +33,7 @@
             resetPasswordTextBox = new TextBox();
             resetPasswordConfirmTextBox = new TextBox();
             resetPasswordButton = new Panel();
-            registerBtn = new Panel();
+            goBackLoginBtn = new Panel();
             SuspendLayout();
             // 
             // exitBtn
@@ -44,7 +44,6 @@
             exitBtn.Name = "exitBtn";
             exitBtn.Size = new Size(55, 46);
             exitBtn.TabIndex = 2;
-            exitBtn.Click += exitBtn_Click;
             // 
             // resetPasswordTextBox
             // 
@@ -54,6 +53,7 @@
             resetPasswordTextBox.ForeColor = Color.White;
             resetPasswordTextBox.Location = new Point(705, 310);
             resetPasswordTextBox.Name = "resetPasswordTextBox";
+            resetPasswordTextBox.PasswordChar = '*';
             resetPasswordTextBox.Size = new Size(405, 36);
             resetPasswordTextBox.TabIndex = 3;
             // 
@@ -65,6 +65,7 @@
             resetPasswordConfirmTextBox.ForeColor = Color.White;
             resetPasswordConfirmTextBox.Location = new Point(705, 401);
             resetPasswordConfirmTextBox.Name = "resetPasswordConfirmTextBox";
+            resetPasswordConfirmTextBox.PasswordChar = '*';
             resetPasswordConfirmTextBox.Size = new Size(405, 36);
             resetPasswordConfirmTextBox.TabIndex = 4;
             // 
@@ -76,17 +77,15 @@
             resetPasswordButton.Name = "resetPasswordButton";
             resetPasswordButton.Size = new Size(420, 51);
             resetPasswordButton.TabIndex = 5;
-            resetPasswordButton.Click += resetPasswordButton_Click;
             // 
-            // registerBtn
+            // goBackLoginBtn
             // 
-            registerBtn.BackColor = Color.Transparent;
-            registerBtn.Cursor = Cursors.Hand;
-            registerBtn.Location = new Point(908, 591);
-            registerBtn.Name = "registerBtn";
-            registerBtn.Size = new Size(113, 20);
-            registerBtn.TabIndex = 6;
-            registerBtn.Click += registerBtn_Click;
+            goBackLoginBtn.BackColor = Color.Transparent;
+            goBackLoginBtn.Cursor = Cursors.Hand;
+            goBackLoginBtn.Location = new Point(908, 591);
+            goBackLoginBtn.Name = "goBackLoginBtn";
+            goBackLoginBtn.Size = new Size(113, 20);
+            goBackLoginBtn.TabIndex = 6;
             // 
             // ResetPasswordForm
             // 
@@ -94,7 +93,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1200, 650);
-            Controls.Add(registerBtn);
+            Controls.Add(goBackLoginBtn);
             Controls.Add(resetPasswordButton);
             Controls.Add(resetPasswordConfirmTextBox);
             Controls.Add(resetPasswordTextBox);
@@ -113,6 +112,6 @@
         private TextBox resetPasswordTextBox;
         private TextBox resetPasswordConfirmTextBox;
         private Panel resetPasswordButton;
-        private Panel registerBtn;
+        private Panel goBackLoginBtn;
     }
 }

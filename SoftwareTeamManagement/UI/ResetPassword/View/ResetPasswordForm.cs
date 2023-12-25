@@ -1,10 +1,20 @@
 ﻿using SoftwareTeamManagement.UI.Login.View;
+using SoftwareTeamManagement.UI.ResetPassword.Presenter;
 
 namespace SoftwareTeamManagement.UI.ResetPassword.View
 {
-    public partial class ResetPasswordForm : Form
+    public partial class ResetPasswordForm : Form, IResetPasswordForm
     {
         private static ResetPasswordForm? instance;
+
+        public event EventHandler ResetPasswordClicked;
+        public event EventHandler GoBackLoginButtonClicked;
+        public event EventHandler ExitButtonClicked;
+
+        public string Password => resetPasswordTextBox.Text;
+
+
+        public string ConfirmPassowrd => resetPasswordConfirmTextBox.Text;
 
         public static ResetPasswordForm GetInstance()
         {
@@ -18,30 +28,15 @@ namespace SoftwareTeamManagement.UI.ResetPassword.View
         {
             InitializeComponent();
             instance = this;
+            //init. impl.
+            ResetPasswordController controller = new ResetPasswordController();
+
+
+            resetPasswordButton.Click += (sender, e) => ResetPasswordClicked?.Invoke(this, EventArgs.Empty);
+            goBackLoginBtn.Click += (sender, e) => GoBackLoginButtonClicked?.Invoke(this, EventArgs.Empty);
+            exitBtn.Click += (sender, e) => ExitButtonClicked?.Invoke(this, EventArgs.Empty);
         }
 
-        private void exitBtn_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-           
-        }
 
-        private void resetPasswordButton_Click(object sender, EventArgs e)
-        {
-            //handle process
-
-            ////.....
-            ///
-            //
-            LoginForm.GetInstance().Show();
-            this.Hide();
-
-        }
-
-        private void registerBtn_Click(object sender, EventArgs e)
-        {
-            LoginForm.GetInstance().Show();
-            this.Hide();
-        }
     }
 }

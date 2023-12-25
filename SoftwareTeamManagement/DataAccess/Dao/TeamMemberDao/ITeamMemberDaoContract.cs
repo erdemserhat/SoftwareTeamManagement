@@ -17,5 +17,7 @@ namespace SoftwareTeamManagement.DataAccess.Dao.TeamMemberDao
 
         bool IsValidUser(string email, string password);
 
+        void ChangePassword(string email, string password);
+
     }
 }

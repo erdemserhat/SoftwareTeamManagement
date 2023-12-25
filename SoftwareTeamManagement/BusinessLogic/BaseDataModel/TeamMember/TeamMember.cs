@@ -105,7 +105,7 @@ namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember
 
         public void DeleteTask(DataModel.Task.Task task)
         {
-            //If user can add task,
+            //If user delete add task,
             if (TaskPermissionSetContract.canRemoveTaskInformation())
             {
                 //execute database operations.

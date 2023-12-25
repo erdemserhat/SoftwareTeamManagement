@@ -296,5 +296,13 @@ namespace SoftwareTeamManagement.DataAccess.Dao.TeamMemberDao
 
             return false;
         }
+
+        public void ChangePassword(string email, string password)
+        {
+
+           
+        }
+
+        
     }
 }
