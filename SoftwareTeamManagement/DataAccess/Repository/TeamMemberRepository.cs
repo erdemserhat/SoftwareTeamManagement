@@ -45,7 +45,7 @@ namespace SoftwareTeamManagement.DataAccess.Repository
         {
             dao = new TeamMemberDao();
 
-            return dao.IsValidUser(email,password);
+            return dao.IsValidUser(email, password);
         }
 
 

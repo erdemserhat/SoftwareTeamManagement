@@ -67,7 +67,7 @@
             panel1.Size = new Size(348, 163);
             panel1.TabIndex = 4;
             // 
-            // CustomMessageBox
+            // CustomErrorMessageBoxForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -76,7 +76,7 @@
             Controls.Add(panel1);
             Controls.Add(exitBtn);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "CustomMessageBox";
+            Name = "CustomErrorMessageBoxForm";
             SizeGripStyle = SizeGripStyle.Show;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CustomMessageBox";

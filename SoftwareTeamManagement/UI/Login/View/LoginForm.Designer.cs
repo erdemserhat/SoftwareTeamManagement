@@ -70,7 +70,7 @@
             emailTextBox.BorderStyle = BorderStyle.None;
             emailTextBox.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             emailTextBox.ForeColor = Color.White;
-            emailTextBox.Location = new Point(701, 266);
+            emailTextBox.Location = new Point(701, 265);
             emailTextBox.Name = "emailTextBox";
             emailTextBox.Size = new Size(405, 36);
             emailTextBox.TabIndex = 2;
@@ -119,7 +119,7 @@
         }
 
         #endregion
-        private Panel loginBtn;
+        public Panel loginBtn;
         private Panel exitBtn;
         private Panel registerBtn;
         private TextBox emailTextBox;

@@ -40,10 +40,12 @@ namespace SoftwareTeamManagement.UI.Login.Controller
 
         private void OnLoginButtonClicked(object sender, EventArgs e)
         {
+          
             string errorMessage = ValidateEmailAndPassword(_view.Email, _view.Password);
             if (errorMessage != null)
             {
                 CustomErrorMessageBoxForm messageBox = new CustomErrorMessageBoxForm(errorMessage);
+              
             }
             else
             {
@@ -60,6 +62,8 @@ namespace SoftwareTeamManagement.UI.Login.Controller
                 }
 
             }
+
+          
 
 
         }

@@ -33,7 +33,7 @@ public static class SendEmailService
            
             smtpClient.Send(mail);
 
-            CustomSuccessMessageBoxForm custom = new CustomSuccessMessageBoxForm("Email sent successfully!");
+           
             return true;
         }
         catch (Exception ex)

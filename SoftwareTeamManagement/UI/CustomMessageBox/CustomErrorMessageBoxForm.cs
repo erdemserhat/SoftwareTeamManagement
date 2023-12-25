@@ -22,9 +22,13 @@ namespace SoftwareTeamManagement.UI.CustomMessageBox
             warningText.UseCompatibleTextRendering = true;
             warningText.AutoSize = false;
             this.SetRoundForm(this, 45);
-            this.Show();
+            this.ShowDialog();
+
 
         }
+
+
+
 
 
         private void SetRoundForm(Control control, int radius)
@@ -40,6 +44,7 @@ namespace SoftwareTeamManagement.UI.CustomMessageBox
         private void exitBtn_Click(object sender, EventArgs e)
         {
             this.Dispose();
+
         }
     }
 }

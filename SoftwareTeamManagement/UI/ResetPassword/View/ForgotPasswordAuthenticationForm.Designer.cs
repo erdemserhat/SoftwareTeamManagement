@@ -57,7 +57,6 @@ partial class ForgotPasswordAuthenticationForm
         exitBtn.Name = "exitBtn";
         exitBtn.Size = new Size(55, 46);
         exitBtn.TabIndex = 4;
-        exitBtn.Click += exitBtn_Click;
         // 
         // confirmButton
         // 
@@ -67,7 +66,7 @@ partial class ForgotPasswordAuthenticationForm
         confirmButton.Name = "confirmButton";
         confirmButton.Size = new Size(424, 51);
         confirmButton.TabIndex = 5;
-        confirmButton.Click += confirmButton_Click;
+
         // 
         // goBackToLoginBtn
         // 
@@ -77,7 +76,7 @@ partial class ForgotPasswordAuthenticationForm
         goBackToLoginBtn.Name = "goBackToLoginBtn";
         goBackToLoginBtn.Size = new Size(88, 24);
         goBackToLoginBtn.TabIndex = 6;
-        goBackToLoginBtn.Click += goBackToLoginBtn_Click;
+
         // 
         // ForgotPasswordAuthenticationForm
         // 

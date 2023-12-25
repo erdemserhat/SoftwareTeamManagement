@@ -23,6 +23,7 @@ namespace SoftwareTeamManagement.UI.ResetPassword.View
         private void exitBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
+           
         }
 
         private void resetPasswordButton_Click(object sender, EventArgs e)

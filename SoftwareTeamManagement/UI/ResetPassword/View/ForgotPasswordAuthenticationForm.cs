@@ -1,10 +1,19 @@
 ﻿using SoftwareTeamManagement.UI.Login.View;
+using SoftwareTeamManagement.UI.ResetPassword.Presenter;
 
 namespace SoftwareTeamManagement.UI.ResetPassword.View
 {
-    public partial class ForgotPasswordAuthenticationForm : Form
+    public partial class ForgotPasswordAuthenticationForm : Form, IForgotPasswordAuthenticationForm
     {
+        public int authCode;
         private static ForgotPasswordAuthenticationForm? instance;
+
+        public event EventHandler ConfirmButtonClicked;
+        public event EventHandler GoBackLoginClicked;
+        public event EventHandler ExitButtonClicked;
+        
+
+        public string Code => authenticationCodeTextBox.Text;
 
         public static ForgotPasswordAuthenticationForm? GetInstance()
         {
@@ -21,31 +30,19 @@ namespace SoftwareTeamManagement.UI.ResetPassword.View
         {
             InitializeComponent();
             instance = this;
+            ForgotPasswordAuthenticationController controller = new ForgotPasswordAuthenticationController();
+            confirmButton.Click += (sender, e) => ConfirmButtonClicked(this, EventArgs.Empty);
+            goBackToLoginBtn.Click += (sender, e) => GoBackLoginClicked(this, EventArgs.Empty);
+            exitBtn.Click += (sender, e) => ExitButtonClicked(this, EventArgs.Empty);
+            authenticationCodeTextBox.MaxLength = 6;
         }
 
         private void authenticationCodeTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
-                e.Handled = true; // controls the entered char if it's numeric or not
+                e.Handled = true; // 6 karakterden fazla veya sayısal olmayan karakterlerin engellenmesi
             }
-        }
-
-        private void exitBtn_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void goBackToLoginBtn_Click(object sender, EventArgs e)
-        {
-            LoginForm.GetInstance().Show();
-            this.Hide();
-        }
-
-        private void confirmButton_Click(object sender, EventArgs e)
-        {
-            ResetPasswordForm.GetInstance().Show();
-            this.Hide();
         }
     }
 }

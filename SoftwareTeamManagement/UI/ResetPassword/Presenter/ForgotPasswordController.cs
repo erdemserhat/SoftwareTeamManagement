@@ -1,4 +1,5 @@
-﻿using SoftwareTeamManagement.DataAccess.Repository;
+﻿using SoftwareTeamManagement.BusinessLogic.Email;
+using SoftwareTeamManagement.DataAccess.Repository;
 using SoftwareTeamManagement.UI.CustomMessageBox;
 using SoftwareTeamManagement.UI.Login.View;
 using SoftwareTeamManagement.UI.ResetPassword.View;
@@ -41,7 +42,7 @@ namespace SoftwareTeamManagement.UI.ResetPassword.Presenter
 
         //Search button
 
-        private void OnSearchButtonClicked(object sender, EventArgs e)
+        private   void OnSearchButtonClicked(object sender, EventArgs e)
         {
             if (IsStringValid(_view.Email))
             {
@@ -49,8 +50,20 @@ namespace SoftwareTeamManagement.UI.ResetPassword.Presenter
 
                 if (repo.IsEmailAlreadyRegistered(_view.Email))
                 {
-                    if(SendEmailService.SendMail(_view.Email, "a", "b"))
+                    Random random = new Random();
+                    int code = random.Next(100000, 1000000);
+
+                    if (SendEmailService.SendMail(_view.Email, "Password Reset Request", EmailPreparation.PrepareEmailBody(_view.Email, code)))
                     {
+                        ForgotPasswordAuthenticationForm.GetInstance().Show();
+                        ForgotPasswordForm.GetInstance().Hide();     
+                        CustomSuccessMessageBoxForm custom = new CustomSuccessMessageBoxForm("Email sent successfully!");
+                        ForgotPasswordAuthenticationForm.GetInstance().Show();
+                        ForgotPasswordForm.GetInstance().Hide();                     
+                        ForgotPasswordAuthenticationForm.GetInstance().authCode= code;
+                        ForgotPasswordAuthenticationController.ResetCounter();
+                       
+
 
                     }
 

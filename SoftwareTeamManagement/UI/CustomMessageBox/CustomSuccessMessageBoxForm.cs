@@ -14,6 +14,7 @@ namespace SoftwareTeamManagement.UI.CustomMessageBox
 {
     public partial class CustomSuccessMessageBoxForm : Form
     {
+
         public CustomSuccessMessageBoxForm(string text)
         {
             InitializeComponent();
@@ -21,9 +22,13 @@ namespace SoftwareTeamManagement.UI.CustomMessageBox
             warningText.UseCompatibleTextRendering = true;
             warningText.AutoSize = false;
             this.SetRoundForm(this, 45);
-            this.Show();
+            this.ShowDialog();
+
 
         }
+
+
+
 
 
         private void SetRoundForm(Control control, int radius)
@@ -38,7 +43,10 @@ namespace SoftwareTeamManagement.UI.CustomMessageBox
 
         private void exitBtn_Click_1(object sender, EventArgs e)
         {
+
             this.Dispose();
+
+
         }
     }
 }
