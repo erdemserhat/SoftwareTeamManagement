@@ -41,7 +41,7 @@
             label1 = new Label();
             User = new Label();
             pictureBox1 = new PictureBox();
-            flowLayoutPanel1 = new FlowLayoutPanel();
+            sectionPanel = new FlowLayoutPanel();
             teamMemberBindingSource = new BindingSource(components);
             menuPanel.SuspendLayout();
             profilPanel.SuspendLayout();
@@ -216,14 +216,14 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // flowLayoutPanel1
+            // sectionPanel
             // 
-            flowLayoutPanel1.BackColor = Color.FromArgb(238, 245, 255);
-            flowLayoutPanel1.Dock = DockStyle.Fill;
-            flowLayoutPanel1.Location = new Point(248, 0);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(952, 650);
-            flowLayoutPanel1.TabIndex = 1;
+            sectionPanel.BackColor = Color.FromArgb(238, 245, 255);
+            sectionPanel.Dock = DockStyle.Fill;
+            sectionPanel.Location = new Point(248, 0);
+            sectionPanel.Name = "sectionPanel";
+            sectionPanel.Size = new Size(952, 650);
+            sectionPanel.TabIndex = 1;
             // 
             // teamMemberBindingSource
             // 
@@ -235,7 +235,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.CornflowerBlue;
             ClientSize = new Size(1200, 650);
-            Controls.Add(flowLayoutPanel1);
+            Controls.Add(sectionPanel);
             Controls.Add(menuPanel);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Dashboard";
@@ -266,5 +266,6 @@
         private Button tasksBtn;
         private Button button1;
         private BindingSource teamMemberBindingSource;
+        private FlowLayoutPanel sectionPanel;
     }
 }
