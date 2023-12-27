@@ -1,13 +1,7 @@
-﻿using SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember;
-using SoftwareTeamManagement.DataAccess.Repository;
+﻿using SoftwareTeamManagement.DataAccess.Repository;
 using SoftwareTeamManagement.UI.CustomMessageBox;
 using SoftwareTeamManagement.UI.Login.View;
 using SoftwareTeamManagement.UI.ResetPassword.View;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SoftwareTeamManagement.UI.ResetPassword.Presenter
 {
@@ -41,9 +35,15 @@ namespace SoftwareTeamManagement.UI.ResetPassword.Presenter
             if (ControlPasswords(_view.Password, _view.ConfirmPassowrd))
             {
                 //execute database
-                CustomSuccessMessageBoxForm message = new CustomSuccessMessageBoxForm("OK");
+
                 string email = ForgotPasswordForm.GetInstance().Email;
                 TeamMemberRepository repo = new TeamMemberRepository();
+                repo.ChangePassword(email, _view.Password);
+
+                LoginForm.GetInstance().Show();
+                ResetPasswordForm.GetInstance().Hide();
+                LoginForm.GetInstance().passwordTextBox.Text = "";
+                CustomSuccessMessageBoxForm message = new CustomSuccessMessageBoxForm("You have successfully changed your password!");
 
             }
 
@@ -80,6 +80,6 @@ namespace SoftwareTeamManagement.UI.ResetPassword.Presenter
             }
         }
 
-      
+
     }
 }

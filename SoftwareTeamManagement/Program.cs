@@ -1,24 +1,4 @@
-﻿
-using SoftwareTeamManagement;
-
-using MySql.Data.MySqlClient;
-using SoftwareTeamManagement.Constants.DatabaseConstants;
-using SoftwareTeamManagement.DataAccess.DataAccess;
-
-using SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember;
-using SoftwareTeamManagement.DataAccess.Dao.AnnouncementDao;
-using SoftwareTeamManagement.BusinessLogic.DataModel.Announcement;
-using SoftwareTeamManagement.DataAccess.Repository;
-using SoftwareTeamManagement.BusinessLogic.DataModel.Meeting;
-using SoftwareTeamManagement.DataAccess.Dao.MeetingDao;
-using SoftwareTeamManagement.BusinessLogic.DataModel.Project;
-using SoftwareTeamManagement.BusinessLogic.DataModel.Task;
-using Task = SoftwareTeamManagement.BusinessLogic.DataModel.Task.Task;
-using SoftwareTeamManagement.BusinessLogic.DataModel.Enums;
-using SoftwareTeamManagement.BusinessLogic.DataModel.Team;
-using SoftwareTeamManagement.BusinessLogic.Configuration.Roles;
-using SoftwareTeamManagement.BusinessLogic.Role.Permissions.TaskPermission;
-using SoftwareTeamManagement.BusinessLogic.Role.Permissions.ProjectPermission;
+﻿using SoftwareTeamManagement.UI.SprintMateDashboard.View;
 
 namespace SoftwareTeamManagement
 {
@@ -88,38 +68,16 @@ namespace SoftwareTeamManagement
             //foreach (TeamMember member in members)
             //{
 
-               // {
-                   // MessageBox.Show($"{member.RoleContract.RoleTypeInformation()}");
-                  //  MessageBox.Show($"{member.RoleContract.RoleDepartmentInformation()}");
-                //}
-                //  
+            // {
+            // MessageBox.Show($"{member.RoleContract.RoleTypeInformation()}");
+            //  MessageBox.Show($"{member.RoleContract.RoleDepartmentInformation()}");
+            //}
+            //  
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                ApplicationConfiguration.Initialize();
-                Application.Run(new UI.Login.View.LoginForm());
-            }
-
+            ApplicationConfiguration.Initialize();
+            Application.Run(new Dashboard());
         }
+
     }
+}

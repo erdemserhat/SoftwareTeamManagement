@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SoftwareTeamManagement.BusinessLogic.Configuration.Roles
+﻿namespace SoftwareTeamManagement.BusinessLogic.Configuration.Roles
 {
     public class Role : IRoleContract
     {

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace SoftwareTeamManagement.BusinessLogic.Configuration.Roles
+﻿namespace SoftwareTeamManagement.BusinessLogic.Configuration.Roles
 {
     public enum RoleDepartment
     {

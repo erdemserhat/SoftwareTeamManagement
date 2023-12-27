@@ -1,10 +1,4 @@
-﻿using SoftwareTeamManagement.BusinessLogic.DataModel.Announcement;
-using SoftwareTeamManagement.BusinessLogic.DataModel.Meeting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SoftwareTeamManagement.BusinessLogic.DataModel.Meeting;
 
 namespace SoftwareTeamManagement.DataAccess.Dao.MeetingDao
 {
@@ -15,7 +9,7 @@ namespace SoftwareTeamManagement.DataAccess.Dao.MeetingDao
         void UpdateMeeting();
 
         List<IMeetingContract> GetAllMeetings();
-     
+
     }
 
 }

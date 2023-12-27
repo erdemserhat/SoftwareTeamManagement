@@ -1,12 +1,10 @@
 ﻿using SoftwareTeamManagement.UI.Register.Presenter;
-using System;
-using System.Windows.Forms;
 
 namespace SoftwareTeamManagement.UI.Register.View
 {
     public partial class RegisterRoleForm : Form, IRegisterRoleForm
     {
-   
+
 
         private static RegisterRoleForm instance;
 

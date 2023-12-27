@@ -1,8 +1,5 @@
 ﻿using SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember;
 using SoftwareTeamManagement.DataAccess.Dao.TeamMemberDao;
-using System.Collections.Generic;
-using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace SoftwareTeamManagement.DataAccess.Repository
 {
@@ -46,6 +43,15 @@ namespace SoftwareTeamManagement.DataAccess.Repository
             dao = new TeamMemberDao();
 
             return dao.IsValidUser(email, password);
+        }
+
+        public void ChangePassword(string email, string password)
+        {
+            dao = new TeamMemberDao();
+            dao.ChangePassword(email, password);
+
+
+
         }
 
 

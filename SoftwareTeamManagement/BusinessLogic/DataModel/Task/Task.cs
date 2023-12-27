@@ -1,11 +1,4 @@
-﻿using SoftwareTeamManagement.BusinessLogic.DataModel.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SoftwareTeamManagement.BusinessLogic.DataModel.Task
+﻿namespace SoftwareTeamManagement.BusinessLogic.DataModel.Task
 {
     public record class Task : ITaskContract
     {

@@ -1,27 +1,24 @@
 ﻿using SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember.TeamMemberContracts;
-using SoftwareTeamManagement.BusinessLogic.BaseDataModel.User;
 using SoftwareTeamManagement.BusinessLogic.Configuration.Roles;
 using SoftwareTeamManagement.BusinessLogic.DataModel.Announcement;
 using SoftwareTeamManagement.BusinessLogic.DataModel.Meeting;
-using SoftwareTeamManagement.BusinessLogic.DataModel.Task;
 using SoftwareTeamManagement.BusinessLogic.Role.Permissions.ProjectPermission;
 using SoftwareTeamManagement.BusinessLogic.Role.Permissions.TaskPermission;
-using User = SoftwareTeamManagement.BusinessLogic.BaseDataModel.User.User;
 
 namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember
 {
-    public  record class TeamMember : User.User, ITeamMemberTaskContract, ITeamMemberProjectContract, ITeamMemberGeneralContract
+    public record class TeamMember : User.User, ITeamMemberTaskContract, ITeamMemberProjectContract, ITeamMemberGeneralContract
     {
         //Dependecy Injection as property
         private IRoleContract _roleContract;
         private ITaskPermissionSetContract _taskPermissionSetContract = new TaskPermissionSet(true, true, true);
-        private IProjectPermissionSetContract _projectPermissionSetContract= new ProjectPermissionSet(true, true, true,true,true,true,true,true);
+        private IProjectPermissionSetContract _projectPermissionSetContract = new ProjectPermissionSet(true, true, true, true, true, true, true, true);
 
-        public TeamMember(int id, string fullName,string email, string password, IRoleContract roleContract, ITaskPermissionSetContract taskPermissionSetContract, IProjectPermissionSetContract projectPermissionSetContract)
+        public TeamMember(int id, string fullName, string email, string password, IRoleContract roleContract, ITaskPermissionSetContract taskPermissionSetContract, IProjectPermissionSetContract projectPermissionSetContract)
         {
             Id = id;
             FullName = fullName;
-            Email = email;          
+            Email = email;
             Password = password;
 
             _roleContract = roleContract;
@@ -49,13 +46,13 @@ namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember
             Password = password;
 
             _roleContract = roleContract;
-          
+
         }
 
         public TeamMember(int id)
         {
             Id = id;
-           
+
         }
 
 

@@ -1,14 +1,7 @@
-﻿using SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember;
-using SoftwareTeamManagement.DataAccess.Repository;
+﻿using SoftwareTeamManagement.DataAccess.Repository;
 using SoftwareTeamManagement.UI.CustomMessageBox;
 using SoftwareTeamManagement.UI.Login.View;
 using SoftwareTeamManagement.UI.Register.View;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace SoftwareTeamManagement.UI.Register.Presenter
 {

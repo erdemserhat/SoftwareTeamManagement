@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.User
+﻿namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.User
 {
-    abstract public record class User:IUserContract
+    abstract public record class User : IUserContract
     {
         //Attributes for User base class
         private string _fullName;
@@ -40,7 +34,7 @@ namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.User
 
         public string FullNameInformation()
         {
-           return FullName;
+            return FullName;
         }
 
         public int Id
@@ -74,6 +68,6 @@ namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.User
             Password = password;
         }
 
-      
+
     }
 }

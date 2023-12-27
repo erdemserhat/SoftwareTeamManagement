@@ -1,12 +1,4 @@
-﻿using SoftwareTeamManagement.BusinessLogic.DataModel.Meeting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static Google.Protobuf.Reflection.SourceCodeInfo.Types;
-
-namespace SoftwareTeamManagement.Constants.DatabaseColumnConstants
+﻿namespace SoftwareTeamManagement.Constants.DatabaseColumnConstants
 {
     public static class MeetingColumn
     {

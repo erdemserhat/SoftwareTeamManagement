@@ -1,11 +1,9 @@
-﻿using MySql.Data.MySqlClient;
-using SoftwareTeamManagement.Constants.DatabaseConstants;
-using System;
+﻿using SoftwareTeamManagement.Constants.DatabaseConstants;
 
 namespace SoftwareTeamManagement.DataAccess
 {
-    using System;
     using MySql.Data.MySqlClient;
+    using System;
 
     namespace DataAccess
     {
@@ -74,7 +72,7 @@ namespace SoftwareTeamManagement.DataAccess
                     {
                         MySqlCommand cmd = new MySqlCommand(query, connection);
                         cmd.ExecuteNonQuery();
-                       // MessageBox.Show("Query executed successfully ✓");
+                        // MessageBox.Show("Query executed successfully ✓");
                     }
                     catch (Exception ex)
                     {
@@ -97,9 +95,9 @@ namespace SoftwareTeamManagement.DataAccess
                     try
                     {
                         MySqlCommand command = new MySqlCommand(selectQuery, connection);
-                         reader= command.ExecuteReader();
-                       // MessageBox.Show("Reader is created successfully ✓");
-                       
+                        reader = command.ExecuteReader();
+                        // MessageBox.Show("Reader is created successfully ✓");
+
                     }
                     catch (Exception ex)
                     {
@@ -107,7 +105,7 @@ namespace SoftwareTeamManagement.DataAccess
                     }
                     finally
                     {
-                       
+
 
                     }
                 }
@@ -126,9 +124,9 @@ namespace SoftwareTeamManagement.DataAccess
                     try
                     {
                         command = new MySqlCommand(query, connection);
-                       
-                       // MessageBox.Show("Command  is created successfully ✓");
-                       
+
+                        // MessageBox.Show("Command  is created successfully ✓");
+
                     }
                     catch (Exception ex)
                     {
@@ -136,7 +134,7 @@ namespace SoftwareTeamManagement.DataAccess
                     }
                     finally
                     {
-                       
+
 
                     }
                 }

@@ -3,8 +3,6 @@ using SoftwareTeamManagement.BusinessLogic.DataModel.Team;
 using SoftwareTeamManagement.Constants.DatabaseColumnConstants;
 using SoftwareTeamManagement.Constants.DatabaseTableConstants;
 using SoftwareTeamManagement.DataAccess.DataAccess;
-using System;
-using System.Collections.Generic;
 
 namespace SoftwareTeamManagement.DataAccess.Dao.TeamDao
 {

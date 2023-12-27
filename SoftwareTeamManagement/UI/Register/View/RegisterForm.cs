@@ -1,5 +1,4 @@
-﻿using SoftwareTeamManagement.UI.Login.View;
-using SoftwareTeamManagement.UI.Register.Presenter;
+﻿using SoftwareTeamManagement.UI.Register.Presenter;
 
 namespace SoftwareTeamManagement.UI.Register.View
 {
@@ -21,7 +20,7 @@ namespace SoftwareTeamManagement.UI.Register.View
 
         public string ConfirmPassword => confirmPasswordTextBox.Text;
 
-        public string Name=>fullNameTextBox.Text;
+        public string Name => fullNameTextBox.Text;
 
 
 

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace SoftwareTeamManagement.BusinessLogic.DataModel.Meeting
+﻿namespace SoftwareTeamManagement.BusinessLogic.DataModel.Meeting
 {
     public interface IMeetingContract
     {
@@ -10,7 +8,7 @@ namespace SoftwareTeamManagement.BusinessLogic.DataModel.Meeting
         DateTime EndTime { get; set; }
         string Location { get; set; }
 
-        int OrganizatorId {  get; set; }
+        int OrganizatorId { get; set; }
         // ... other properties or methods related to meetings
     }
 }

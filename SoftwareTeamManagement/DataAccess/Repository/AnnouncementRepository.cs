@@ -1,17 +1,12 @@
 ﻿using SoftwareTeamManagement.BusinessLogic.DataModel.Announcement;
 using SoftwareTeamManagement.DataAccess.Dao.AnnouncementDao;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SoftwareTeamManagement.DataAccess.Repository
 {
-    public  class AnnouncementRepository
+    public class AnnouncementRepository
     {
         private IAnnouncementDaoContract dao;
-      
+
 
         public void AddAnnouncement(IAnnouncementContract announcement)
         {

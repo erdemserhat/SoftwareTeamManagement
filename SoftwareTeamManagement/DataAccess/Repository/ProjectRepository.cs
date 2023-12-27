@@ -1,7 +1,5 @@
 ﻿using SoftwareTeamManagement.BusinessLogic.DataModel.Project;
 using SoftwareTeamManagement.DataAccess.Dao.ProjectDao;
-using System;
-using System.Collections.Generic;
 
 namespace SoftwareTeamManagement.DataAccess.Repository
 {

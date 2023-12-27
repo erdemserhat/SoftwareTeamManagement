@@ -1,11 +1,8 @@
 ﻿using MySql.Data.MySqlClient;
-using SoftwareTeamManagement.BusinessLogic.DataModel.Enums;
 using SoftwareTeamManagement.BusinessLogic.DataModel.Task;
 using SoftwareTeamManagement.Constants.DatabaseColumnConstants;
 using SoftwareTeamManagement.Constants.DatabaseTableConstants;
 using SoftwareTeamManagement.DataAccess.DataAccess;
-using System;
-using System.Collections.Generic;
 using Task = SoftwareTeamManagement.BusinessLogic.DataModel.Task.Task;
 
 namespace SoftwareTeamManagement.DataAccess.Dao.TaskDao

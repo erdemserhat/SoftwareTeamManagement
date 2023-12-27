@@ -39,6 +39,7 @@ namespace SoftwareTeamManagement.UI.Login.View
             loginBtn.Click += (sender, e) => LoginButtonClicked?.Invoke(this, EventArgs.Empty);
             forgotPasswordBtn.Click += (sender, e) => ForgotPasswordClicked?.Invoke(this, EventArgs.Empty);
 
+
             LoginController controller = new LoginController();
 
 

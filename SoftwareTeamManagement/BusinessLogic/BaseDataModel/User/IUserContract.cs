@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.User
+﻿namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.User
 {
     public interface IUserContract
     {
@@ -17,6 +11,6 @@ namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.User
         public string EmailInformation();
 
         public int IdInformation();
-  
+
     }
 }

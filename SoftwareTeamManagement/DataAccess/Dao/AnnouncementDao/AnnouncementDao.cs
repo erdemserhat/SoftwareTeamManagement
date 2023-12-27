@@ -1,15 +1,8 @@
-﻿using SoftwareTeamManagement.BusinessLogic.DataModel.Announcement;
+﻿using MySql.Data.MySqlClient;
+using SoftwareTeamManagement.BusinessLogic.DataModel.Announcement;
 using SoftwareTeamManagement.Constants.DatabaseColumnConstants;
 using SoftwareTeamManagement.DataAccess.DataAccess;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SoftwareTeamManagement.Constants.DatabaseTableConstants;
 using DatabaseTable = SoftwareTeamManagement.Constants.DatabaseTableConstants.DatabaseTable;
-using MySql.Data.MySqlClient;
-using static Google.Protobuf.Reflection.SourceCodeInfo.Types;
 
 namespace SoftwareTeamManagement.DataAccess.Dao.AnnouncementDao
 {

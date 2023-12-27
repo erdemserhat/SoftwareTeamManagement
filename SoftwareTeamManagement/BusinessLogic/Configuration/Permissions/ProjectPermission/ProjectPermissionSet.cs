@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SoftwareTeamManagement.BusinessLogic.Role.Permissions.ProjectPermission
+﻿namespace SoftwareTeamManagement.BusinessLogic.Role.Permissions.ProjectPermission
 {
-    public class ProjectPermissionSet: IProjectPermissionSetContract
+    public class ProjectPermissionSet : IProjectPermissionSetContract
     {
         // Properties
         private bool canChangeProjectName;
@@ -30,7 +24,7 @@ namespace SoftwareTeamManagement.BusinessLogic.Role.Permissions.ProjectPermissio
             this.canUpdateMemberPermissionSet = canUpdateMemberPermissionSet;
         }
 
-        
+
 
         // Getters and Setters
         public bool CanChangeProjectName
@@ -39,7 +33,7 @@ namespace SoftwareTeamManagement.BusinessLogic.Role.Permissions.ProjectPermissio
             set { canChangeProjectName = value; }
         }
 
-     
+
         public bool CanUpdateProjectDescription
         {
             get { return canUpdateProjectDescription; }

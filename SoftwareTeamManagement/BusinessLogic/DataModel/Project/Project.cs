@@ -1,12 +1,6 @@
-﻿using SoftwareTeamManagement.BusinessLogic.DataModel.Task;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace SoftwareTeamManagement.BusinessLogic.DataModel.Project
+﻿namespace SoftwareTeamManagement.BusinessLogic.DataModel.Project
 {
-    public record class Project :IProjectContract
+    public record class Project : IProjectContract
     {
         private int _id = 0;
         private string _name;
@@ -31,16 +25,16 @@ namespace SoftwareTeamManagement.BusinessLogic.DataModel.Project
 
         public string Name
         {
-            get => _name; 
+            get => _name;
             set => _name = value;
         }
         public string Description
-        { 
-            get => _description; 
-            set => _description = value; 
+        {
+            get => _description;
+            set => _description = value;
         }
 
-    
+
 
         public int Id
         {

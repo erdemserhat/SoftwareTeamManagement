@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace SoftwareTeamManagement.BusinessLogic.DataModel.Announcement
+﻿namespace SoftwareTeamManagement.BusinessLogic.DataModel.Announcement
 {
     public record class Announcement : IAnnouncementContract
     {
@@ -15,7 +13,7 @@ namespace SoftwareTeamManagement.BusinessLogic.DataModel.Announcement
         public Announcement(int announcementId)
         {
             _announcementId = announcementId;
-           
+
         }
 
 
@@ -77,7 +75,7 @@ namespace SoftwareTeamManagement.BusinessLogic.DataModel.Announcement
             set { _dateCreated = value; }
         }
 
-       
-      
+
+
     }
 }

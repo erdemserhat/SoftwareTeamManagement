@@ -5,7 +5,6 @@ using SoftwareTeamManagement.BusinessLogic.Configuration.Roles;
 using SoftwareTeamManagement.BusinessLogic.Role.Permissions.ProjectPermission;
 using SoftwareTeamManagement.BusinessLogic.Role.Permissions.TaskPermission;
 using SoftwareTeamManagement.Constants.DatabaseColumnConstants;
-using SoftwareTeamManagement.Constants.DatabaseTableConstants;
 using SoftwareTeamManagement.DataAccess.DataAccess;
 using DatabaseTable = SoftwareTeamManagement.Constants.DatabaseTableConstants.DatabaseTable;
 
@@ -300,9 +299,16 @@ namespace SoftwareTeamManagement.DataAccess.Dao.TeamMemberDao
         public void ChangePassword(string email, string password)
         {
 
-           
-        }
+            string updateQuery = ($"UPDATE {DatabaseTable.TABLE_TEAM_MEMBER}" +
+                $" SET {TeamMemberColumn.PASSWORD} = @Password WHERE {TeamMemberColumn.EMAIL} = @Email;");
+            using (MySqlCommand? command = DatabaseManager.GetCommand(updateQuery))
+            {
+                command?.Parameters.AddWithValue("@Password", password);
+                command?.Parameters.AddWithValue("@Email", email);
+                command?.ExecuteNonQuery();
+            }
 
-        
+
+        }
     }
 }

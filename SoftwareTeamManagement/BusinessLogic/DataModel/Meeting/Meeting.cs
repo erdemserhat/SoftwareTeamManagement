@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Metadata.Ecma335;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SoftwareTeamManagement.BusinessLogic.DataModel.Meeting
+﻿namespace SoftwareTeamManagement.BusinessLogic.DataModel.Meeting
 {
     public record class Meeting : IMeetingContract
     {
@@ -76,7 +69,7 @@ namespace SoftwareTeamManagement.BusinessLogic.DataModel.Meeting
         public int OrganizatorId
         {
             get => _organizatorId;
-            set => _organizatorId=value;
+            set => _organizatorId = value;
         }
 
     }

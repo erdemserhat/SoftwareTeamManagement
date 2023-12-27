@@ -3,11 +3,6 @@ using SoftwareTeamManagement.DataAccess.Repository;
 using SoftwareTeamManagement.UI.CustomMessageBox;
 using SoftwareTeamManagement.UI.Login.View;
 using SoftwareTeamManagement.UI.ResetPassword.View;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SoftwareTeamManagement.UI.ResetPassword.Presenter
 {
@@ -42,7 +37,7 @@ namespace SoftwareTeamManagement.UI.ResetPassword.Presenter
 
         //Search button
 
-        private   void OnSearchButtonClicked(object sender, EventArgs e)
+        private void OnSearchButtonClicked(object sender, EventArgs e)
         {
             if (IsStringValid(_view.Email))
             {
@@ -56,13 +51,13 @@ namespace SoftwareTeamManagement.UI.ResetPassword.Presenter
                     if (SendEmailService.SendMail(_view.Email, "Password Reset Request", EmailPreparation.PrepareEmailBody(_view.Email, code)))
                     {
                         ForgotPasswordAuthenticationForm.GetInstance().Show();
-                        ForgotPasswordForm.GetInstance().Hide();     
+                        ForgotPasswordForm.GetInstance().Hide();
                         CustomSuccessMessageBoxForm custom = new CustomSuccessMessageBoxForm("Email sent successfully!");
                         ForgotPasswordAuthenticationForm.GetInstance().Show();
-                        ForgotPasswordForm.GetInstance().Hide();                     
-                        ForgotPasswordAuthenticationForm.GetInstance().authCode= code;
+                        ForgotPasswordForm.GetInstance().Hide();
+                        ForgotPasswordAuthenticationForm.GetInstance().authCode = code;
                         ForgotPasswordAuthenticationController.ResetCounter();
-                       
+
 
 
                     }

@@ -1,7 +1,5 @@
 ﻿using SoftwareTeamManagement.BusinessLogic.DataModel.Team;
 using SoftwareTeamManagement.DataAccess.Dao.TeamDao;
-using System;
-using System.Collections.Generic;
 
 namespace SoftwareTeamManagement.DataAccess.Repository
 {

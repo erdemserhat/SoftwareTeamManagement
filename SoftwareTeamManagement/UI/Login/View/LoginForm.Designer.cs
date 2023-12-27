@@ -123,7 +123,7 @@
         private Panel exitBtn;
         private Panel registerBtn;
         private TextBox emailTextBox;
-        private TextBox passwordTextBox;
+        public TextBox passwordTextBox;
         private Panel forgotPasswordBtn;
     }
 }

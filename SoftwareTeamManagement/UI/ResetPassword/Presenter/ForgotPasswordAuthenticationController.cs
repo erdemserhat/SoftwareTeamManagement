@@ -1,11 +1,6 @@
 ﻿using SoftwareTeamManagement.UI.CustomMessageBox;
 using SoftwareTeamManagement.UI.Login.View;
 using SoftwareTeamManagement.UI.ResetPassword.View;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SoftwareTeamManagement.UI.ResetPassword.Presenter
 {
@@ -46,11 +41,11 @@ namespace SoftwareTeamManagement.UI.ResetPassword.Presenter
             {
                 EmailCounter--;
                 CustomErrorMessageBoxForm message = new CustomErrorMessageBoxForm($"Code was wrong! \nRemaining attempts: {EmailCounter}");
-                if(EmailCounter == 0)
+                if (EmailCounter == 0)
                 {
                     LoginForm.GetInstance().Show();
                     ForgotPasswordAuthenticationForm.GetInstance().Hide();
-                     message = new CustomErrorMessageBoxForm("Warning: Restricted Access Due to Multiple Login Attempts");
+                    message = new CustomErrorMessageBoxForm("Warning: Restricted Access Due to Multiple Login Attempts");
 
                 }
             }

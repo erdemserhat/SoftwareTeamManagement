@@ -2,11 +2,6 @@
 using SoftwareTeamManagement.BusinessLogic.DataModel.Meeting;
 using SoftwareTeamManagement.BusinessLogic.Role.Permissions.ProjectPermission;
 using SoftwareTeamManagement.BusinessLogic.Role.Permissions.TaskPermission;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember.TeamMemberContracts
 {

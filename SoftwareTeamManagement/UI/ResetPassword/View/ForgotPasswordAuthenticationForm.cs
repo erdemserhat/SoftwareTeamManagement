@@ -1,5 +1,4 @@
-﻿using SoftwareTeamManagement.UI.Login.View;
-using SoftwareTeamManagement.UI.ResetPassword.Presenter;
+﻿using SoftwareTeamManagement.UI.ResetPassword.Presenter;
 
 namespace SoftwareTeamManagement.UI.ResetPassword.View
 {
@@ -11,7 +10,7 @@ namespace SoftwareTeamManagement.UI.ResetPassword.View
         public event EventHandler ConfirmButtonClicked;
         public event EventHandler GoBackLoginClicked;
         public event EventHandler ExitButtonClicked;
-        
+
 
         public string Code => authenticationCodeTextBox.Text;
 

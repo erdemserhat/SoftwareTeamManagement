@@ -1,14 +1,6 @@
-﻿using SoftwareTeamManagement.BusinessLogic.Role.Permissions.ProjectPermission;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SoftwareTeamManagement.BusinessLogic.DataModel.Team
+﻿namespace SoftwareTeamManagement.BusinessLogic.DataModel.Team
 {
-    public record class Team :ITeamContract
+    public record class Team : ITeamContract
     {
         private int _id;
         private string _name;

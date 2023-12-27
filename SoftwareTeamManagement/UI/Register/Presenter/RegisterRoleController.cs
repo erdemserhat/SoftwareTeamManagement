@@ -1,6 +1,5 @@
 ﻿using SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember;
 using SoftwareTeamManagement.BusinessLogic.Configuration.Roles;
-using SoftwareTeamManagement.DataAccess.Dao.TeamMemberDao;
 using SoftwareTeamManagement.DataAccess.Repository;
 using SoftwareTeamManagement.UI.CustomMessageBox;
 using SoftwareTeamManagement.UI.Login.View;
@@ -23,13 +22,13 @@ namespace SoftwareTeamManagement.UI.Register.Presenter
 
         private void OnNextButtonClicked(object sender, EventArgs e)
         {
-            if(AreStringsNullOrWhiteSpace(_view.Role, _view.Department))
+            if (AreStringsNullOrWhiteSpace(_view.Role, _view.Department))
             {
-                
+
                 string fullName = RegisterForm.GetInstance().fullName;
-                string email= RegisterForm.GetInstance().email;
+                string email = RegisterForm.GetInstance().email;
                 string password = RegisterForm.GetInstance().password;
-                string role= _view.Role;
+                string role = _view.Role;
                 string department = _view.Department;
 
                 TeamMember member = new TeamMember(fullName, email, password, new Role(role, department));
@@ -44,9 +43,9 @@ namespace SoftwareTeamManagement.UI.Register.Presenter
                 LoginForm.GetInstance().Email = email;
                 LoginForm.GetInstance().Password = password;
 
-                
 
-                
+
+
 
 
 
