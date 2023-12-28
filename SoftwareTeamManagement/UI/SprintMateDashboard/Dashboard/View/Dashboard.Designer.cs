@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             menuPanel = new Panel();
             button2 = new Button();
@@ -42,18 +41,15 @@
             User = new Label();
             pictureBox1 = new PictureBox();
             sectionPanel = new FlowLayoutPanel();
-            teamMemberBindingSource = new BindingSource(components);
             menuPanel.SuspendLayout();
             profilPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)teamMemberBindingSource).BeginInit();
             SuspendLayout();
             // 
             // menuPanel
             // 
             menuPanel.BackColor = Color.FromArgb(6, 6, 6);
-            menuPanel.Controls.Add(button2);
-            menuPanel.Controls.Add(button1);
+          
             menuPanel.Controls.Add(logoutBtn);
             menuPanel.Controls.Add(teamBtn);
             menuPanel.Controls.Add(projectsBtn);
@@ -225,10 +221,6 @@
             sectionPanel.Size = new Size(952, 650);
             sectionPanel.TabIndex = 1;
             // 
-            // teamMemberBindingSource
-            // 
-            teamMemberBindingSource.DataSource = typeof(BusinessLogic.BaseDataModel.TeamMember.TeamMember);
-            // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -245,7 +237,6 @@
             profilPanel.ResumeLayout(false);
             profilPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)teamMemberBindingSource).EndInit();
             ResumeLayout(false);
         }
 
@@ -265,7 +256,6 @@
         private Button projectsBtn;
         private Button tasksBtn;
         private Button button1;
-        private BindingSource teamMemberBindingSource;
         private FlowLayoutPanel sectionPanel;
     }
 }

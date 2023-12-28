@@ -1,6 +1,6 @@
-﻿namespace SoftwareTeamManagement.UI.SprintMateDashboard.View
+﻿namespace SoftwareTeamManagement.UI.SprintMateDashboard.Announcements.View
 {
-    partial class TaskSection
+    partial class TasksForm
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,18 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
+            label1 = new Label();
             SuspendLayout();
             // 
-            // TaskSection
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(421, 297);
+            label1.Name = "label1";
+            label1.Size = new Size(80, 20);
+            label1.TabIndex = 0;
+            label1.Text = "Tasks Form";
+            label1.Click += label1_Click;
+            // 
+            // TasksForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Name = "TaskSection";
-            RightToLeft = RightToLeft.Yes;
-            Size = new Size(945, 650);
+            Controls.Add(label1);
+            Name = "TasksForm";
+            Size = new Size(952, 650);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label label1;
     }
 }

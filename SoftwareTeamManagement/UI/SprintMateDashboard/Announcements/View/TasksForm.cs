@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SoftwareTeamManagement.UI.SprintMateDashboard.View
+namespace SoftwareTeamManagement.UI.SprintMateDashboard.Announcements.View
 {
-    public partial class TaskSection : UserControl
+    public partial class TasksForm : UserControl
     {
-        public TaskSection()
+        public TasksForm()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
