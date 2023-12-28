@@ -1,5 +1,6 @@
 ﻿using SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.View;
 using SoftwareTeamManagement.UI.SprintMateDashboard.Meetings.View;
+using SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,11 +29,9 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.Presenter
         //When user navigates the task section
         public void OnTaskButtonClicked(object sender, EventArgs e)
         {
-            // Yerleştirilecek formu oluşturun veya örneğini alın
-            UserControl1 myForm = new UserControl1(); // Örnek olarak "Form2" yerine kendi formunuzun adını kullanın
 
-           
-            DashboardForm.GetInstance().mainSectionPanel.Controls.Add(myForm); // Formu panele ekleyin
+
+            DashboardForm.GetInstance().mainSectionPanel.Controls.Add(TasksSection.GetInstance()); // Formu panele ekleyin
          
 
         }

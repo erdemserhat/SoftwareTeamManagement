@@ -1,6 +1,6 @@
 ﻿namespace SoftwareTeamManagement.UI.SprintMateDashboard.Meetings.View
 {
-    partial class UserControl1
+    partial class Meetings
     {
         /// <summary> 
         /// Required designer variable.

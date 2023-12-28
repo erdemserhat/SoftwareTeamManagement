@@ -8,18 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SoftwareTeamManagement.UI.SprintMateDashboard.Announcements.View
+namespace SoftwareTeamManagement.UI.SprintMateDashboard.Meetings.View
 {
-    public partial class TasksForm : UserControl
+    public partial class Meetings : UserControl
     {
-        public TasksForm()
+        public Meetings()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
+        //Implementing singleton...
 
-        }
+        private static Meetings instance;
+
     }
 }

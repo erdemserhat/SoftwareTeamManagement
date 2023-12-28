@@ -78,7 +78,7 @@ namespace SoftwareTeamManagement.DataAccess.Dao.TaskDao
                     string category = reader.GetString(TaskColumn.CATEGORY);
                     string description = reader.GetString(TaskColumn.DESCRIPTION);
 
-                    Task task = new Task(id, title, description, priorityLevel, createdTime, catagory);
+                    Task task = new Task(id, title, description, priorityLevel, createdTime, category);
                     tasks.Add(task);
                 }
 
