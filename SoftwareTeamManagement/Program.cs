@@ -1,5 +1,6 @@
 ﻿using SoftwareTeamManagement.UI.Login.View;
-using SoftwareTeamManagement.UI.SprintMateDashboard.View;
+using SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.View;
+using SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.View;
 
 namespace SoftwareTeamManagement
 {
@@ -77,7 +78,7 @@ namespace SoftwareTeamManagement
 
 
             ApplicationConfiguration.Initialize();
-            Application.Run(new LoginForm());
+            Application.Run(new DashboardForm());
         }
 
     }

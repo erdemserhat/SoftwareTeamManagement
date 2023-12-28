@@ -3,7 +3,7 @@ using SoftwareTeamManagement.UI.CustomMessageBox;
 using SoftwareTeamManagement.UI.Login.View;
 using SoftwareTeamManagement.UI.Register.View;
 using SoftwareTeamManagement.UI.ResetPassword.View;
-using SoftwareTeamManagement.UI.SprintMateDashboard.View;
+using SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.View;
 using System.Text.RegularExpressions;
 
 namespace SoftwareTeamManagement.UI.Login.Controller
@@ -47,8 +47,8 @@ namespace SoftwareTeamManagement.UI.Login.Controller
                 TeamMemberRepository repository = new TeamMemberRepository();
                 if (repository.IsValidUser(_view.Email, _view.Password))
                 {
-                    Dashboard.GetInstance().userEmail = _view.Email;
-                    Dashboard.GetInstance().Show();
+                    //MainMenuForm.GetInstance().userEmail = _view.Email;
+                   // MainMenuForm.GetInstance().Show();
                     LoginForm.GetInstance().Hide();
 
 

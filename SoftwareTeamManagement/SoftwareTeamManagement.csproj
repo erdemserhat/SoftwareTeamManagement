@@ -40,9 +40,7 @@
   <ItemGroup>
     <Folder Include="Resources\" />
     <Folder Include="UI\SprintMateDashboard\Announcements\Presenter\" />
-    <Folder Include="UI\SprintMateDashboard\Dashboard\Presenter\" />
     <Folder Include="UI\SprintMateDashboard\Meetings\Presenter\" />
-    <Folder Include="UI\SprintMateDashboard\Meetings\View\" />
     <Folder Include="UI\SprintMateDashboard\Projects\View\" />
     <Folder Include="UI\SprintMateDashboard\Projects\Presenter\" />
     <Folder Include="UI\SprintMateDashboard\Tasks\Presenter\" />
