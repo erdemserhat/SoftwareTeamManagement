@@ -22,6 +22,7 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.View
             DashboardController controller = new DashboardController();
             InitializeEvents();
 
+
         }
 
         //IDashboard Form İmpl.

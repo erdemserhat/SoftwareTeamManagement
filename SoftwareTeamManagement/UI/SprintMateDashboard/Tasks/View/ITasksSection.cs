@@ -14,5 +14,6 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.View
         event EventHandler RefreshTaskClicked;
 
         public void UpdateTaskList();
+
     }
 }

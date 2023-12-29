@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ListViewItem listViewItem1 = new ListViewItem("");
+            ColumnHeader id;
+            ListViewItem listViewItem1 = new ListViewItem(new string[] { "" }, -1, Color.Empty, Color.Empty, new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point));
             generalContainer = new Panel();
             tasksContainer = new Panel();
             taskListView = new ListView();
@@ -39,16 +40,22 @@
             taskDescription = new ColumnHeader();
             optionsContainer = new Panel();
             optionsSection = new Panel();
+            refreshTask = new Button();
             deleteTaskBtn = new Button();
             editTaskBtn = new Button();
             addTaskBtn = new Button();
             tasksSectionHeader = new Panel();
-            refreshTask = new Button();
+            id = new ColumnHeader();
             generalContainer.SuspendLayout();
             tasksContainer.SuspendLayout();
             optionsContainer.SuspendLayout();
             optionsSection.SuspendLayout();
             SuspendLayout();
+            // 
+            // id
+            // 
+            id.Text = "Task No";
+            id.Width = 80;
             // 
             // generalContainer
             // 
@@ -72,44 +79,52 @@
             // 
             // taskListView
             // 
+            taskListView.Activation = ItemActivation.OneClick;
             taskListView.Alignment = ListViewAlignment.SnapToGrid;
-            taskListView.Columns.AddRange(new ColumnHeader[] { taskTitle, taskPriorityLevel, taskCreatedTime, taskCategory, taskDescription });
+            taskListView.AllowDrop = true;
+            taskListView.BorderStyle = BorderStyle.None;
+            taskListView.Columns.AddRange(new ColumnHeader[] { id, taskTitle, taskPriorityLevel, taskCreatedTime, taskCategory, taskDescription });
+            taskListView.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            taskListView.GridLines = true;
+            taskListView.ImeMode = ImeMode.NoControl;
+            listViewItem1.StateImageIndex = 0;
             taskListView.Items.AddRange(new ListViewItem[] { listViewItem1 });
             taskListView.Location = new Point(41, 30);
+            taskListView.MultiSelect = false;
             taskListView.Name = "taskListView";
             taskListView.Size = new Size(805, 437);
             taskListView.TabIndex = 0;
+            taskListView.Tag = "";
             taskListView.UseCompatibleStateImageBehavior = false;
             taskListView.View = System.Windows.Forms.View.Details;
             // 
             // taskTitle
             // 
             taskTitle.Text = "Title";
-            taskTitle.Width = 100;
+            taskTitle.Width = 150;
             // 
             // taskPriorityLevel
             // 
             taskPriorityLevel.Text = "Priority Level";
             taskPriorityLevel.TextAlign = HorizontalAlignment.Center;
-            taskPriorityLevel.Width = 100;
+            taskPriorityLevel.Width = 120;
             // 
             // taskCreatedTime
             // 
             taskCreatedTime.Text = "Created Time";
             taskCreatedTime.TextAlign = HorizontalAlignment.Center;
-            taskCreatedTime.Width = 100;
+            taskCreatedTime.Width = 200;
             // 
             // taskCategory
             // 
             taskCategory.Text = "Category";
             taskCategory.TextAlign = HorizontalAlignment.Center;
-            taskCategory.Width = 80;
+            taskCategory.Width = 100;
             // 
             // taskDescription
             // 
             taskDescription.Text = "Description";
-            taskDescription.TextAlign = HorizontalAlignment.Center;
-            taskDescription.Width = 100;
+            taskDescription.Width = 400;
             // 
             // optionsContainer
             // 
@@ -130,6 +145,17 @@
             optionsSection.Name = "optionsSection";
             optionsSection.Size = new Size(661, 64);
             optionsSection.TabIndex = 1;
+            // 
+            // refreshTask
+            // 
+            refreshTask.FlatStyle = FlatStyle.Popup;
+            refreshTask.Location = new Point(597, 0);
+            refreshTask.Margin = new Padding(0);
+            refreshTask.Name = "refreshTask";
+            refreshTask.Size = new Size(64, 64);
+            refreshTask.TabIndex = 3;
+            refreshTask.Text = "Refresh Tasks";
+            refreshTask.UseVisualStyleBackColor = true;
             // 
             // deleteTaskBtn
             // 
@@ -173,17 +199,6 @@
             tasksSectionHeader.Size = new Size(900, 64);
             tasksSectionHeader.TabIndex = 0;
             // 
-            // refreshTask
-            // 
-            refreshTask.FlatStyle = FlatStyle.Popup;
-            refreshTask.Location = new Point(597, 0);
-            refreshTask.Margin = new Padding(0);
-            refreshTask.Name = "refreshTask";
-            refreshTask.Size = new Size(64, 64);
-            refreshTask.TabIndex = 3;
-            refreshTask.Text = "Refresh Tasks";
-            refreshTask.UseVisualStyleBackColor = true;
-            // 
             // TasksSection
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -191,6 +206,7 @@
             Controls.Add(generalContainer);
             Name = "TasksSection";
             Size = new Size(900, 650);
+            Load += TasksSection_Load;
             generalContainer.ResumeLayout(false);
             tasksContainer.ResumeLayout(false);
             optionsContainer.ResumeLayout(false);
@@ -214,6 +230,6 @@
         private ColumnHeader taskCreatedTime;
         private ColumnHeader taskCategory;
         public ListView taskListView;
-        private Button refreshTask;
+        public Button refreshTask;
     }
 }

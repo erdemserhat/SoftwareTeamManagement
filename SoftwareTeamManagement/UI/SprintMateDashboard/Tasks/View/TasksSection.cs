@@ -5,9 +5,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Windows.Forms;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.View
 {
@@ -38,6 +40,7 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.View
 
         public static TasksSection GetInstance()
         {
+
             if (instance == null || instance.IsDisposed)
             {
                 instance = new TasksSection();
@@ -62,6 +65,9 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.View
             refreshTask.Click += (sender, e) => RefreshTaskClicked?.Invoke(this, EventArgs.Empty);
         }
 
-
+        private void TasksSection_Load(object sender, EventArgs e)
+        {
+            taskListView.FullRowSelect = true;
+        }
     }
 }

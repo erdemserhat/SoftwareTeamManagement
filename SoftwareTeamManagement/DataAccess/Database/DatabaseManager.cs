@@ -3,6 +3,7 @@
 namespace SoftwareTeamManagement.DataAccess
 {
     using MySql.Data.MySqlClient;
+    using SoftwareTeamManagement.UI.CustomMessageBox;
     using System;
 
     namespace DataAccess
@@ -32,7 +33,8 @@ namespace SoftwareTeamManagement.DataAccess
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Please check your internet connection : " + ex.Message);
+                        CustomErrorMessageBoxForm message = new CustomErrorMessageBoxForm("Please check your internet connection : " + ex.Message);
+                        
 
                     }
 
@@ -55,7 +57,8 @@ namespace SoftwareTeamManagement.DataAccess
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("An error while closing the connection: " + ex.Message);
+                        
+                        CustomErrorMessageBoxForm message = new CustomErrorMessageBoxForm("An error while closing the connection: " + ex.Message);
 
                     }
 
@@ -76,7 +79,8 @@ namespace SoftwareTeamManagement.DataAccess
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("An error occurred while executing the query: " + ex.Message);
+                        CustomErrorMessageBoxForm message = new CustomErrorMessageBoxForm("An error occurred while executing the query: " + ex.Message);
+                       
                     }
                     finally
                     {
@@ -101,7 +105,8 @@ namespace SoftwareTeamManagement.DataAccess
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message);
+                        CustomErrorMessageBoxForm message = new CustomErrorMessageBoxForm(ex.Message);
+                        
                     }
                     finally
                     {
@@ -130,7 +135,8 @@ namespace SoftwareTeamManagement.DataAccess
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message);
+                        CustomErrorMessageBoxForm message = new CustomErrorMessageBoxForm(ex.Message);
+                       
                     }
                     finally
                     {
