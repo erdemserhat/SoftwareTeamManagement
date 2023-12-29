@@ -25,7 +25,7 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.View
             InitializeEvents();
         }
 
-       
+
 
         public event EventHandler DeleteButtonClicked;
         public event EventHandler ExitButtonClicked;
@@ -33,7 +33,7 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.View
         //implementing singleton method
         public static DeleteTaskFrame GetInstance()
         {
-            if(instance == null || instance.IsDisposed)
+            if (instance == null || instance.IsDisposed)
             {
                 instance = new DeleteTaskFrame();
             }

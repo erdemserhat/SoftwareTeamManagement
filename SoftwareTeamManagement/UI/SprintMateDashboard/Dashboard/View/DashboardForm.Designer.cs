@@ -285,6 +285,8 @@
             tasksBtn.Text = "          Tasks";
             tasksBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
             tasksBtn.UseVisualStyleBackColor = false;
+            tasksBtn.MouseEnter += tasksBtn_MouseEnter;
+            tasksBtn.MouseLeave += tasksBtn_MouseLeave;
             // 
             // DashboardForm
             // 

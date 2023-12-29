@@ -33,6 +33,11 @@
             _id = id;
         }
 
+        public Task()
+        {
+           
+        }
+
         public string Title { get => _title; set => _title = value; }
         public string Description { get => _description; set => _description = value; }
         public string PriorityLevel { get => _priorityLevel; set => _priorityLevel = value; }

@@ -98,7 +98,7 @@
             categoryListBox.ForeColor = Color.White;
             categoryListBox.FormattingEnabled = true;
             categoryListBox.ItemHeight = 25;
-            categoryListBox.Items.AddRange(new object[] { "To Do", "In Progress", "Done" });
+            categoryListBox.Items.AddRange(new object[] { "Pending", "In Progress", "Done" });
             categoryListBox.Location = new Point(28, 457);
             categoryListBox.Name = "categoryListBox";
             categoryListBox.Size = new Size(322, 75);

@@ -12,6 +12,7 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.View
         event EventHandler DeleteTaskClicked;
         event EventHandler EditTasksClicked;
         event EventHandler RefreshTaskClicked;
+        event EventHandler TaskDoubleClicked;
 
         public void UpdateTaskList();
 

@@ -52,7 +52,7 @@
             // 
             // taskInformation
             // 
-            taskInformation.AutoSize = true;
+            taskInformation.AutoEllipsis = true;
             taskInformation.Font = new Font("Abhaya Libre Medium", 18F, FontStyle.Bold, GraphicsUnit.Point);
             taskInformation.Location = new Point(99, 98);
             taskInformation.Name = "taskInformation";
@@ -74,7 +74,6 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "DeleteTaskFrame";
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion

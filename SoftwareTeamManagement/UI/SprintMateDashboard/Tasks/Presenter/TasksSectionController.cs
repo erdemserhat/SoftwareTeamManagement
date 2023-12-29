@@ -1,4 +1,5 @@
 ﻿
+using Google.Protobuf;
 using SoftwareTeamManagement.BusinessLogic.DataModel.Task;
 using SoftwareTeamManagement.DataAccess.Repository;
 using SoftwareTeamManagement.UI.CustomMessageBox;
@@ -23,6 +24,7 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.Presenter
             _view.DeleteTaskClicked += OnDeleteTaskClicked;
             _view.EditTasksClicked += OnEditTaskClicked;
             _view.RefreshTaskClicked += OnRefreshTaskClicked;
+            _view.TaskDoubleClicked += OnTaskDoubleClicked;
         }
 
         private void OnAddTaskClicked(object sender, EventArgs e)
@@ -111,6 +113,43 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.Presenter
             }
 
         }
+
+        private void OnTaskDoubleClicked(object sender, EventArgs e)
+        {
+            Task task = null;
+            if (TasksSection.GetInstance().taskListView.SelectedItems.Count > 0)
+            {
+                ListViewItem selectedRow = TasksSection.GetInstance().taskListView.SelectedItems[0]; // Seçilen öğeyi al
+
+                //provide information
+
+                string id = selectedRow.SubItems[0].Text;
+                string title = selectedRow.SubItems[1].Text;
+                string priority = selectedRow.SubItems[2].Text;
+                string createdTime = selectedRow.SubItems[3].Text;
+                string category = selectedRow.SubItems[4].Text;
+                string description = selectedRow.SubItems[5].Text;
+
+                task = new Task(Convert.ToInt32(id), title, description, priority, DateTime.Parse(createdTime), category);
+
+                TaskViewerDataSingleton.SetInstance(task);
+                TaskViewerFrame.GetInstance().NotifyDataSet();
+                TaskViewerFrame.GetInstance().ShowDialog();
+                
+
+
+
+
+
+
+
+            }
+
+
+
+        }
+
+
 
         //to 
         private Task ProvideSelectedRowInformation()

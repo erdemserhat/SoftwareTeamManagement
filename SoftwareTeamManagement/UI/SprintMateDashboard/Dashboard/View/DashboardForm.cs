@@ -61,11 +61,15 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.View
             return instance;
         }
 
+        private void tasksBtn_MouseEnter(object sender, EventArgs e)
+        {
+            tasksBtn.BackColor = Color.FromArgb(95, 106, 115);
+        }
 
+        private void tasksBtn_MouseLeave(object sender, EventArgs e)
+        {
+            tasksBtn.BackColor = Color.FromArgb(6, 6, 6);
 
-
-
-
-
+        }
     }
 }

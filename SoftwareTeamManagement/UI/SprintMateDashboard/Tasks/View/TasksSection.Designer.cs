@@ -59,6 +59,7 @@
             // 
             // generalContainer
             // 
+            generalContainer.BackColor = Color.FromArgb(196, 215, 178);
             generalContainer.Controls.Add(tasksContainer);
             generalContainer.Controls.Add(optionsContainer);
             generalContainer.Controls.Add(tasksSectionHeader);
@@ -82,10 +83,12 @@
             taskListView.Activation = ItemActivation.OneClick;
             taskListView.Alignment = ListViewAlignment.SnapToGrid;
             taskListView.AllowDrop = true;
+            taskListView.AutoArrange = false;
+            taskListView.BackColor = Color.White;
             taskListView.BorderStyle = BorderStyle.None;
             taskListView.Columns.AddRange(new ColumnHeader[] { id, taskTitle, taskPriorityLevel, taskCreatedTime, taskCategory, taskDescription });
             taskListView.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            taskListView.GridLines = true;
+            taskListView.ForeColor = Color.Black;
             taskListView.ImeMode = ImeMode.NoControl;
             listViewItem1.StateImageIndex = 0;
             taskListView.Items.AddRange(new ListViewItem[] { listViewItem1 });
@@ -124,7 +127,7 @@
             // taskDescription
             // 
             taskDescription.Text = "Description";
-            taskDescription.Width = 400;
+            taskDescription.Width = 250;
             // 
             // optionsContainer
             // 
@@ -165,7 +168,7 @@
             deleteTaskBtn.Name = "deleteTaskBtn";
             deleteTaskBtn.Size = new Size(64, 64);
             deleteTaskBtn.TabIndex = 2;
-            deleteTaskBtn.Text = "Delete Task";
+            deleteTaskBtn.Text = "Delete";
             deleteTaskBtn.UseVisualStyleBackColor = true;
             // 
             // editTaskBtn
@@ -176,20 +179,21 @@
             editTaskBtn.Name = "editTaskBtn";
             editTaskBtn.Size = new Size(64, 64);
             editTaskBtn.TabIndex = 1;
-            editTaskBtn.Text = "Edit Task";
+            editTaskBtn.Text = "Update";
             editTaskBtn.UseVisualStyleBackColor = true;
             // 
             // addTaskBtn
             // 
+            addTaskBtn.BackColor = Color.Transparent;
             addTaskBtn.Dock = DockStyle.Left;
-            addTaskBtn.FlatStyle = FlatStyle.Popup;
+            addTaskBtn.FlatStyle = FlatStyle.Flat;
             addTaskBtn.Location = new Point(0, 0);
             addTaskBtn.Margin = new Padding(0);
             addTaskBtn.Name = "addTaskBtn";
             addTaskBtn.Size = new Size(64, 64);
             addTaskBtn.TabIndex = 0;
-            addTaskBtn.Text = "Add Task";
-            addTaskBtn.UseVisualStyleBackColor = true;
+            addTaskBtn.Text = "Add";
+            addTaskBtn.UseVisualStyleBackColor = false;
             // 
             // tasksSectionHeader
             // 
@@ -231,5 +235,6 @@
         private ColumnHeader taskCategory;
         public ListView taskListView;
         public Button refreshTask;
+        private PictureBox pictureBox1;
     }
 }

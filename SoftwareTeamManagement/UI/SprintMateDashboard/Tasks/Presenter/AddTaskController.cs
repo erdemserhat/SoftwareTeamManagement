@@ -33,7 +33,7 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.Presenter
             if (ControlInputs())
             {
                 TaskRepository repo = new TaskRepository();
-                Task task = new Task(_view.Title, _view.Description, _view.Priority, DateTime.Now, "To Do");
+                Task task = new Task(_view.Title, _view.Description, _view.Priority, DateTime.Now, "Pending");
                 repo.AddTask(task);
                 
                 AddTaskFrame.GetInstance().Hide();
