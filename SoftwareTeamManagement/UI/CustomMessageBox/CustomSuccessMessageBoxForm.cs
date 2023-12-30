@@ -14,6 +14,11 @@ namespace SoftwareTeamManagement.UI.CustomMessageBox
             this.SetRoundForm(this, 45);
             this.ShowDialog();
 
+            Button acceptButton = new Button();
+            acceptButton.Click += (sender, e) => { this.exitBtn_Click_1(sender, e); };
+
+
+
 
         }
 

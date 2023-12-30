@@ -108,6 +108,7 @@
             Name = "AddTaskFrame";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "AddTaskFrame";
+            Load += AddTaskFrame_Load;
             ResumeLayout(false);
             PerformLayout();
         }

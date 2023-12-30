@@ -37,6 +37,7 @@
             // exitBtn
             // 
             exitBtn.BackColor = Color.Transparent;
+            exitBtn.Cursor = Cursors.Hand;
             exitBtn.Location = new Point(340, 2);
             exitBtn.Name = "exitBtn";
             exitBtn.Size = new Size(37, 36);
@@ -45,6 +46,7 @@
             // deleteBtn
             // 
             deleteBtn.BackColor = Color.Transparent;
+            deleteBtn.Cursor = Cursors.Hand;
             deleteBtn.Location = new Point(124, 303);
             deleteBtn.Name = "deleteBtn";
             deleteBtn.Size = new Size(131, 48);
@@ -73,6 +75,7 @@
             Name = "DeleteTaskFrame";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "DeleteTaskFrame";
+            Enter += DeleteTaskFrame_Enter;
             ResumeLayout(false);
         }
 

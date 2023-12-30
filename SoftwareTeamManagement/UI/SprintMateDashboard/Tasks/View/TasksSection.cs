@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using SoftwareTeamManagement.UI.CustomMessageBox;
 
 namespace SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.View
 {
@@ -32,6 +33,7 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.View
             controller = new TasksSectionController();
             InitializeEvents();
             UpdateTaskList();
+
 
 
         }
@@ -61,7 +63,7 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.View
 
         private void InitializeEvents()
         {
-             addTaskBtn1.Click += (sender, e) => AddTaskClicked?.Invoke(this, EventArgs.Empty);
+            addTaskBtn1.Click += (sender, e) => AddTaskClicked?.Invoke(this, EventArgs.Empty);
             deleteTaskBtn.Click += (sender, e) => DeleteTaskClicked?.Invoke(this, EventArgs.Empty);
             editTaskBtn.Click += (sender, e) => EditTasksClicked?.Invoke(this, EventArgs.Empty);
             refreshTask.Click += (sender, e) => RefreshTaskClicked?.Invoke(this, EventArgs.Empty);
@@ -73,59 +75,9 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.View
             taskListView.FullRowSelect = true;
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void taskListView_KeyDown(object sender, KeyEventArgs e)
         {
-
-        }
-
-        private void addTaskBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void optionsSection_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void optionsContainer_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void taskListView_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void editTaskBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tasksContainer_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel6_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-
+            DeleteTaskClicked?.Invoke(this, EventArgs.Empty);
         }
     }
 }

@@ -15,6 +15,8 @@ namespace SoftwareTeamManagement.UI.CustomMessageBox
             this.ShowDialog();
 
 
+
+
         }
 
 
@@ -36,5 +38,7 @@ namespace SoftwareTeamManagement.UI.CustomMessageBox
             this.Dispose();
 
         }
+
+
     }
 }

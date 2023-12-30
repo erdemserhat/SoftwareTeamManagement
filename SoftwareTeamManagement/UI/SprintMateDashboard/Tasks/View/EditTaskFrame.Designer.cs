@@ -40,6 +40,7 @@
             // exitBtn
             // 
             exitBtn.BackColor = Color.Transparent;
+            exitBtn.Cursor = Cursors.Hand;
             exitBtn.Location = new Point(337, 3);
             exitBtn.Name = "exitBtn";
             exitBtn.Size = new Size(41, 34);
@@ -48,6 +49,7 @@
             // saveBtn
             // 
             saveBtn.BackColor = Color.Transparent;
+            saveBtn.Cursor = Cursors.Hand;
             saveBtn.Location = new Point(123, 569);
             saveBtn.Name = "saveBtn";
             saveBtn.Size = new Size(128, 46);

@@ -66,7 +66,7 @@
             // 
             // mainSectionPanel
             // 
-            mainSectionPanel.BackColor = SystemColors.AppWorkspace;
+            mainSectionPanel.BackColor = SystemColors.ButtonShadow;
             mainSectionPanel.Dock = DockStyle.Fill;
             mainSectionPanel.ForeColor = SystemColors.ActiveCaptionText;
             mainSectionPanel.Location = new Point(300, 0);
@@ -87,7 +87,7 @@
             // 
             // headerContainer
             // 
-            headerContainer.BackColor = Color.FromArgb(6, 6, 6);
+            headerContainer.BackColor = Color.FromArgb(34, 40, 49);
             headerContainer.Controls.Add(logoPanel);
             headerContainer.Dock = DockStyle.Top;
             headerContainer.Location = new Point(0, 0);
@@ -97,9 +97,11 @@
             // 
             // logoPanel
             // 
+            logoPanel.BackColor = Color.FromArgb(34, 40, 49);
             logoPanel.Controls.Add(welcomeText);
             logoPanel.Controls.Add(dashboardLogoIcon);
             logoPanel.Controls.Add(dashboardIconText);
+            logoPanel.ForeColor = SystemColors.ControlText;
             logoPanel.Location = new Point(17, 21);
             logoPanel.Name = "logoPanel";
             logoPanel.Size = new Size(280, 136);
@@ -110,7 +112,7 @@
             welcomeText.AutoSize = true;
             welcomeText.Dock = DockStyle.Bottom;
             welcomeText.Font = new Font("Abhaya Libre Medium", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            welcomeText.ForeColor = Color.FromArgb(165, 217, 222);
+            welcomeText.ForeColor = SystemColors.ButtonShadow;
             welcomeText.Location = new Point(0, 112);
             welcomeText.Name = "welcomeText";
             welcomeText.Size = new Size(233, 24);
@@ -130,7 +132,7 @@
             // 
             dashboardIconText.AutoSize = true;
             dashboardIconText.Font = new Font("Iceland", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            dashboardIconText.ForeColor = Color.FromArgb(165, 217, 222);
+            dashboardIconText.ForeColor = SystemColors.ButtonShadow;
             dashboardIconText.Location = new Point(56, 10);
             dashboardIconText.Name = "dashboardIconText";
             dashboardIconText.Size = new Size(210, 39);
@@ -139,7 +141,7 @@
             // 
             // optionsPanel
             // 
-            optionsPanel.BackColor = Color.Black;
+            optionsPanel.BackColor = Color.FromArgb(34, 40, 49);
             optionsPanel.Controls.Add(optionsGroup);
             optionsPanel.Dock = DockStyle.Fill;
             optionsPanel.Location = new Point(0, 0);
@@ -149,7 +151,7 @@
             // 
             // optionsGroup
             // 
-            optionsGroup.BackColor = Color.FromArgb(6, 6, 6);
+            optionsGroup.BackColor = Color.FromArgb(34, 40, 49);
             optionsGroup.Controls.Add(logoutBtn);
             optionsGroup.Controls.Add(meetingsBtn);
             optionsGroup.Controls.Add(announcementsBtn);
@@ -171,7 +173,7 @@
             logoutBtn.Dock = DockStyle.Bottom;
             logoutBtn.FlatStyle = FlatStyle.Flat;
             logoutBtn.Font = new Font("Abhaya Libre Medium", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            logoutBtn.ForeColor = Color.FromArgb(165, 217, 208);
+            logoutBtn.ForeColor = SystemColors.ButtonShadow;
             logoutBtn.Image = (Image)resources.GetObject("logoutBtn.Image");
             logoutBtn.ImageAlign = ContentAlignment.MiddleLeft;
             logoutBtn.Location = new Point(5, 385);
@@ -192,7 +194,7 @@
             meetingsBtn.Dock = DockStyle.Top;
             meetingsBtn.FlatStyle = FlatStyle.Flat;
             meetingsBtn.Font = new Font("Abhaya Libre Medium", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            meetingsBtn.ForeColor = Color.FromArgb(165, 217, 208);
+            meetingsBtn.ForeColor = SystemColors.ButtonShadow;
             meetingsBtn.Image = (Image)resources.GetObject("meetingsBtn.Image");
             meetingsBtn.ImageAlign = ContentAlignment.MiddleLeft;
             meetingsBtn.Location = new Point(5, 225);
@@ -213,7 +215,7 @@
             announcementsBtn.Dock = DockStyle.Top;
             announcementsBtn.FlatStyle = FlatStyle.Flat;
             announcementsBtn.Font = new Font("Abhaya Libre Medium", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            announcementsBtn.ForeColor = Color.FromArgb(165, 217, 208);
+            announcementsBtn.ForeColor = SystemColors.ButtonShadow;
             announcementsBtn.Image = (Image)resources.GetObject("announcementsBtn.Image");
             announcementsBtn.ImageAlign = ContentAlignment.MiddleLeft;
             announcementsBtn.Location = new Point(5, 170);
@@ -234,7 +236,7 @@
             teamBtn.Dock = DockStyle.Top;
             teamBtn.FlatStyle = FlatStyle.Flat;
             teamBtn.Font = new Font("Abhaya Libre Medium", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            teamBtn.ForeColor = Color.FromArgb(165, 217, 208);
+            teamBtn.ForeColor = SystemColors.ButtonShadow;
             teamBtn.Image = (Image)resources.GetObject("teamBtn.Image");
             teamBtn.ImageAlign = ContentAlignment.MiddleLeft;
             teamBtn.Location = new Point(5, 115);
@@ -255,7 +257,7 @@
             projectsBtn.Dock = DockStyle.Top;
             projectsBtn.FlatStyle = FlatStyle.Flat;
             projectsBtn.Font = new Font("Abhaya Libre Medium", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            projectsBtn.ForeColor = Color.FromArgb(165, 217, 208);
+            projectsBtn.ForeColor = SystemColors.ButtonShadow;
             projectsBtn.Image = (Image)resources.GetObject("projectsBtn.Image");
             projectsBtn.ImageAlign = ContentAlignment.MiddleLeft;
             projectsBtn.Location = new Point(5, 60);
@@ -276,7 +278,7 @@
             tasksBtn.Dock = DockStyle.Top;
             tasksBtn.FlatStyle = FlatStyle.Flat;
             tasksBtn.Font = new Font("Abhaya Libre Medium", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            tasksBtn.ForeColor = Color.FromArgb(165, 217, 222);
+            tasksBtn.ForeColor = SystemColors.ButtonShadow;
             tasksBtn.Image = (Image)resources.GetObject("tasksBtn.Image");
             tasksBtn.ImageAlign = ContentAlignment.MiddleLeft;
             tasksBtn.Location = new Point(5, 5);

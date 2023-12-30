@@ -37,6 +37,9 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.View
             AddTaskController controller = new AddTaskController();
             exitBtn.Click += (sender, e) => ExitButtonClicked?.Invoke(this, EventArgs.Empty);
             saveBtn.Click += (sender, e) => SaveButtonClicked?.Invoke(this, EventArgs.Empty);
+            Button acceptButton = new Button();
+            acceptButton.Click += (sender, e) => { SaveButtonClicked.Invoke(sender, e); };
+            this.AcceptButton = acceptButton;
 
 
 
@@ -79,6 +82,9 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.View
             priorityListBox.SelectedIndex = -1;
         }
 
+        private void AddTaskFrame_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }

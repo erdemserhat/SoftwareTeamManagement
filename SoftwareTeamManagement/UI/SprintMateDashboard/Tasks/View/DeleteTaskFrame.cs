@@ -23,6 +23,10 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.View
             instance = this;
             DeleteTaskController controller = new DeleteTaskController();
             InitializeEvents();
+            Button acceptButton = new Button();
+            acceptButton.Click += (sender, e) => { DeleteButtonClicked.Invoke(sender, e); };
+            this.AcceptButton = acceptButton;
+           
         }
 
 
@@ -54,5 +58,12 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.View
             taskInformation.Text = $"{title} #{no}";
             Id = no;
         }
+
+        private void DeleteTaskFrame_Enter(object sender, EventArgs e)
+        {
+            DeleteButtonClicked?.Invoke(sender, e);
+        }
+
+
     }
 }

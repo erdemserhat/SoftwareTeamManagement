@@ -43,6 +43,10 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.View
             instance = this;
             InitializeEvents();
             EditTaskController controller = new EditTaskController();
+            Button acceptButton = new Button();
+            acceptButton.Click += (sender, e) => { SaveButtonClicked.Invoke(sender, e); };
+            this.AcceptButton = acceptButton;
+
 
         }
 

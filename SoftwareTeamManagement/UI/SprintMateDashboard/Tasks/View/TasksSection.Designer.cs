@@ -30,7 +30,7 @@
         {
             ColumnHeader id;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TasksSection));
-            ListViewItem listViewItem2 = new ListViewItem(new string[] { "" }, -1, Color.Empty, Color.Empty, new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point));
+            ListViewItem listViewItem1 = new ListViewItem(new string[] { "" }, -1, Color.Empty, Color.Empty, new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point));
             generalContainer = new Panel();
             tasksContainer = new Panel();
             addTaskBtn = new Panel();
@@ -104,7 +104,6 @@
             tasksContainer.Name = "tasksContainer";
             tasksContainer.Size = new Size(900, 576);
             tasksContainer.TabIndex = 3;
-            tasksContainer.Paint += tasksContainer_Paint;
             // 
             // addTaskBtn
             // 
@@ -114,16 +113,15 @@
             addTaskBtn.Name = "addTaskBtn";
             addTaskBtn.Size = new Size(68, 95);
             addTaskBtn.TabIndex = 5;
-            addTaskBtn.Paint += panel5_Paint;
             // 
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(7, 63);
+            label10.Location = new Point(13, 63);
             label10.Name = "label10";
-            label10.Size = new Size(58, 20);
+            label10.Size = new Size(37, 20);
             label10.TabIndex = 3;
-            label10.Text = "Update";
+            label10.Text = "Add";
             // 
             // addTaskBtn1
             // 
@@ -133,7 +131,6 @@
             addTaskBtn1.Name = "addTaskBtn1";
             addTaskBtn1.Size = new Size(64, 64);
             addTaskBtn1.TabIndex = 2;
-            addTaskBtn1.Paint += panel6_Paint;
             // 
             // panel4
             // 
@@ -149,10 +146,9 @@
             label9.AutoSize = true;
             label9.Location = new Point(7, 63);
             label9.Name = "label9";
-            label9.Size = new Size(58, 20);
+            label9.Size = new Size(53, 20);
             label9.TabIndex = 3;
-            label9.Text = "Update";
-            label9.Click += label9_Click;
+            label9.Text = "Delete";
             // 
             // deleteTaskBtn
             // 
@@ -180,7 +176,6 @@
             label8.Size = new Size(58, 20);
             label8.TabIndex = 3;
             label8.Text = "Update";
-            label8.Click += label8_Click;
             // 
             // editTaskBtn
             // 
@@ -224,7 +219,6 @@
             optionsSection.Name = "optionsSection";
             optionsSection.Size = new Size(672, 64);
             optionsSection.TabIndex = 1;
-            optionsSection.Paint += optionsSection_Paint;
             // 
             // panel1
             // 
@@ -238,7 +232,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(806, 45);
             panel1.TabIndex = 1;
-            panel1.Paint += panel1_Paint;
             // 
             // label5
             // 
@@ -302,8 +295,8 @@
             taskListView.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             taskListView.ForeColor = Color.Black;
             taskListView.ImeMode = ImeMode.NoControl;
-            listViewItem2.StateImageIndex = 0;
-            taskListView.Items.AddRange(new ListViewItem[] { listViewItem2 });
+            listViewItem1.StateImageIndex = 0;
+            taskListView.Items.AddRange(new ListViewItem[] { listViewItem1 });
             taskListView.Location = new Point(38, 118);
             taskListView.MultiSelect = false;
             taskListView.Name = "taskListView";
@@ -312,7 +305,7 @@
             taskListView.Tag = "";
             taskListView.UseCompatibleStateImageBehavior = false;
             taskListView.View = System.Windows.Forms.View.Details;
-            taskListView.SelectedIndexChanged += taskListView_SelectedIndexChanged;
+            taskListView.KeyDown += taskListView_KeyDown;
             // 
             // taskTitle
             // 
@@ -348,7 +341,6 @@
             optionsContainer.Name = "optionsContainer";
             optionsContainer.Size = new Size(900, 58);
             optionsContainer.TabIndex = 2;
-            optionsContainer.Paint += optionsContainer_Paint;
             // 
             // tasksSectionHeader
             // 
@@ -364,6 +356,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Iceland", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.ForeColor = Color.FromArgb(34, 40, 49);
             label6.Location = new Point(367, 16);
             label6.Name = "label6";
             label6.Size = new Size(119, 45);
