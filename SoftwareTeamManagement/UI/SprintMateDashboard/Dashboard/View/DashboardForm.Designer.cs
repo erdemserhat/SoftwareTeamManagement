@@ -66,7 +66,9 @@
             // 
             // mainSectionPanel
             // 
+            mainSectionPanel.BackColor = SystemColors.AppWorkspace;
             mainSectionPanel.Dock = DockStyle.Fill;
+            mainSectionPanel.ForeColor = SystemColors.ActiveCaptionText;
             mainSectionPanel.Location = new Point(300, 0);
             mainSectionPanel.Name = "mainSectionPanel";
             mainSectionPanel.Size = new Size(900, 650);
@@ -74,6 +76,7 @@
             // 
             // menuPanel
             // 
+            menuPanel.BackColor = SystemColors.ActiveCaptionText;
             menuPanel.Controls.Add(headerContainer);
             menuPanel.Controls.Add(optionsPanel);
             menuPanel.Dock = DockStyle.Left;
@@ -136,7 +139,7 @@
             // 
             // optionsPanel
             // 
-            optionsPanel.BackColor = Color.FromArgb(6, 6, 6);
+            optionsPanel.BackColor = Color.Black;
             optionsPanel.Controls.Add(optionsGroup);
             optionsPanel.Dock = DockStyle.Fill;
             optionsPanel.Location = new Point(0, 0);

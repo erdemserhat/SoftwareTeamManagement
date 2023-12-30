@@ -29,9 +29,29 @@
         private void InitializeComponent()
         {
             ColumnHeader id;
-            ListViewItem listViewItem1 = new ListViewItem(new string[] { "" }, -1, Color.Empty, Color.Empty, new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TasksSection));
+            ListViewItem listViewItem2 = new ListViewItem(new string[] { "" }, -1, Color.Empty, Color.Empty, new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point));
             generalContainer = new Panel();
             tasksContainer = new Panel();
+            addTaskBtn = new Panel();
+            label10 = new Label();
+            addTaskBtn1 = new Panel();
+            panel4 = new Panel();
+            label9 = new Label();
+            deleteTaskBtn = new Panel();
+            panel2 = new Panel();
+            label8 = new Label();
+            editTaskBtn = new Panel();
+            panel3 = new Panel();
+            label7 = new Label();
+            refreshTask = new Panel();
+            optionsSection = new Panel();
+            panel1 = new Panel();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
             taskListView = new ListView();
             taskTitle = new ColumnHeader();
             taskPriorityLevel = new ColumnHeader();
@@ -39,27 +59,27 @@
             taskCategory = new ColumnHeader();
             taskDescription = new ColumnHeader();
             optionsContainer = new Panel();
-            optionsSection = new Panel();
-            refreshTask = new Button();
-            deleteTaskBtn = new Button();
-            editTaskBtn = new Button();
-            addTaskBtn = new Button();
             tasksSectionHeader = new Panel();
+            label6 = new Label();
             id = new ColumnHeader();
             generalContainer.SuspendLayout();
             tasksContainer.SuspendLayout();
-            optionsContainer.SuspendLayout();
-            optionsSection.SuspendLayout();
+            addTaskBtn.SuspendLayout();
+            panel4.SuspendLayout();
+            panel2.SuspendLayout();
+            panel3.SuspendLayout();
+            panel1.SuspendLayout();
+            tasksSectionHeader.SuspendLayout();
             SuspendLayout();
             // 
             // id
             // 
             id.Text = "Task No";
-            id.Width = 80;
+            id.Width = 0;
             // 
             // generalContainer
             // 
-            generalContainer.BackColor = Color.FromArgb(196, 215, 178);
+            generalContainer.BackColor = SystemColors.AppWorkspace;
             generalContainer.Controls.Add(tasksContainer);
             generalContainer.Controls.Add(optionsContainer);
             generalContainer.Controls.Add(tasksSectionHeader);
@@ -71,12 +91,204 @@
             // 
             // tasksContainer
             // 
+            tasksContainer.BackColor = Color.Transparent;
+            tasksContainer.Controls.Add(addTaskBtn);
+            tasksContainer.Controls.Add(panel4);
+            tasksContainer.Controls.Add(panel2);
+            tasksContainer.Controls.Add(panel3);
+            tasksContainer.Controls.Add(optionsSection);
+            tasksContainer.Controls.Add(panel1);
             tasksContainer.Controls.Add(taskListView);
             tasksContainer.Dock = DockStyle.Fill;
-            tasksContainer.Location = new Point(0, 128);
+            tasksContainer.Location = new Point(0, 74);
             tasksContainer.Name = "tasksContainer";
-            tasksContainer.Size = new Size(900, 522);
+            tasksContainer.Size = new Size(900, 576);
             tasksContainer.TabIndex = 3;
+            tasksContainer.Paint += tasksContainer_Paint;
+            // 
+            // addTaskBtn
+            // 
+            addTaskBtn.Controls.Add(label10);
+            addTaskBtn.Controls.Add(addTaskBtn1);
+            addTaskBtn.Location = new Point(116, 6);
+            addTaskBtn.Name = "addTaskBtn";
+            addTaskBtn.Size = new Size(68, 95);
+            addTaskBtn.TabIndex = 5;
+            addTaskBtn.Paint += panel5_Paint;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(7, 63);
+            label10.Name = "label10";
+            label10.Size = new Size(58, 20);
+            label10.TabIndex = 3;
+            label10.Text = "Update";
+            // 
+            // addTaskBtn1
+            // 
+            addTaskBtn1.BackgroundImage = (Image)resources.GetObject("addTaskBtn1.BackgroundImage");
+            addTaskBtn1.Cursor = Cursors.Hand;
+            addTaskBtn1.Location = new Point(1, 0);
+            addTaskBtn1.Name = "addTaskBtn1";
+            addTaskBtn1.Size = new Size(64, 64);
+            addTaskBtn1.TabIndex = 2;
+            addTaskBtn1.Paint += panel6_Paint;
+            // 
+            // panel4
+            // 
+            panel4.Controls.Add(label9);
+            panel4.Controls.Add(deleteTaskBtn);
+            panel4.Location = new Point(300, 6);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(68, 95);
+            panel4.TabIndex = 5;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(7, 63);
+            label9.Name = "label9";
+            label9.Size = new Size(58, 20);
+            label9.TabIndex = 3;
+            label9.Text = "Update";
+            label9.Click += label9_Click;
+            // 
+            // deleteTaskBtn
+            // 
+            deleteTaskBtn.BackgroundImage = (Image)resources.GetObject("deleteTaskBtn.BackgroundImage");
+            deleteTaskBtn.Cursor = Cursors.Hand;
+            deleteTaskBtn.Location = new Point(1, 0);
+            deleteTaskBtn.Name = "deleteTaskBtn";
+            deleteTaskBtn.Size = new Size(64, 64);
+            deleteTaskBtn.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(label8);
+            panel2.Controls.Add(editTaskBtn);
+            panel2.Location = new Point(515, 6);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(68, 95);
+            panel2.TabIndex = 4;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(7, 63);
+            label8.Name = "label8";
+            label8.Size = new Size(58, 20);
+            label8.TabIndex = 3;
+            label8.Text = "Update";
+            label8.Click += label8_Click;
+            // 
+            // editTaskBtn
+            // 
+            editTaskBtn.BackgroundImage = (Image)resources.GetObject("editTaskBtn.BackgroundImage");
+            editTaskBtn.Cursor = Cursors.Hand;
+            editTaskBtn.Location = new Point(1, 0);
+            editTaskBtn.Name = "editTaskBtn";
+            editTaskBtn.Size = new Size(64, 64);
+            editTaskBtn.TabIndex = 2;
+            // 
+            // panel3
+            // 
+            panel3.Controls.Add(label7);
+            panel3.Controls.Add(refreshTask);
+            panel3.Location = new Point(720, 6);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(68, 95);
+            panel3.TabIndex = 3;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(7, 63);
+            label7.Name = "label7";
+            label7.Size = new Size(58, 20);
+            label7.TabIndex = 3;
+            label7.Text = "Refresh";
+            // 
+            // refreshTask
+            // 
+            refreshTask.BackgroundImage = (Image)resources.GetObject("refreshTask.BackgroundImage");
+            refreshTask.Cursor = Cursors.Hand;
+            refreshTask.Location = new Point(1, 0);
+            refreshTask.Name = "refreshTask";
+            refreshTask.Size = new Size(64, 64);
+            refreshTask.TabIndex = 2;
+            // 
+            // optionsSection
+            // 
+            optionsSection.Location = new Point(116, 19);
+            optionsSection.Name = "optionsSection";
+            optionsSection.Size = new Size(672, 64);
+            optionsSection.TabIndex = 1;
+            optionsSection.Paint += optionsSection_Paint;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.Silver;
+            panel1.Controls.Add(label5);
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(label1);
+            panel1.Location = new Point(38, 103);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(806, 45);
+            panel1.TabIndex = 1;
+            panel1.Paint += panel1_Paint;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(551, 7);
+            label5.Name = "label5";
+            label5.Size = new Size(102, 25);
+            label5.TabIndex = 6;
+            label5.Text = "Description";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(461, 7);
+            label4.Name = "label4";
+            label4.Size = new Size(84, 25);
+            label4.TabIndex = 5;
+            label4.Text = "Category";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(294, 7);
+            label3.Name = "label3";
+            label3.Size = new Size(116, 25);
+            label3.TabIndex = 4;
+            label3.Text = "Created Time";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(160, 7);
+            label2.Name = "label2";
+            label2.Size = new Size(68, 25);
+            label2.TabIndex = 3;
+            label2.Text = "Priority";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(0, 7);
+            label1.Name = "label1";
+            label1.Size = new Size(44, 25);
+            label1.TabIndex = 2;
+            label1.Text = "Title";
             // 
             // taskListView
             // 
@@ -84,15 +296,15 @@
             taskListView.Alignment = ListViewAlignment.SnapToGrid;
             taskListView.AllowDrop = true;
             taskListView.AutoArrange = false;
-            taskListView.BackColor = Color.White;
+            taskListView.BackColor = SystemColors.AppWorkspace;
             taskListView.BorderStyle = BorderStyle.None;
             taskListView.Columns.AddRange(new ColumnHeader[] { id, taskTitle, taskPriorityLevel, taskCreatedTime, taskCategory, taskDescription });
             taskListView.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             taskListView.ForeColor = Color.Black;
             taskListView.ImeMode = ImeMode.NoControl;
-            listViewItem1.StateImageIndex = 0;
-            taskListView.Items.AddRange(new ListViewItem[] { listViewItem1 });
-            taskListView.Location = new Point(41, 30);
+            listViewItem2.StateImageIndex = 0;
+            taskListView.Items.AddRange(new ListViewItem[] { listViewItem2 });
+            taskListView.Location = new Point(38, 118);
             taskListView.MultiSelect = false;
             taskListView.Name = "taskListView";
             taskListView.Size = new Size(805, 437);
@@ -100,6 +312,7 @@
             taskListView.Tag = "";
             taskListView.UseCompatibleStateImageBehavior = false;
             taskListView.View = System.Windows.Forms.View.Details;
+            taskListView.SelectedIndexChanged += taskListView_SelectedIndexChanged;
             // 
             // taskTitle
             // 
@@ -110,7 +323,7 @@
             // 
             taskPriorityLevel.Text = "Priority Level";
             taskPriorityLevel.TextAlign = HorizontalAlignment.Center;
-            taskPriorityLevel.Width = 120;
+            taskPriorityLevel.Width = 100;
             // 
             // taskCreatedTime
             // 
@@ -127,81 +340,35 @@
             // taskDescription
             // 
             taskDescription.Text = "Description";
-            taskDescription.Width = 250;
+            taskDescription.Width = 200;
             // 
             // optionsContainer
             // 
-            optionsContainer.Controls.Add(optionsSection);
-            optionsContainer.Dock = DockStyle.Top;
-            optionsContainer.Location = new Point(0, 64);
+            optionsContainer.Location = new Point(0, 74);
             optionsContainer.Name = "optionsContainer";
-            optionsContainer.Size = new Size(900, 64);
+            optionsContainer.Size = new Size(900, 58);
             optionsContainer.TabIndex = 2;
-            // 
-            // optionsSection
-            // 
-            optionsSection.Controls.Add(refreshTask);
-            optionsSection.Controls.Add(deleteTaskBtn);
-            optionsSection.Controls.Add(editTaskBtn);
-            optionsSection.Controls.Add(addTaskBtn);
-            optionsSection.Location = new Point(103, 0);
-            optionsSection.Name = "optionsSection";
-            optionsSection.Size = new Size(661, 64);
-            optionsSection.TabIndex = 1;
-            // 
-            // refreshTask
-            // 
-            refreshTask.FlatStyle = FlatStyle.Popup;
-            refreshTask.Location = new Point(597, 0);
-            refreshTask.Margin = new Padding(0);
-            refreshTask.Name = "refreshTask";
-            refreshTask.Size = new Size(64, 64);
-            refreshTask.TabIndex = 3;
-            refreshTask.Text = "Refresh Tasks";
-            refreshTask.UseVisualStyleBackColor = true;
-            // 
-            // deleteTaskBtn
-            // 
-            deleteTaskBtn.FlatStyle = FlatStyle.Popup;
-            deleteTaskBtn.Location = new Point(399, 0);
-            deleteTaskBtn.Margin = new Padding(0);
-            deleteTaskBtn.Name = "deleteTaskBtn";
-            deleteTaskBtn.Size = new Size(64, 64);
-            deleteTaskBtn.TabIndex = 2;
-            deleteTaskBtn.Text = "Delete";
-            deleteTaskBtn.UseVisualStyleBackColor = true;
-            // 
-            // editTaskBtn
-            // 
-            editTaskBtn.FlatStyle = FlatStyle.Popup;
-            editTaskBtn.Location = new Point(191, 0);
-            editTaskBtn.Margin = new Padding(0);
-            editTaskBtn.Name = "editTaskBtn";
-            editTaskBtn.Size = new Size(64, 64);
-            editTaskBtn.TabIndex = 1;
-            editTaskBtn.Text = "Update";
-            editTaskBtn.UseVisualStyleBackColor = true;
-            // 
-            // addTaskBtn
-            // 
-            addTaskBtn.BackColor = Color.Transparent;
-            addTaskBtn.Dock = DockStyle.Left;
-            addTaskBtn.FlatStyle = FlatStyle.Flat;
-            addTaskBtn.Location = new Point(0, 0);
-            addTaskBtn.Margin = new Padding(0);
-            addTaskBtn.Name = "addTaskBtn";
-            addTaskBtn.Size = new Size(64, 64);
-            addTaskBtn.TabIndex = 0;
-            addTaskBtn.Text = "Add";
-            addTaskBtn.UseVisualStyleBackColor = false;
+            optionsContainer.Paint += optionsContainer_Paint;
             // 
             // tasksSectionHeader
             // 
+            tasksSectionHeader.BackColor = SystemColors.ButtonShadow;
+            tasksSectionHeader.Controls.Add(label6);
             tasksSectionHeader.Dock = DockStyle.Top;
             tasksSectionHeader.Location = new Point(0, 0);
             tasksSectionHeader.Name = "tasksSectionHeader";
-            tasksSectionHeader.Size = new Size(900, 64);
+            tasksSectionHeader.Size = new Size(900, 74);
             tasksSectionHeader.TabIndex = 0;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Iceland", 28.1999989F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.Location = new Point(367, 16);
+            label6.Name = "label6";
+            label6.Size = new Size(119, 45);
+            label6.TabIndex = 0;
+            label6.Text = "Tasks";
             // 
             // TasksSection
             // 
@@ -213,8 +380,18 @@
             Load += TasksSection_Load;
             generalContainer.ResumeLayout(false);
             tasksContainer.ResumeLayout(false);
-            optionsContainer.ResumeLayout(false);
-            optionsSection.ResumeLayout(false);
+            addTaskBtn.ResumeLayout(false);
+            addTaskBtn.PerformLayout();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            tasksSectionHeader.ResumeLayout(false);
+            tasksSectionHeader.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -222,9 +399,6 @@
 
         private Panel generalContainer;
         private Panel optionsSection;
-        private Button deleteTaskBtn;
-        private Button editTaskBtn;
-        private Button addTaskBtn;
         private Panel tasksSectionHeader;
         private Panel optionsContainer;
         private Panel tasksContainer;
@@ -234,7 +408,25 @@
         private ColumnHeader taskCreatedTime;
         private ColumnHeader taskCategory;
         public ListView taskListView;
-        public Button refreshTask;
         private PictureBox pictureBox1;
+        private Panel panel1;
+        private Label label5;
+        private Label label4;
+        private Label label3;
+        private Label label2;
+        private Label label1;
+        private Label label6;
+        private Panel refreshTask;
+        private Panel panel3;
+        private Label label7;
+        private Panel panel2;
+        private Label label8;
+        private Panel editTaskBtn;
+        private Panel panel4;
+        private Label label9;
+        private Panel deleteTaskBtn;
+        private Panel addTaskBtn;
+        private Label label10;
+        private Panel addTaskBtn1;
     }
 }
