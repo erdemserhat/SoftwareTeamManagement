@@ -4,6 +4,7 @@ using SoftwareTeamManagement.DataAccess.Repository;
 using SoftwareTeamManagement.UI.Login.Controller;
 using SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.View;
 using SoftwareTeamManagement.UI.SprintMateDashboard.Meetings.View;
+using SoftwareTeamManagement.UI.SprintMateDashboard.Projects.View;
 using SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.View;
 using System;
 using System.Collections.Generic;
@@ -39,6 +40,7 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.Presenter
         {
 
             //Adding the relavent panel..
+            DashboardForm.GetInstance().mainSectionPanel.Controls.Clear();
             DashboardForm.GetInstance().mainSectionPanel.Controls.Add(TasksSection.GetInstance()); 
 
         }
@@ -46,6 +48,8 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.Presenter
         //When user navigates the projects section
         public void OnProjectsButtonClicked(object sender, EventArgs e)
         {
+            DashboardForm.GetInstance().mainSectionPanel.Controls.Clear();
+            DashboardForm.GetInstance().mainSectionPanel.Controls.Add(ProjectSection.GetInstance());
 
         }
 

@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace SoftwareTeamManagement.UI.SprintMateDashboard.Projects.View
 {
-    internal interface IProjectSection
+    public interface IProjectSection
     {
+        event EventHandler EditProjectButtonClicked;
+        string ProjectTitle { set; }
+        string ProjectDescription { set; }
+        
     }
 }

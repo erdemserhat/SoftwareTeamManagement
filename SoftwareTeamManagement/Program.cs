@@ -79,6 +79,8 @@ namespace SoftwareTeamManagement
             //  
 
 
+
+            //do not forget to configure quick test changes
             ApplicationConfiguration.Initialize();
             Application.Run(new DashboardForm());
         }

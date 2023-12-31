@@ -30,5 +30,11 @@ namespace SoftwareTeamManagement.DataAccess.Repository
             dao = new ProjectDao();
             return dao.GetAllProjects();
         }
+
+        public IProjectContract GetSingleProject()
+        {
+            dao = new ProjectDao();
+            return dao.GetAllProjects()[0];
+        }
     }
 }
