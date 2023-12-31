@@ -1,5 +1,6 @@
 ﻿using SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember;
 using SoftwareTeamManagement.DataAccess.Dao.TeamMemberDao;
+using SoftwareTeamManagement.UI.CustomMessageBox;
 
 namespace SoftwareTeamManagement.DataAccess.Repository
 {
@@ -52,6 +53,19 @@ namespace SoftwareTeamManagement.DataAccess.Repository
 
 
 
+        }
+
+        public TeamMember? ProvideUserDataModelByEmail(string email)
+        {
+            dao = new TeamMemberDao();
+            TeamMember member = dao.GetUserByEmail(email);
+            if (member == null)
+            {
+                CustomErrorMessageBoxForm error = new CustomErrorMessageBoxForm("An error occured while providing user information (null)");
+                return null;
+            }
+
+            return member;
         }
 
 

@@ -25,6 +25,7 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.Presenter
             _view.EditTasksClicked += OnEditTaskClicked;
             _view.RefreshTaskClicked += OnRefreshTaskClicked;
             _view.TaskDoubleClicked += OnTaskDoubleClicked;
+            _view.OverviewTaskClicked += OnOverViewTaskClicked;
         }
 
         private void OnAddTaskClicked(object sender, EventArgs e)
@@ -146,6 +147,20 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.Presenter
             }
 
 
+
+        }
+
+        private void OnOverViewTaskClicked(object sender, EventArgs e)
+        {
+            if (ProvideSelectedRowInformation() != null)
+            {
+               OnTaskDoubleClicked(sender, e);
+
+            }
+            else
+            {
+                CustomErrorMessageBoxForm message = new CustomErrorMessageBoxForm("Please select a task to overivew..");
+            }
 
         }
 

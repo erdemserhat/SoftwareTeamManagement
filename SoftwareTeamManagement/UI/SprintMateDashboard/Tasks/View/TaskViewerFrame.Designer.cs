@@ -99,6 +99,7 @@
             // exitBtn
             // 
             exitBtn.BackColor = Color.Transparent;
+            exitBtn.Cursor = Cursors.Hand;
             exitBtn.Location = new Point(338, 12);
             exitBtn.Name = "exitBtn";
             exitBtn.Size = new Size(37, 33);

@@ -40,8 +40,6 @@
   <ItemGroup>
     <Folder Include="UI\Splash\Presenter\" />
     <Folder Include="UI\SprintMateDashboard\Meetings\Presenter\" />
-    <Folder Include="UI\SprintMateDashboard\Projects\View\" />
-    <Folder Include="UI\SprintMateDashboard\Projects\Presenter\" />
     <Folder Include="UI\SprintMateDashboard\Team\View\" />
     <Folder Include="UI\SprintMateDashboard\Team\Presenter\" />
   </ItemGroup>

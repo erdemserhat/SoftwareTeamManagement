@@ -15,5 +15,7 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.View
         event EventHandler? MeetingButtonClicked;
         event EventHandler? LogoutButtonClicked;
 
+        public string WelcomeText { set; }
+
     }
 }

@@ -1,4 +1,5 @@
-﻿using SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.Presenter;
+﻿using SoftwareTeamManagement.UI.CustomMessageBox;
+using SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.Presenter;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +14,7 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.View
 {
     public partial class DashboardForm : Form, IDashboardForm
     {
-        public string userEmail;
+
         //Constructor of Main Menu
         public DashboardForm()
         {
@@ -21,6 +22,7 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.View
             instance = this;
             DashboardController controller = new DashboardController();
             InitializeEvents();
+
 
 
         }
@@ -32,6 +34,7 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.View
         public event EventHandler? AnnouncementButtonClicked;
         public event EventHandler? MeetingButtonClicked;
         public event EventHandler? LogoutButtonClicked;
+        public string WelcomeText { set => welcomeText.Text = value; }
 
 
         private void InitializeEvents()
@@ -50,6 +53,9 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.View
 
         //Singleton impl. of form
         private static DashboardForm instance;
+
+
+
         public static DashboardForm GetInstance()
         {
             if (instance == null || instance.IsDisposed)
@@ -71,5 +77,12 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.View
             tasksBtn.BackColor = Color.FromArgb(6, 6, 6);
 
         }
+
+        private void welcomeText_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

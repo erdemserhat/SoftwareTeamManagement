@@ -47,8 +47,9 @@ namespace SoftwareTeamManagement.UI.Login.Controller
                 TeamMemberRepository repository = new TeamMemberRepository();
                 if (repository.IsValidUser(_view.Email, _view.Password))
                 {
-                    DashboardForm.GetInstance().userEmail = _view.Email;
-                   DashboardForm.GetInstance().Show();
+                  
+                    UserDataModelTransferLoginToDashboard.SetEmail(_view.Email);
+                    DashboardForm.GetInstance().Show();
                     LoginForm.GetInstance().Hide();
 
 

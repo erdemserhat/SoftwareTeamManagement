@@ -30,5 +30,7 @@ namespace SoftwareTeamManagement.DataAccess.Repository
             teamDao = new TeamDao();
             return teamDao.GetTeams();
         }
+
+      
     }
 }

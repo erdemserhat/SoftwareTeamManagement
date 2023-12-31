@@ -14,5 +14,7 @@ namespace SoftwareTeamManagement.DataAccess.Dao.TeamMemberDao
 
         void ChangePassword(string email, string password);
 
+        TeamMember GetUserByEmail(string email);
+
     }
 }

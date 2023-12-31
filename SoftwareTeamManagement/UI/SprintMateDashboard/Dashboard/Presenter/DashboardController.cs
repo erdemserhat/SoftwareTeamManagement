@@ -1,4 +1,8 @@
-﻿using SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.View;
+﻿using SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember;
+using SoftwareTeamManagement.DataAccess.Dao.TeamMemberDao;
+using SoftwareTeamManagement.DataAccess.Repository;
+using SoftwareTeamManagement.UI.Login.Controller;
+using SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.View;
 using SoftwareTeamManagement.UI.SprintMateDashboard.Meetings.View;
 using SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.View;
 using System;
@@ -13,6 +17,7 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.Presenter
     public class DashboardController
     {
         private IDashboardForm _view = DashboardForm.GetInstance();
+        private TeamMember _member;
 
         public DashboardController()
         {
@@ -22,6 +27,9 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.Presenter
             _view.AnnouncementButtonClicked += OnAnnouncementButtonClicked;
             _view.MeetingButtonClicked += OnMeetingButtonClicked;
             _view.LogoutButtonClicked += OnLogoutButtonClicked;
+            ConfigureUserDataModel();
+            SetWelcomeText();
+
         }
 
         //Implementations...
@@ -30,9 +38,8 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.Presenter
         public void OnTaskButtonClicked(object sender, EventArgs e)
         {
 
-
-            DashboardForm.GetInstance().mainSectionPanel.Controls.Add(TasksSection.GetInstance()); // Formu panele ekleyin
-         
+            //Adding the relavent panel..
+            DashboardForm.GetInstance().mainSectionPanel.Controls.Add(TasksSection.GetInstance()); 
 
         }
 
@@ -65,6 +72,23 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.Presenter
         {
 
         }
+        
+        public void ConfigureUserDataModel()
+        {
+            TeamMemberRepository repo = new TeamMemberRepository();
+          
+            _member = repo.ProvideUserDataModelByEmail(UserDataModelTransferLoginToDashboard.GetEmail());
+
+        }
+
+       //Costumizing User Experience...
+
+        public void SetWelcomeText()
+        {
+           _view.WelcomeText=$"Welcome, {_member.FullName}!";
+        }
+
+      
 
 
 

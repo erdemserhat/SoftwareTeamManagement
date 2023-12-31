@@ -118,6 +118,7 @@
             welcomeText.Size = new Size(233, 24);
             welcomeText.TabIndex = 1;
             welcomeText.Text = "Welcome, Serhat Erdem!";
+            welcomeText.Click += welcomeText_Click;
             // 
             // dashboardLogoIcon
             // 

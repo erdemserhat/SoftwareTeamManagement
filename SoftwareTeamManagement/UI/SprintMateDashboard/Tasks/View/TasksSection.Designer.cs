@@ -33,6 +33,9 @@
             ListViewItem listViewItem1 = new ListViewItem(new string[] { "" }, -1, Color.Empty, Color.Empty, new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point));
             generalContainer = new Panel();
             tasksContainer = new Panel();
+            panel5 = new Panel();
+            label11 = new Label();
+            overviewBtn = new Panel();
             addTaskBtn = new Panel();
             label10 = new Label();
             addTaskBtn1 = new Panel();
@@ -64,6 +67,7 @@
             id = new ColumnHeader();
             generalContainer.SuspendLayout();
             tasksContainer.SuspendLayout();
+            panel5.SuspendLayout();
             addTaskBtn.SuspendLayout();
             panel4.SuspendLayout();
             panel2.SuspendLayout();
@@ -92,6 +96,7 @@
             // tasksContainer
             // 
             tasksContainer.BackColor = Color.Transparent;
+            tasksContainer.Controls.Add(panel5);
             tasksContainer.Controls.Add(addTaskBtn);
             tasksContainer.Controls.Add(panel4);
             tasksContainer.Controls.Add(panel2);
@@ -105,11 +110,39 @@
             tasksContainer.Size = new Size(900, 576);
             tasksContainer.TabIndex = 3;
             // 
+            // panel5
+            // 
+            panel5.Controls.Add(label11);
+            panel5.Controls.Add(overviewBtn);
+            panel5.Location = new Point(409, 3);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(68, 95);
+            panel5.TabIndex = 6;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(0, 63);
+            label11.Name = "label11";
+            label11.Size = new Size(70, 20);
+            label11.TabIndex = 3;
+            label11.Text = "Overview";
+            // 
+            // overviewBtn
+            // 
+            overviewBtn.BackgroundImage = (Image)resources.GetObject("overviewBtn.BackgroundImage");
+            overviewBtn.BackgroundImageLayout = ImageLayout.Stretch;
+            overviewBtn.Cursor = Cursors.Hand;
+            overviewBtn.Location = new Point(5, 5);
+            overviewBtn.Name = "overviewBtn";
+            overviewBtn.Size = new Size(63, 62);
+            overviewBtn.TabIndex = 2;
+            // 
             // addTaskBtn
             // 
             addTaskBtn.Controls.Add(label10);
             addTaskBtn.Controls.Add(addTaskBtn1);
-            addTaskBtn.Location = new Point(116, 6);
+            addTaskBtn.Location = new Point(74, 3);
             addTaskBtn.Name = "addTaskBtn";
             addTaskBtn.Size = new Size(68, 95);
             addTaskBtn.TabIndex = 5;
@@ -117,7 +150,7 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(13, 63);
+            label10.Location = new Point(4, 58);
             label10.Name = "label10";
             label10.Size = new Size(37, 20);
             label10.TabIndex = 3;
@@ -136,7 +169,7 @@
             // 
             panel4.Controls.Add(label9);
             panel4.Controls.Add(deleteTaskBtn);
-            panel4.Location = new Point(300, 6);
+            panel4.Location = new Point(245, 3);
             panel4.Name = "panel4";
             panel4.Size = new Size(68, 95);
             panel4.TabIndex = 5;
@@ -144,7 +177,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(7, 63);
+            label9.Location = new Point(3, 60);
             label9.Name = "label9";
             label9.Size = new Size(53, 20);
             label9.TabIndex = 3;
@@ -163,7 +196,7 @@
             // 
             panel2.Controls.Add(label8);
             panel2.Controls.Add(editTaskBtn);
-            panel2.Location = new Point(515, 6);
+            panel2.Location = new Point(589, 6);
             panel2.Name = "panel2";
             panel2.Size = new Size(68, 95);
             panel2.TabIndex = 4;
@@ -171,7 +204,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(7, 63);
+            label8.Location = new Point(6, 60);
             label8.Name = "label8";
             label8.Size = new Size(58, 20);
             label8.TabIndex = 3;
@@ -181,7 +214,7 @@
             // 
             editTaskBtn.BackgroundImage = (Image)resources.GetObject("editTaskBtn.BackgroundImage");
             editTaskBtn.Cursor = Cursors.Hand;
-            editTaskBtn.Location = new Point(1, 0);
+            editTaskBtn.Location = new Point(3, 0);
             editTaskBtn.Name = "editTaskBtn";
             editTaskBtn.Size = new Size(64, 64);
             editTaskBtn.TabIndex = 2;
@@ -190,7 +223,7 @@
             // 
             panel3.Controls.Add(label7);
             panel3.Controls.Add(refreshTask);
-            panel3.Location = new Point(720, 6);
+            panel3.Location = new Point(748, 6);
             panel3.Name = "panel3";
             panel3.Size = new Size(68, 95);
             panel3.TabIndex = 3;
@@ -198,7 +231,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(7, 63);
+            label7.Location = new Point(7, 57);
             label7.Name = "label7";
             label7.Size = new Size(58, 20);
             label7.TabIndex = 3;
@@ -373,6 +406,8 @@
             Load += TasksSection_Load;
             generalContainer.ResumeLayout(false);
             tasksContainer.ResumeLayout(false);
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
             addTaskBtn.ResumeLayout(false);
             addTaskBtn.PerformLayout();
             panel4.ResumeLayout(false);
@@ -421,5 +456,9 @@
         private Panel addTaskBtn;
         private Label label10;
         private Panel addTaskBtn1;
+        private Panel panel5;
+        private Label label11;
+        private Panel panel6;
+        private Panel overviewBtn;
     }
 }

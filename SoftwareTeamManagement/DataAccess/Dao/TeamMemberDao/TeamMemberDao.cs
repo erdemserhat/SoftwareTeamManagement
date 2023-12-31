@@ -310,5 +310,22 @@ namespace SoftwareTeamManagement.DataAccess.Dao.TeamMemberDao
 
 
         }
+
+        public TeamMember? GetUserByEmail(string email)
+        {
+            TeamMember _member = null;
+            List<TeamMember> userList = getAllMembers();
+
+            foreach(var member in userList)
+            {
+                if (member.Email == email)
+                {
+                    _member=member;
+                    return _member;
+                }
+            }
+
+            return null;
+        }
     }
 }

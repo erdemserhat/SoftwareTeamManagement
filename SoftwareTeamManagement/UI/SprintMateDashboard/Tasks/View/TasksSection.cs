@@ -23,6 +23,7 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.View
         public event EventHandler EditTasksClicked;
         public event EventHandler RefreshTaskClicked;
         public event EventHandler TaskDoubleClicked;
+        public event EventHandler OverviewTaskClicked;
 
         TasksSectionController controller;
 
@@ -68,6 +69,7 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.View
             editTaskBtn.Click += (sender, e) => EditTasksClicked?.Invoke(this, EventArgs.Empty);
             refreshTask.Click += (sender, e) => RefreshTaskClicked?.Invoke(this, EventArgs.Empty);
             taskListView.MouseDoubleClick += (sender, e) => TaskDoubleClicked?.Invoke(this, EventArgs.Empty);
+            overviewBtn.Click += (sender, e) => OverviewTaskClicked?.Invoke(this, EventArgs.Empty);
         }
 
         private void TasksSection_Load(object sender, EventArgs e)
@@ -79,5 +81,7 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.View
         {
             DeleteTaskClicked?.Invoke(this, EventArgs.Empty);
         }
+
+
     }
 }

@@ -80,7 +80,7 @@ namespace SoftwareTeamManagement
 
 
             ApplicationConfiguration.Initialize();
-            Application.Run(new SplashScreenForm());
+            Application.Run(new DashboardForm());
         }
 
     }
