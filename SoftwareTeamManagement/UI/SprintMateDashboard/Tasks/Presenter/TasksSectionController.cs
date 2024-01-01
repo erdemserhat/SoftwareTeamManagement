@@ -1,15 +1,7 @@
-﻿
-using Google.Protobuf;
-using SoftwareTeamManagement.BusinessLogic.DataModel.Task;
+﻿using SoftwareTeamManagement.BusinessLogic.DataModel.Task;
 using SoftwareTeamManagement.DataAccess.Repository;
 using SoftwareTeamManagement.UI.CustomMessageBox;
 using SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.View;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 using Task = SoftwareTeamManagement.BusinessLogic.DataModel.Task.Task;
 
 namespace SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.Presenter
@@ -36,7 +28,7 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.Presenter
 
         private void OnEditTaskClicked(object sender, EventArgs e)
         {
-            if (ProvideSelectedRowInformation()!=null)
+            if (ProvideSelectedRowInformation() != null)
             {
                 Task task = ProvideSelectedRowInformation();
                 EditTaskFrame.GetInstance().PreviewData(task);
@@ -69,11 +61,11 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.Presenter
 
         }
 
-        public  bool UpdateTaskList()
+        public bool UpdateTaskList()
         {
             TaskRepository repo = new TaskRepository();
             List<ITaskContract> tasksList = repo.GetTasks();
-       
+
             TasksSection.GetInstance().taskListView.BeginUpdate(); // BeginUpdate
             TasksSection.GetInstance().taskListView.Items.Clear();
 
@@ -87,15 +79,15 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.Presenter
                 item.SubItems.Add(task.CreatedTime.ToString());
                 item.SubItems.Add(task.TaskCatagory);
                 item.SubItems.Add(task.Description);
-       
-              
+
+
 
                 TasksSection.GetInstance().taskListView.Items.Add(item);
             }
 
             TasksSection.GetInstance().taskListView.EndUpdate();
 
-            if (TasksSection.GetInstance().taskListView.Items.Count> 0)
+            if (TasksSection.GetInstance().taskListView.Items.Count > 0)
             {
                 return true;
             }
@@ -109,8 +101,9 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.Presenter
         private void OnRefreshTaskClicked(object sender, EventArgs e)
         {
 
-            if (UpdateTaskList()) { 
-            CustomSuccessMessageBoxForm message = new CustomSuccessMessageBoxForm("Task List Updated from Server!");
+            if (UpdateTaskList())
+            {
+                CustomSuccessMessageBoxForm message = new CustomSuccessMessageBoxForm("Task List Updated from Server!");
             }
 
         }
@@ -136,7 +129,7 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.Presenter
                 TaskViewerDataSingleton.SetInstance(task);
                 TaskViewerFrame.GetInstance().NotifyDataSet();
                 TaskViewerFrame.GetInstance().ShowDialog();
-                
+
 
 
 
@@ -154,7 +147,7 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.Presenter
         {
             if (ProvideSelectedRowInformation() != null)
             {
-               OnTaskDoubleClicked(sender, e);
+                OnTaskDoubleClicked(sender, e);
 
             }
             else
@@ -176,7 +169,7 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.Presenter
                 ListViewItem selectedRow = TasksSection.GetInstance().taskListView.SelectedItems[0];
 
                 //provide information
-                
+
                 string id = selectedRow.SubItems[0].Text;
                 string title = selectedRow.SubItems[1].Text;
                 string priority = selectedRow.SubItems[2].Text;
@@ -187,7 +180,7 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.Presenter
 
                 task = new Task(Convert.ToInt32(id), title, description, priority, DateTime.Now, category);
 
-              
+
             }
 
             return task;

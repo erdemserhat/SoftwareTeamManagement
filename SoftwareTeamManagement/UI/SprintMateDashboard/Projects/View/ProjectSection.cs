@@ -1,15 +1,4 @@
 ﻿using SoftwareTeamManagement.UI.SprintMateDashboard.Projects.Presenter;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using Timer = System.Windows.Forms.Timer;
 
 namespace SoftwareTeamManagement.UI.SprintMateDashboard.Projects.View
 {
@@ -21,10 +10,12 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Projects.View
 
 
         //Defining relevatn implementations which the form can do...
-        public string ProjectTitle { set => projectTitleTB.Text = value; }
-        public string ProjectDescription { set => projectDescriptionTB.Text = value; }
+        public string ProjectTitle { set => projectTitleTB.Text = value; get => projectTitleTB.Text; }
+        public string ProjectDescription { set => projectDescriptionTB.Text = value; get => projectDescriptionTB.Text; }
 
         public event EventHandler EditProjectButtonClicked;
+        public event EventHandler SaveProjectButtonClicked;
+
         //Assigning the contoller object
         private ProjectSectionController controller;
 
@@ -56,6 +47,7 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Projects.View
         private void InitializeEvents()
         {
             editBtn.Click += (sender, e) => EditProjectButtonClicked?.Invoke(this, EventArgs.Empty);
+            saveBtn.Click += (sender, e) => SaveProjectButtonClicked?.Invoke(this, EventArgs.Empty);
         }
 
         public void ArrangeDescriptionText()

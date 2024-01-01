@@ -1,13 +1,4 @@
 ﻿using SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.Presenter;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.View
 {
@@ -26,7 +17,7 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.View
             Button acceptButton = new Button();
             acceptButton.Click += (sender, e) => { DeleteButtonClicked.Invoke(sender, e); };
             this.AcceptButton = acceptButton;
-           
+
         }
 
 

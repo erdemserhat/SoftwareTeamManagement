@@ -1,8 +1,5 @@
-﻿using SoftwareTeamManagement.UI.Login.View;
-using SoftwareTeamManagement.UI.Splash.View;
+﻿using SoftwareTeamManagement.UI.Splash.View;
 using SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.View;
-using SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.View;
-using SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.View;
 
 namespace SoftwareTeamManagement
 {
@@ -14,73 +11,6 @@ namespace SoftwareTeamManagement
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
-
-
-            //AnnouncementRepository repo = new AnnouncementRepository();
-            // repo.AddAnnouncement(new Announcement("İlan Başlığı", "İlan Açıklaması", DateTime.Now));
-            //repo.RemoveAnnouncement(new Announcement(7));
-            // Announcement a = new Announcement("İlan Başlığı", "İlan Açıklaması", DateTime.Now);
-            //Announcement updated = a with { AnnouncementId = 6, Content = "1212" };
-
-            // List<IAnnouncementContract> announcements = repo.GetAnnoucements();
-
-            //Meeting meeting = new Meeting("toplantı var",DateTime.Now, DateTime.Now,"ev",2);
-            //MeetingRepository repository = new MeetingRepository();
-            // repository.AddMeeting(meeting);
-            //repository.EditMeeting(meeting with { Location="yurt", MeetingId=1} );
-            //repository.RemoveMeeting(meeting with { MeetingId=3});
-            //var a = repository.GetMeetings();
-            //MessageBox.Show(a.Count().ToString());
-
-            //Project project = new Project("benim projem","proje açıklaması");
-
-            // ProjectRepository repository = new ProjectRepository();
-            //repository.AddProject(project);
-            // repository.EditProject(project with { Id=1});
-            //repository.RemoveProject(project with { Id=2});
-
-            //var a = repository.GetProjects();
-            // MessageBox.Show(a[0].Description);
-
-            // Task task = new Task("görev başlığı", "görev açıklaması",PriorityLevelHelper.getPriority(PriorityLevel.Medium), DateTime.Now, TaskCatagoryHelper.GetCatagory(TaskCatagory.Done));
-
-            // TaskRepository repository = new TaskRepository();
-            // repository.AddTask(task);
-            //repository.EditTask(task with {Id=2, Description="güncellenen açıklama" });
-            //repository.RemoveTask(task with { Id=1});
-            // List<ITaskContract> a = repository.GetTasks();
-            // MessageBox.Show(a[0].CreatedTime.ToString());
-
-            // Team team = new Team("X Takımı", "Projemya !");
-            // TeamRepository repository = new TeamRepository();
-            //  repository.AddTeam(team);
-            //repository.EditTeam(team with {Id=1, Description="upddd"});
-            // repository.RemoveTeam(team with { Id=1});
-            //List<ITeamContract> a = repository.GetTeams();
-            //MessageBox.Show(a[0].Name);
-
-            //TeamMember teamMember = new TeamMember("serhat", "me.serhaterdem@gmail.com", "erdem3451", new Role("rol tipi", "rol departmanı"), new TaskPermissionSet(false, false, false), new ProjectPermissionSet(false, false, false, false, false, false, false, false));
-
-            //TeamMemberRepository repo = new TeamMemberRepository();
-            //repo.AddTeamMember(teamMember with { FullName="samet berkant koca", Email="example@gmail.com"});
-            // repo.EditTeamMember(teamMember with { Id = 3, RoleContract=new Role("a","b") });
-            // repo.EditTeamMember(teamMember with { Id = 2, ProjectPermissionSet =new ProjectPermissionSet(true, true, true, true, true, true, true, true) });
-            //repo.RemoveTeamMember(teamMember with { Id=1});
-            //List<TeamMember> members = repo.GetTeamMembers();
-            //foreach (TeamMember member in members)
-            //{
-
-            // {
-            // MessageBox.Show($"{member.RoleContract.RoleTypeInformation()}");
-            //  MessageBox.Show($"{member.RoleContract.RoleDepartmentInformation()}");
-            //}
-            //  
-
-
-
-            //do not forget to configure quick test changes
             ApplicationConfiguration.Initialize();
             Application.Run(new DashboardForm());
         }

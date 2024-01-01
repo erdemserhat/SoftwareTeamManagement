@@ -1,12 +1,6 @@
-﻿using SoftwareTeamManagement.BusinessLogic.DataModel.Task;
-using SoftwareTeamManagement.DataAccess.Repository;
+﻿using SoftwareTeamManagement.DataAccess.Repository;
 using SoftwareTeamManagement.UI.CustomMessageBox;
 using SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.View;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Task = SoftwareTeamManagement.BusinessLogic.DataModel.Task.Task;
 
 namespace SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.Presenter
@@ -35,7 +29,7 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.Presenter
                 TaskRepository repo = new TaskRepository();
                 Task task = new Task(_view.Title, _view.Description, _view.Priority, DateTime.Now, "Pending");
                 repo.AddTask(task);
-                
+
                 AddTaskFrame.GetInstance().Hide();
                 AddTaskFrame.GetInstance().ClearSelections();
                 TasksSection.GetInstance().UpdateTaskList();

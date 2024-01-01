@@ -34,7 +34,7 @@ namespace SoftwareTeamManagement.DataAccess
                     catch (Exception ex)
                     {
                         CustomErrorMessageBoxForm message = new CustomErrorMessageBoxForm("Please check your internet connection : " + ex.Message);
-                        
+
 
                     }
 
@@ -57,7 +57,7 @@ namespace SoftwareTeamManagement.DataAccess
                     }
                     catch (Exception ex)
                     {
-                        
+
                         CustomErrorMessageBoxForm message = new CustomErrorMessageBoxForm("An error while closing the connection: " + ex.Message);
 
                     }
@@ -80,7 +80,7 @@ namespace SoftwareTeamManagement.DataAccess
                     catch (Exception ex)
                     {
                         CustomErrorMessageBoxForm message = new CustomErrorMessageBoxForm("An error occurred while executing the query: " + ex.Message);
-                       
+
                     }
                     finally
                     {
@@ -106,7 +106,7 @@ namespace SoftwareTeamManagement.DataAccess
                     catch (Exception ex)
                     {
                         CustomErrorMessageBoxForm message = new CustomErrorMessageBoxForm(ex.Message);
-                        
+
                     }
                     finally
                     {
@@ -136,7 +136,7 @@ namespace SoftwareTeamManagement.DataAccess
                     catch (Exception ex)
                     {
                         CustomErrorMessageBoxForm message = new CustomErrorMessageBoxForm(ex.Message);
-                       
+
                     }
                     finally
                     {

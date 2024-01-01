@@ -1,15 +1,7 @@
 ﻿using SoftwareTeamManagement.BusinessLogic.DataModel.Project;
-using SoftwareTeamManagement.DataAccess.Dao.ProjectDao;
-using SoftwareTeamManagement.DataAccess.Dao.TeamMemberDao;
 using SoftwareTeamManagement.DataAccess.Repository;
 using SoftwareTeamManagement.UI.CustomMessageBox;
 using SoftwareTeamManagement.UI.SprintMateDashboard.Projects.View;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Timer = System.Windows.Forms.Timer;
 
 namespace SoftwareTeamManagement.UI.SprintMateDashboard.Projects.Presenter
 {
@@ -22,6 +14,7 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Projects.Presenter
         public ProjectSectionController()
         {
             _view.EditProjectButtonClicked += OnEditButtonClicked;
+            _view.SaveProjectButtonClicked += OnSaveButtonClicked;
             SetProjectInformation();
             LockProjectEditStatus(true);
 
@@ -36,6 +29,16 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Projects.Presenter
             ProjectSection.GetInstance().generalContainer.BackgroundImage = Properties.Resources.editableBg;
             ProjectSection.GetInstance().projectDescriptionTB.BackColor = Color.White;
 
+        }
+
+        //this function runs when edit button is clicked....
+        private void OnSaveButtonClicked(object sender, EventArgs e)
+        {
+
+            LockProjectEditStatus(true);
+            ProjectSection.GetInstance().generalContainer.BackgroundImage = Properties.Resources.generalContainer_BackgroundImage;
+            ProjectSection.GetInstance().projectDescriptionTB.BackColor = Color.FromArgb(192, 192, 192);
+            UpdateProjectInformation(_view.ProjectTitle, _view.ProjectDescription);
 
 
 
@@ -56,8 +59,23 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Projects.Presenter
             ProjectSection.GetInstance().projectTitleTB.ReadOnly = condition;
         }
 
-       
-        
+        private void UpdateProjectInformation(string title, string description)
+        {
+            ProjectRepository repo;
+            IProjectContract _project;
+            repo = new ProjectRepository();
+            _project = new Project(1, title, description);
+            repo.EditProject(_project);
+            CustomSuccessMessageBoxForm message = new CustomSuccessMessageBoxForm("Project Information is successfully updated..");
+
+
+
+
+
+        }
+
+
+
 
     }
 

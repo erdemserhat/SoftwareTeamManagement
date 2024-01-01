@@ -1,17 +1,4 @@
-﻿using SoftwareTeamManagement.BusinessLogic.DataModel.Task;
-using SoftwareTeamManagement.UI.CustomMessageBox;
-using SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.Presenter;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using Task = SoftwareTeamManagement.BusinessLogic.DataModel.Task.Task;
+﻿using SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.Presenter;
 
 namespace SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.View
 {

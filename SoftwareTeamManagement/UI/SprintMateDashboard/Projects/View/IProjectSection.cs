@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SoftwareTeamManagement.UI.SprintMateDashboard.Projects.View
+﻿namespace SoftwareTeamManagement.UI.SprintMateDashboard.Projects.View
 {
     public interface IProjectSection
     {
         event EventHandler EditProjectButtonClicked;
-        string ProjectTitle { set; }
-        string ProjectDescription { set; }
-        
+        event EventHandler SaveProjectButtonClicked;
+        string ProjectTitle { set; get; }
+        string ProjectDescription { set; get; }
+
     }
 }

@@ -1,9 +1,4 @@
 ﻿using SoftwareTeamManagement.BusinessLogic.DataModel.Task;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Task = SoftwareTeamManagement.BusinessLogic.DataModel.Task.Task;
 
 namespace SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.Presenter
@@ -18,7 +13,7 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.Presenter
 
         public static ITaskContract SetInstance(ITaskContract task)
         {
-         
+
             instance = task;
             return instance;
         }

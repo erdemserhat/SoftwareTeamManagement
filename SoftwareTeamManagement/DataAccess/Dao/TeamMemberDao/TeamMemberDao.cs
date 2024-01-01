@@ -316,11 +316,11 @@ namespace SoftwareTeamManagement.DataAccess.Dao.TeamMemberDao
             TeamMember _member = null;
             List<TeamMember> userList = getAllMembers();
 
-            foreach(var member in userList)
+            foreach (var member in userList)
             {
                 if (member.Email == email)
                 {
-                    _member=member;
+                    _member = member;
                     return _member;
                 }
             }

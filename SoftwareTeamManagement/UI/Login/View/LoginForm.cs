@@ -9,7 +9,7 @@ namespace SoftwareTeamManagement.UI.Login.View
 
 
         ///Singleton
-        private static LoginForm? instance;
+        public static LoginForm? instance;
 
 
         public string Email { get => emailTextBox.Text; set => emailTextBox.Text = value; }

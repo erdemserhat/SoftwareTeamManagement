@@ -83,6 +83,16 @@ namespace SoftwareTeamManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap generalContainer_BackgroundImage {
+            get {
+                object obj = ResourceManager.GetObject("generalContainer.BackgroundImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap highPriorityIcon {
             get {
                 object obj = ResourceManager.GetObject("highPriorityIcon", resourceCulture);

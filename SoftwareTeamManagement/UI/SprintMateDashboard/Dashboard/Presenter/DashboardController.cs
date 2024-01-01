@@ -1,17 +1,9 @@
 ﻿using SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember;
-using SoftwareTeamManagement.DataAccess.Dao.TeamMemberDao;
 using SoftwareTeamManagement.DataAccess.Repository;
 using SoftwareTeamManagement.UI.Login.Controller;
 using SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.View;
-using SoftwareTeamManagement.UI.SprintMateDashboard.Meetings.View;
 using SoftwareTeamManagement.UI.SprintMateDashboard.Projects.View;
 using SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.View;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.Presenter
 {
@@ -41,7 +33,7 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.Presenter
 
             //Adding the relavent panel..
             DashboardForm.GetInstance().mainSectionPanel.Controls.Clear();
-            DashboardForm.GetInstance().mainSectionPanel.Controls.Add(TasksSection.GetInstance()); 
+            DashboardForm.GetInstance().mainSectionPanel.Controls.Add(TasksSection.GetInstance());
 
         }
 
@@ -74,25 +66,26 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.Presenter
         //When user navigates the logout section
         public void OnLogoutButtonClicked(object sender, EventArgs e)
         {
+            LogoutForm.GetInstance().ShowDialog();
 
         }
-        
+
         public void ConfigureUserDataModel()
         {
             TeamMemberRepository repo = new TeamMemberRepository();
-          
+
             _member = repo.ProvideUserDataModelByEmail(UserDataModelTransferLoginToDashboard.GetEmail());
 
         }
 
-       //Costumizing User Experience...
+        //Costumizing User Experience...
 
         public void SetWelcomeText()
         {
-           _view.WelcomeText=$"Welcome, {_member.FullName}!";
+            _view.WelcomeText = $"Welcome, {_member.FullName}!";
         }
 
-      
+
 
 
 

@@ -1,14 +1,4 @@
-﻿using SoftwareTeamManagement.UI.CustomMessageBox;
-using SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.Presenter;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.Presenter;
 
 namespace SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.View
 {
@@ -52,7 +42,7 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.View
 
 
         //Singleton impl. of form
-        private static DashboardForm instance;
+        public static DashboardForm instance;
 
 
 

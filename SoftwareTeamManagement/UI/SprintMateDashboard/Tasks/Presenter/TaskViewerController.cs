@@ -1,10 +1,5 @@
 ﻿using SoftwareTeamManagement.BusinessLogic.DataModel.Task;
 using SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.View;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.Presenter
 {
@@ -83,9 +78,9 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.Presenter
         //defining the dynamic dictinory model
         private Dictionary<String, Image> priorityImage = new Dictionary<String, Image>()
         {
-            { "High", Properties.Resources.highPriorityIcon }, 
+            { "High", Properties.Resources.highPriorityIcon },
             { "Medium", Properties.Resources.mediumPriortityIcon },
-            { "Low", Properties.Resources.lowPriorityIcon } 
+            { "Low", Properties.Resources.lowPriorityIcon }
         };
 
         private Dictionary<String, Image> categoryImage = new Dictionary<String, Image>()

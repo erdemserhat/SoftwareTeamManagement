@@ -1,11 +1,4 @@
-﻿using SoftwareTeamManagement.UI.CustomMessageBox;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SoftwareTeamManagement.UI.Login.Controller
+﻿namespace SoftwareTeamManagement.UI.Login.Controller
 {
     public static class UserDataModelTransferLoginToDashboard
     {
@@ -30,7 +23,7 @@ namespace SoftwareTeamManagement.UI.Login.Controller
         }
 
         //use this function in case of logout...
-        public static void  Reset()
+        public static void Reset()
         {
             flag = 0;
         }

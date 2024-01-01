@@ -31,6 +31,6 @@ namespace SoftwareTeamManagement.DataAccess.Repository
             return teamDao.GetTeams();
         }
 
-      
+
     }
 }

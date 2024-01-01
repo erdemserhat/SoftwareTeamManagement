@@ -1,14 +1,4 @@
-﻿using SoftwareTeamManagement.BusinessLogic.DataModel.Task;
-using SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.Presenter;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.Presenter;
 using Task = SoftwareTeamManagement.BusinessLogic.DataModel.Task.Task;
 
 namespace SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.View
