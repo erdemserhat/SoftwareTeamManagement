@@ -28,10 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TeamSection));
             generalContainer = new Panel();
+            panel1 = new Panel();
+            memberListView = new ListView();
+            memberNo = new ColumnHeader();
+            fullName = new ColumnHeader();
+            roleType = new ColumnHeader();
+            roleDepartment = new ColumnHeader();
+            email = new ColumnHeader();
             headerContainer = new Panel();
+            updateProfile = new Panel();
             titleText = new Label();
-            listView1 = new ListView();
             generalContainer.SuspendLayout();
             headerContainer.SuspendLayout();
             SuspendLayout();
@@ -39,7 +47,8 @@
             // generalContainer
             // 
             generalContainer.BackColor = SystemColors.AppWorkspace;
-            generalContainer.Controls.Add(listView1);
+            generalContainer.Controls.Add(panel1);
+            generalContainer.Controls.Add(memberListView);
             generalContainer.Controls.Add(headerContainer);
             generalContainer.Dock = DockStyle.Fill;
             generalContainer.Location = new Point(0, 0);
@@ -47,15 +56,73 @@
             generalContainer.Size = new Size(900, 650);
             generalContainer.TabIndex = 0;
             // 
+            // panel1
+            // 
+            panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
+            panel1.Location = new Point(23, 151);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(850, 100);
+            panel1.TabIndex = 5;
+            // 
+            // memberListView
+            // 
+            memberListView.BackColor = SystemColors.AppWorkspace;
+            memberListView.Columns.AddRange(new ColumnHeader[] { memberNo, fullName, roleType, roleDepartment, email });
+            memberListView.GridLines = true;
+            memberListView.Location = new Point(23, 223);
+            memberListView.Name = "memberListView";
+            memberListView.Scrollable = false;
+            memberListView.Size = new Size(850, 400);
+            memberListView.TabIndex = 1;
+            memberListView.UseCompatibleStateImageBehavior = false;
+            memberListView.View = System.Windows.Forms.View.Details;
+            // 
+            // memberNo
+            // 
+            memberNo.Text = "Member No";
+            memberNo.Width = 0;
+            // 
+            // fullName
+            // 
+            fullName.Text = "Full Name";
+            fullName.TextAlign = HorizontalAlignment.Center;
+            fullName.Width = 200;
+            // 
+            // roleType
+            // 
+            roleType.Text = "Position Title";
+            roleType.TextAlign = HorizontalAlignment.Center;
+            roleType.Width = 200;
+            // 
+            // roleDepartment
+            // 
+            roleDepartment.Text = "Department";
+            roleDepartment.TextAlign = HorizontalAlignment.Center;
+            roleDepartment.Width = 200;
+            // 
+            // email
+            // 
+            email.Text = "Email";
+            email.TextAlign = HorizontalAlignment.Center;
+            email.Width = 250;
+            // 
             // headerContainer
             // 
             headerContainer.BackColor = SystemColors.ButtonShadow;
+            headerContainer.Controls.Add(updateProfile);
             headerContainer.Controls.Add(titleText);
             headerContainer.Dock = DockStyle.Top;
             headerContainer.Location = new Point(0, 0);
             headerContainer.Name = "headerContainer";
             headerContainer.Size = new Size(900, 75);
             headerContainer.TabIndex = 0;
+            // 
+            // updateProfile
+            // 
+            updateProfile.Location = new Point(847, 22);
+            updateProfile.Name = "updateProfile";
+            updateProfile.Size = new Size(50, 50);
+            updateProfile.TabIndex = 3;
             // 
             // titleText
             // 
@@ -68,18 +135,9 @@
             titleText.TabIndex = 1;
             titleText.Text = "My Team";
             // 
-            // listView1
-            // 
-            listView1.Location = new Point(211, 144);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(151, 121);
-            listView1.TabIndex = 1;
-            listView1.UseCompatibleStateImageBehavior = false;
-            // 
             // TeamSection
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.Inherit;
             Controls.Add(generalContainer);
             Name = "TeamSection";
             Size = new Size(900, 650);
@@ -94,6 +152,13 @@
         private Panel generalContainer;
         private Panel headerContainer;
         private Label titleText;
-        private ListView listView1;
+        private ColumnHeader fullName;
+        private ColumnHeader roleType;
+        private ColumnHeader roleDepartment;
+        private ColumnHeader memberNo;
+        private ColumnHeader email;
+        public ListView memberListView;
+        private Panel panel1;
+        private Panel updateProfile;
     }
 }

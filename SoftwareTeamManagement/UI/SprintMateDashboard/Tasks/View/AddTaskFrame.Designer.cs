@@ -93,8 +93,7 @@
             // 
             // AddTaskFrame
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.Inherit;
             BackColor = Color.FromArgb(32, 96, 93);
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(380, 510);

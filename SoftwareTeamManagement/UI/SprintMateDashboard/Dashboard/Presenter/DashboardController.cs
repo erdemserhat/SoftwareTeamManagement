@@ -4,6 +4,7 @@ using SoftwareTeamManagement.UI.Login.Controller;
 using SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.View;
 using SoftwareTeamManagement.UI.SprintMateDashboard.Projects.View;
 using SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.View;
+using SoftwareTeamManagement.UI.SprintMateDashboard.Team.View;
 
 namespace SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.Presenter
 {
@@ -22,6 +23,10 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.Presenter
             _view.LogoutButtonClicked += OnLogoutButtonClicked;
             ConfigureUserDataModel();
             SetWelcomeText();
+            //Adding the relavent panel..
+            DashboardForm.GetInstance().mainSectionPanel.Controls.Clear();
+            DashboardForm.GetInstance().mainSectionPanel.Controls.Add(TasksSection.GetInstance());
+
 
         }
 
@@ -48,6 +53,9 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.Presenter
         //When user navigates the team section
         public void OnTeamButtonClicked(object sender, EventArgs e)
         {
+            //Adding the relavent panel..
+            DashboardForm.GetInstance().mainSectionPanel.Controls.Clear();
+            DashboardForm.GetInstance().mainSectionPanel.Controls.Add(TeamSection.GetInstance());
 
         }
 

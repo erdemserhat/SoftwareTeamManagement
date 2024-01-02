@@ -4,7 +4,6 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Projects.View
 {
     public partial class ProjectSection : UserControl, IProjectSection
     {
-        private System.Windows.Forms.Timer marqueeTimer;
         //Assigning singleton object of class
         private static ProjectSection instance;
 
@@ -71,6 +70,12 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Projects.View
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void refreshProject_Click(object sender, EventArgs e)
+        {
+            controller.SetProjectInformation();
+            CustomMessageBox.CustomSuccessMessageBoxForm message = new CustomMessageBox.CustomSuccessMessageBoxForm("Refresehed from Server!");
         }
     }
 

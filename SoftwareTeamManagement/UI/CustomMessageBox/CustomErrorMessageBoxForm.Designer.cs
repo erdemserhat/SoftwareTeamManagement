@@ -69,8 +69,7 @@
             // 
             // CustomErrorMessageBoxForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.Inherit;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(393, 344);
             Controls.Add(panel1);

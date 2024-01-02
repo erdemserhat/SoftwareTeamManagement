@@ -54,7 +54,6 @@
             exitBtn.Name = "exitBtn";
             exitBtn.Size = new Size(55, 46);
             exitBtn.TabIndex = 6;
-     
             // 
             // goBackToLoginBtn
             // 
@@ -64,7 +63,6 @@
             goBackToLoginBtn.Name = "goBackToLoginBtn";
             goBackToLoginBtn.Size = new Size(98, 19);
             goBackToLoginBtn.TabIndex = 7;
-
             // 
             // searchBtn
             // 
@@ -74,12 +72,10 @@
             searchBtn.Name = "searchBtn";
             searchBtn.Size = new Size(420, 51);
             searchBtn.TabIndex = 8;
-   
             // 
             // ForgotPasswordForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.Inherit;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1200, 650);
             Controls.Add(searchBtn);

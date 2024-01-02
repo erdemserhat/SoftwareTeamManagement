@@ -36,6 +36,7 @@
             // logoutBtn
             // 
             logoutBtn.BackColor = Color.Transparent;
+            logoutBtn.Cursor = Cursors.Hand;
             logoutBtn.Location = new Point(57, 218);
             logoutBtn.Name = "logoutBtn";
             logoutBtn.Size = new Size(108, 36);
@@ -44,6 +45,7 @@
             // cancelBtn
             // 
             cancelBtn.BackColor = Color.Transparent;
+            cancelBtn.Cursor = Cursors.Hand;
             cancelBtn.Location = new Point(215, 218);
             cancelBtn.Name = "cancelBtn";
             cancelBtn.Size = new Size(108, 36);
@@ -51,8 +53,7 @@
             // 
             // LogoutForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.Inherit;
             AutoValidate = AutoValidate.EnablePreventFocusChange;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(375, 275);

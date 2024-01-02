@@ -270,7 +270,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(551, 7);
+            label5.Location = new Point(591, 7);
             label5.Name = "label5";
             label5.Size = new Size(102, 25);
             label5.TabIndex = 6;
@@ -398,8 +398,7 @@
             // 
             // TasksSection
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.Inherit;
             Controls.Add(generalContainer);
             Name = "TasksSection";
             Size = new Size(900, 650);

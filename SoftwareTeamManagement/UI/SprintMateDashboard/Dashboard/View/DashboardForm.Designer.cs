@@ -118,7 +118,6 @@
             welcomeText.Size = new Size(233, 24);
             welcomeText.TabIndex = 1;
             welcomeText.Text = "Welcome, Serhat Erdem!";
-            welcomeText.Click += welcomeText_Click;
             // 
             // dashboardLogoIcon
             // 
@@ -186,6 +185,8 @@
             logoutBtn.Text = "        Log Out";
             logoutBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
             logoutBtn.UseVisualStyleBackColor = false;
+            logoutBtn.MouseEnter += logoutBtn_MouseEnter;
+            logoutBtn.MouseLeave += logoutBtn_MouseLeave;
             // 
             // meetingsBtn
             // 
@@ -193,6 +194,7 @@
             meetingsBtn.BackgroundImageLayout = ImageLayout.None;
             meetingsBtn.Cursor = Cursors.Hand;
             meetingsBtn.Dock = DockStyle.Top;
+            meetingsBtn.Enabled = false;
             meetingsBtn.FlatStyle = FlatStyle.Flat;
             meetingsBtn.Font = new Font("Abhaya Libre Medium", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             meetingsBtn.ForeColor = SystemColors.ButtonShadow;
@@ -214,6 +216,7 @@
             announcementsBtn.BackgroundImageLayout = ImageLayout.None;
             announcementsBtn.Cursor = Cursors.Hand;
             announcementsBtn.Dock = DockStyle.Top;
+            announcementsBtn.Enabled = false;
             announcementsBtn.FlatStyle = FlatStyle.Flat;
             announcementsBtn.Font = new Font("Abhaya Libre Medium", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             announcementsBtn.ForeColor = SystemColors.ButtonShadow;
@@ -249,6 +252,8 @@
             teamBtn.Text = "        My Team";
             teamBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
             teamBtn.UseVisualStyleBackColor = false;
+            teamBtn.MouseEnter += teamBtn_MouseEnter;
+            teamBtn.MouseLeave += teamBtn_MouseLeave;
             // 
             // projectsBtn
             // 
@@ -270,6 +275,8 @@
             projectsBtn.Text = "        Projects";
             projectsBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
             projectsBtn.UseVisualStyleBackColor = false;
+            projectsBtn.MouseEnter += projectsBtn_MouseEnter;
+            projectsBtn.MouseLeave += projectsBtn_MouseLeave;
             // 
             // tasksBtn
             // 
@@ -296,8 +303,7 @@
             // 
             // DashboardForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.Inherit;
             ClientSize = new Size(1200, 650);
             Controls.Add(mainContainerPanel);
             FormBorderStyle = FormBorderStyle.None;

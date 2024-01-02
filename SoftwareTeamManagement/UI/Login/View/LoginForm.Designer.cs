@@ -98,8 +98,7 @@
             // 
             // LoginForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.Inherit;
             AutoValidate = AutoValidate.EnablePreventFocusChange;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1200, 650);

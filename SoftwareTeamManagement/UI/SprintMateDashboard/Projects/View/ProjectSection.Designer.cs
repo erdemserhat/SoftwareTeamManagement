@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProjectSection));
             generalContainer = new Panel();
+            refreshProject = new Panel();
             label1 = new Label();
             saveBtn = new Panel();
             label2 = new Label();
@@ -39,6 +40,7 @@
             projectDescriptionBackgroundTitle = new Panel();
             projectDescriptionTB = new TextBox();
             titleBackgroundContainer = new Panel();
+            label3 = new Label();
             projectTitleTB = new TextBox();
             editTaskBtn = new Panel();
             generalContainer.SuspendLayout();
@@ -51,6 +53,7 @@
             // 
             generalContainer.BackColor = SystemColors.AppWorkspace;
             generalContainer.BackgroundImage = (Image)resources.GetObject("generalContainer.BackgroundImage");
+            generalContainer.Controls.Add(refreshProject);
             generalContainer.Controls.Add(label1);
             generalContainer.Controls.Add(saveBtn);
             generalContainer.Controls.Add(label2);
@@ -64,6 +67,17 @@
             generalContainer.Name = "generalContainer";
             generalContainer.Size = new Size(900, 650);
             generalContainer.TabIndex = 0;
+            // 
+            // refreshProject
+            // 
+            refreshProject.BackgroundImage = (Image)resources.GetObject("refreshProject.BackgroundImage");
+            refreshProject.BackgroundImageLayout = ImageLayout.Stretch;
+            refreshProject.Cursor = Cursors.Hand;
+            refreshProject.Location = new Point(664, 102);
+            refreshProject.Name = "refreshProject";
+            refreshProject.Size = new Size(45, 45);
+            refreshProject.TabIndex = 6;
+            refreshProject.Click += refreshProject_Click;
             // 
             // label1
             // 
@@ -147,11 +161,21 @@
             // titleBackgroundContainer
             // 
             titleBackgroundContainer.BackColor = SystemColors.AppWorkspace;
+            titleBackgroundContainer.Controls.Add(label3);
             titleBackgroundContainer.Controls.Add(projectTitleTB);
             titleBackgroundContainer.Location = new Point(145, 131);
             titleBackgroundContainer.Name = "titleBackgroundContainer";
             titleBackgroundContainer.Size = new Size(595, 41);
             titleBackgroundContainer.TabIndex = 1;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(513, 16);
+            label3.Name = "label3";
+            label3.Size = new Size(58, 20);
+            label3.TabIndex = 7;
+            label3.Text = "Refresh";
             // 
             // projectTitleTB
             // 
@@ -177,8 +201,7 @@
             // 
             // ProjectSection
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.Inherit;
             Controls.Add(generalContainer);
             Name = "ProjectSection";
             Size = new Size(900, 650);
@@ -207,5 +230,7 @@
         private Label label2;
         private Label label1;
         private Panel saveBtn;
+        private Panel refreshProject;
+        private Label label3;
     }
 }

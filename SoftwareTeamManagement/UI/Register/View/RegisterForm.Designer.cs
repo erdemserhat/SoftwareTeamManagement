@@ -46,7 +46,6 @@
             goBackToLoginBtn.Name = "goBackToLoginBtn";
             goBackToLoginBtn.Size = new Size(98, 19);
             goBackToLoginBtn.TabIndex = 2;
-
             // 
             // exitBtn
             // 
@@ -76,8 +75,6 @@
             registerBtn.Name = "registerBtn";
             registerBtn.Size = new Size(420, 51);
             registerBtn.TabIndex = 8;
-  
-
             // 
             // emailTextBox
             // 
@@ -116,8 +113,7 @@
             // 
             // RegisterForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.Inherit;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1200, 650);
             Controls.Add(confirmPasswordTextBox);
@@ -128,6 +124,7 @@
             Controls.Add(exitBtn);
             Controls.Add(goBackToLoginBtn);
             FormBorderStyle = FormBorderStyle.None;
+           
             StartPosition = FormStartPosition.CenterScreen;
             Text = "RegisterForm";
             ResumeLayout(false);

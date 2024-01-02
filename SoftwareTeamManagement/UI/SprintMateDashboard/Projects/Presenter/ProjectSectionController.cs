@@ -7,7 +7,7 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Projects.Presenter
 {
     public class ProjectSectionController
     {
-        IProjectContract project;
+        
         private IProjectSection _view = ProjectSection.GetInstance();
 
         //Main Constructor of controller
@@ -39,15 +39,17 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Projects.Presenter
             ProjectSection.GetInstance().generalContainer.BackgroundImage = Properties.Resources.generalContainer_BackgroundImage;
             ProjectSection.GetInstance().projectDescriptionTB.BackColor = Color.FromArgb(192, 192, 192);
             UpdateProjectInformation(_view.ProjectTitle, _view.ProjectDescription);
+            SetProjectInformation();
+
 
 
 
         }
 
-        private void SetProjectInformation()
+        public void SetProjectInformation()
         {
             ProjectRepository repo = new ProjectRepository();
-            project = repo.GetSingleProject();
+            IProjectContract project = repo.GetSingleProject();
             _view.ProjectTitle = project.Name;
             _view.ProjectDescription = project.Description;
 
@@ -61,16 +63,11 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Projects.Presenter
 
         private void UpdateProjectInformation(string title, string description)
         {
-            ProjectRepository repo;
-            IProjectContract _project;
-            repo = new ProjectRepository();
-            _project = new Project(1, title, description);
-            repo.EditProject(_project);
+            ProjectRepository repo = new ProjectRepository();
+            Project project = (Project) repo.GetSingleProject();
+            repo.EditProject(project with { Description = description, Name=title });
             CustomSuccessMessageBoxForm message = new CustomSuccessMessageBoxForm("Project Information is successfully updated..");
-
-
-
-
+            SetProjectInformation();
 
         }
 

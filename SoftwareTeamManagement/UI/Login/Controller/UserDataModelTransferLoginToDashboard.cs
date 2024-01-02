@@ -12,14 +12,7 @@
 
         public static string GetEmail()
         {
-            if (flag > 0)
-            {
-                return _data;
-            }
-
-            //throw new Exception("you must set the value before get");
-            //for testing
-            return "me.serhaterdem@gmail.com";
+            return _data;
         }
 
         //use this function in case of logout...

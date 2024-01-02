@@ -12,7 +12,7 @@ namespace SoftwareTeamManagement
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-            Application.Run(new DashboardForm());
+            Application.Run(new SplashScreenForm());
         }
 
     }

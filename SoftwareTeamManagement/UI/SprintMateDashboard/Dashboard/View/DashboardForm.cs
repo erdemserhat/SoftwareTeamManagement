@@ -13,6 +13,9 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.View
             DashboardController controller = new DashboardController();
             InitializeEvents();
 
+            ToolTip toolTip = new ToolTip();
+            toolTip.SetToolTip(announcementsBtn, "Bu bir butondur.");
+
 
 
         }
@@ -64,15 +67,38 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.View
 
         private void tasksBtn_MouseLeave(object sender, EventArgs e)
         {
-            tasksBtn.BackColor = Color.FromArgb(6, 6, 6);
+            tasksBtn.BackColor = Color.FromArgb(34, 40, 49);
 
         }
 
-        private void welcomeText_Click(object sender, EventArgs e)
+        private void projectsBtn_MouseEnter(object sender, EventArgs e)
         {
-
+            projectsBtn.BackColor = Color.FromArgb(95, 106, 115);
         }
 
+        private void projectsBtn_MouseLeave(object sender, EventArgs e)
+        {
+            projectsBtn.BackColor = Color.FromArgb(34, 40, 49);
+        }
 
+        private void teamBtn_MouseEnter(object sender, EventArgs e)
+        {
+            teamBtn.BackColor = Color.FromArgb(95, 106, 115);
+        }
+
+        private void teamBtn_MouseLeave(object sender, EventArgs e)
+        {
+            teamBtn.BackColor = Color.FromArgb(34, 40, 49);
+        }
+
+        private void logoutBtn_MouseEnter(object sender, EventArgs e)
+        {
+            logoutBtn.BackColor = Color.FromArgb(95, 106, 115);
+        }
+
+        private void logoutBtn_MouseLeave(object sender, EventArgs e)
+        {
+            logoutBtn.BackColor = Color.FromArgb(34, 40, 49);
+        }
     }
 }

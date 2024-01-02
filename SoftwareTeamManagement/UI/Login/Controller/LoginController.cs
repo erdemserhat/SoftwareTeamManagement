@@ -51,6 +51,8 @@ namespace SoftwareTeamManagement.UI.Login.Controller
                     UserDataModelTransferLoginToDashboard.SetEmail(_view.Email);
                     DashboardForm.GetInstance().Show();
                     LoginForm.GetInstance().Hide();
+                    LoginForm.GetInstance().Dispose();
+
 
 
                     CustomSuccessMessageBoxForm message = new CustomSuccessMessageBoxForm("Succesfully logged in. Welcome!");

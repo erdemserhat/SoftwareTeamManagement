@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace SoftwareTeamManagement.UI.SprintMateDashboard.Team.View
 {
-    internal class ITeamSection
+    public interface ITeamSection
     {
+        event EventHandler UpdateProfileButtonClicked;
+        public void ShowMemberList();
     }
 }

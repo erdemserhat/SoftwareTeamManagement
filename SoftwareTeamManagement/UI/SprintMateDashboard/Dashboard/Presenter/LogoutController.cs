@@ -24,7 +24,7 @@ namespace SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.Presenter
         {
             UserDataModelTransferLoginToDashboard.Reset();
             LoginForm.GetInstance().Show();
-            DashboardForm.GetInstance().Hide();
+            DashboardForm.GetInstance().Dispose();
             LogoutForm.GetInstance().Hide();
 
 

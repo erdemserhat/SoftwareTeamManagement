@@ -62,16 +62,15 @@
             textBox4.Size = new Size(125, 27);
             textBox4.TabIndex = 3;
             // 
-            // UserControl1
+            // Meetings
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.Inherit;
             BackColor = SystemColors.ControlDarkDark;
             Controls.Add(textBox4);
             Controls.Add(textBox3);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
-            Name = "UserControl1";
+            Name = "Meetings";
             Size = new Size(900, 650);
             ResumeLayout(false);
             PerformLayout();
