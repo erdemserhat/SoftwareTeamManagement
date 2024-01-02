@@ -1,9 +1,9 @@
 ﻿using SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember.TeamMemberContracts;
+using SoftwareTeamManagement.BusinessLogic.Configuration.Permissions.ProjectPermission;
+using SoftwareTeamManagement.BusinessLogic.Configuration.Permissions.TaskPermission;
 using SoftwareTeamManagement.BusinessLogic.Configuration.Roles;
 using SoftwareTeamManagement.BusinessLogic.DataModel.Announcement;
 using SoftwareTeamManagement.BusinessLogic.DataModel.Meeting;
-using SoftwareTeamManagement.BusinessLogic.Role.Permissions.ProjectPermission;
-using SoftwareTeamManagement.BusinessLogic.Role.Permissions.TaskPermission;
 
 namespace SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember
 {

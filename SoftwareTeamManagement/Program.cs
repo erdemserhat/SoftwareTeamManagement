@@ -3,7 +3,7 @@ using SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.View;
 
 namespace SoftwareTeamManagement
 {
-    internal static class Program
+    internal static class FF
     {
         /// <summary>
         ///  The main entry point for the application.

@@ -71,7 +71,6 @@
             memberListView.GridLines = true;
             memberListView.Location = new Point(23, 223);
             memberListView.Name = "memberListView";
-            memberListView.Scrollable = false;
             memberListView.Size = new Size(850, 400);
             memberListView.TabIndex = 1;
             memberListView.UseCompatibleStateImageBehavior = false;

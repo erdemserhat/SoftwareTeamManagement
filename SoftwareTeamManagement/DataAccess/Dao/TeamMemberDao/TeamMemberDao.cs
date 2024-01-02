@@ -1,9 +1,9 @@
 ﻿
 using MySql.Data.MySqlClient;
 using SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember;
+using SoftwareTeamManagement.BusinessLogic.Configuration.Permissions.ProjectPermission;
+using SoftwareTeamManagement.BusinessLogic.Configuration.Permissions.TaskPermission;
 using SoftwareTeamManagement.BusinessLogic.Configuration.Roles;
-using SoftwareTeamManagement.BusinessLogic.Role.Permissions.ProjectPermission;
-using SoftwareTeamManagement.BusinessLogic.Role.Permissions.TaskPermission;
 using SoftwareTeamManagement.Constants.DatabaseColumnConstants;
 using SoftwareTeamManagement.DataAccess.DataAccess;
 using DatabaseTable = SoftwareTeamManagement.Constants.DatabaseTableConstants.DatabaseTable;

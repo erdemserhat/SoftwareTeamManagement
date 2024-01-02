@@ -1,4 +1,4 @@
-﻿namespace SoftwareTeamManagement.BusinessLogic.Role.Permissions.TaskPermission
+﻿namespace SoftwareTeamManagement.BusinessLogic.Configuration.Permissions.TaskPermission
 {
     public class TaskPermissionSet : ITaskPermissionSetContract
     {

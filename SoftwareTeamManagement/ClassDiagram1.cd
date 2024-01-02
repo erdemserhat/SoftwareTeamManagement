@@ -1,0 +1,768 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SoftwareTeamManagement.FF" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.Properties.Resources" Collapsed="true">
+    <Position X="14.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAEAAAAQAAEAAEJEAAAAQACABAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.Properties.Settings" Collapsed="true">
+    <Position X="5.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.BusinessLogic.Configuration.Permissions.ProjectPermission.ProjectPermissionSet" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAADA0IEAgMAAgAAICCACiARgAAAAgIAAQQAAAAA=</HashCode>
+      <FileName>BusinessLogic\Configuration\Permissions\ProjectPermission\ProjectPermissionSet.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SoftwareTeamManagement.BusinessLogic.Configuration.Permissions.TaskPermission.TaskPermissionSet" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAACAAAAQQACAAAAAAAAAAAAAAAAEAIAAABIA=</HashCode>
+      <FileName>BusinessLogic\Configuration\Permissions\TaskPermission\TaskPermissionSet.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SoftwareTeamManagement.BusinessLogic.Configuration.Roles.Role" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAgAAAAABAAAAAAAAAABAAAAAAAAgARAAAAIAAAAA=</HashCode>
+      <FileName>BusinessLogic\Configuration\Roles\Role.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SoftwareTeamManagement.BusinessLogic.Configuration.Roles.RoleDepartmentHelper" Collapsed="true">
+    <Position X="2.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAggAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>BusinessLogic\Configuration\Roles\RoleDepartment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.BusinessLogic.Configuration.Roles.RoleTypeHelper" Collapsed="true">
+    <Position X="4" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAgAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>BusinessLogic\Configuration\Roles\RoleType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.BusinessLogic.DataModel.Enums.PriorityLevelHelper" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\DataModel\Enums\PriorityLevel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.BusinessLogic.DataModel.Enums.TaskCatagoryHelper" Collapsed="true">
+    <Position X="9.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\DataModel\Enums\TaskCatagory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.BusinessLogic.Email.EmailPreparation" Collapsed="true">
+    <Position X="12.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>BusinessLogic\Email\EmailPreparation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.Constants.DatabaseColumnConstants.AnnouncementColumn" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQEgAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Constants\DatabaseColumnConstants\AnnouncementColumn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.Constants.DatabaseColumnConstants.MeetingColumn" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACgAAAAAIAAAAAAAAEAAAAAAAAADAAAAAAAAA=</HashCode>
+      <FileName>Constants\DatabaseColumnConstants\MeetingColumn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.Constants.DatabaseColumnConstants.ProjectColumn" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Constants\DatabaseColumnConstants\ProjectColumn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.Constants.DatabaseColumnConstants.TaskColumn" Collapsed="true">
+    <Position X="11" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIACAAAAAAgAAAAAAAAAAEAQAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Constants\DatabaseColumnConstants\TaskColumn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.Constants.DatabaseColumnConstants.TeamColumn" Collapsed="true">
+    <Position X="11" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAkA=</HashCode>
+      <FileName>Constants\DatabaseColumnConstants\TeamColumn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.Constants.DatabaseColumnConstants.TeamMemberColumn" Collapsed="true">
+    <Position X="14.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAkCgAQCACAIBAAgQAAIAgAAkAIAAAAAAAA=</HashCode>
+      <FileName>Constants\DatabaseColumnConstants\TeamMemberColumn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.Constants.DatabaseConstants.DatabaseCredentials" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAABCAAAAAAAAAAAQAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Constants\DatabaseConstants\DatabaseCredentials.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.Constants.DatabaseTableConstants.DatabaseTable" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAQAAAEAAEAAAAAAAAABAIA=</HashCode>
+      <FileName>Constants\DatabaseTableConstants\DatabaseTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.Constants.EmailSender" Collapsed="true">
+    <Position X="14.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Constants\EmailSender.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.DataAccess.Dao.AnnouncementDao.AnnouncementDao" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAARAAAAAAAAAAAAAAAAIABAAQAAAAAEAAAAgA=</HashCode>
+      <FileName>DataAccess\Dao\AnnouncementDao\AnnouncementDao.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SoftwareTeamManagement.DataAccess.Dao.MeetingDao.MeetingDao" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAABAgECACAAAAAAUIAAAACAAAAAA=</HashCode>
+      <FileName>DataAccess\Dao\MeetingDao\MeetingDao.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SoftwareTeamManagement.DataAccess.Dao.ProjectDao.ProjectDao" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAIAAAAgAAAAAEAAAAAAAIAAAIAgA=</HashCode>
+      <FileName>DataAccess\Dao\ProjectDao\ProjectDao.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SoftwareTeamManagement.DataAccess.Dao.TaskDao.TaskDao" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACBQQAAAAIAAIAAAAABAABAAAAAAAAQAAAAAAgA=</HashCode>
+      <FileName>DataAccess\Dao\TaskDao\TaskDao.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SoftwareTeamManagement.DataAccess.Dao.TeamDao.TeamDao" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAIAACAAAAAAAEAgAAAAAEAAAAAgA=</HashCode>
+      <FileName>DataAccess\Dao\TeamDao\TeamDao.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SoftwareTeamManagement.DataAccess.Dao.TeamMemberDao.TeamMemberDao" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAEAgAQggACCAACCCSBoAAAAgAAAIgACAog=</HashCode>
+      <FileName>DataAccess\Dao\TeamMemberDao\TeamMemberDao.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SoftwareTeamManagement.DataAccess.DataAccess.DatabaseManager" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAFAAAAAAABAAACAAABBABAA=</HashCode>
+      <FileName>DataAccess\Database\DatabaseManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.DataAccess.Repository.AnnouncementRepository" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAEAAAAAAAAAIAAAAAAAAAAAABAAgA=</HashCode>
+      <FileName>DataAccess\Repository\AnnouncementRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.DataAccess.Repository.MeetingRepository" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIgAEAAAAAAAAAAAAAAAAAAAAAAAQAIAAAAAAAAAAA=</HashCode>
+      <FileName>DataAccess\Repository\MeetingRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.DataAccess.Repository.ProjectRepository" Collapsed="true">
+    <Position X="14.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAABAAAAAAAAKAAAAAAAAAAAAEAAAAABAAA=</HashCode>
+      <FileName>DataAccess\Repository\ProjectRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.DataAccess.Repository.TaskRepository" Collapsed="true">
+    <Position X="0.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgBCgAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataAccess\Repository\TaskRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.DataAccess.Repository.TeamMemberRepository" Collapsed="true">
+    <Position X="2.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgABAAAAAAgAAAAAAAgAAAACAAAUAAgAAAAAAAIAA=</HashCode>
+      <FileName>DataAccess\Repository\TeamMemberRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.DataAccess.Repository.TeamRepository" Collapsed="true">
+    <Position X="4" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAKAIEAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataAccess\Repository\TeamRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.UI.CustomMessageBox.CustomErrorMessageBoxForm" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAACAAAACABAEAAAAAAgAAQAAAAA=</HashCode>
+      <FileName>UI\CustomMessageBox\CustomErrorMessageBoxForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.UI.CustomMessageBox.CustomSuccessMessageBoxForm" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAAKABAEAAAAAAgAAQAAAAA=</HashCode>
+      <FileName>UI\CustomMessageBox\CustomSuccessMessageBoxForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.UI.Login.Controller.LoginController" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAIAAAAAAAAAAAACAAgAAAAAAgAAAAAACBAAAAAAAA=</HashCode>
+      <FileName>UI\Login\Controller\LoginController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.UI.Login.Controller.UserDataModelTransferLoginToDashboard" Collapsed="true">
+    <Position X="9.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAADIAABAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UI\Login\Controller\UserDataModelTransferLoginToDashboard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.UI.Login.View.LoginForm" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAIAAACIAAAAAACCAQEACBARAAAACAAoAAAAAAAA=</HashCode>
+      <FileName>UI\Login\View\LoginForm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SoftwareTeamManagement.UI.Register.Presenter.RegisterController" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAACAIAAAAAAAAAACRAAAAAAAA=</HashCode>
+      <FileName>UI\Register\Presenter\RegisterController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.UI.Register.Presenter.RegisterRoleController" Collapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAACAAAAAAAAAgAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>UI\Register\Presenter\RegisterRoleController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.UI.Register.View.RegisterForm" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAgAAAACIAAAAiACCAAERCBABAAAACAAggAgAAIAA=</HashCode>
+      <FileName>UI\Register\View\RegisterForm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SoftwareTeamManagement.UI.Register.View.RegisterRoleForm" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAMCCAAEACFIBAAAAAAAgAAAgAAAI=</HashCode>
+      <FileName>UI\Register\View\RegisterRoleForm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SoftwareTeamManagement.UI.ResetPassword.Presenter.ForgotPasswordAuthenticationController" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAgEAAAAAAAAAAABAAAAAAgAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>UI\ResetPassword\Presenter\ForgotPasswordAuthenticationController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.UI.ResetPassword.Presenter.ForgotPasswordController" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAgACAAABCAAAAAAABA=</HashCode>
+      <FileName>UI\ResetPassword\Presenter\ForgotPasswordController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.UI.ResetPassword.Presenter.ResetPasswordController" Collapsed="true">
+    <Position X="11" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAgAAAAAACAAAAAAAFA=</HashCode>
+      <FileName>UI\ResetPassword\Presenter\ResetPasswordController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.UI.ResetPassword.View.ForgotPasswordAuthenticationForm" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAIACAAAAECACCgAAACBABAAAAAAAgAAEEAQAA=</HashCode>
+      <FileName>UI\ResetPassword\View\ForgotPasswordAuthenticationForm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SoftwareTeamManagement.UI.ResetPassword.View.ForgotPasswordForm" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAgAQACAAAAACACCAAAACBABAAAAAAAgAAACAAAA=</HashCode>
+      <FileName>UI\ResetPassword\View\ForgotPasswordForm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SoftwareTeamManagement.UI.ResetPassword.View.ResetPasswordForm" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAYAAASAAAAUAACCAAAACBABAAAACAAgAAACAACA=</HashCode>
+      <FileName>UI\ResetPassword\View\ResetPasswordForm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SoftwareTeamManagement.UI.Splash.View.SplashScreenForm" Collapsed="true">
+    <Position X="7.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAQACBAAARAQBCAAAACAAEAIAAAAIAAAEAAAAA=</HashCode>
+      <FileName>UI\Splash\View\SplashScreenForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.Presenter.DashboardController" Collapsed="true">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQgAAAAAgAAAEAAAAAAAAAAAAAggAAACAAAABACAg=</HashCode>
+      <FileName>UI\SprintMateDashboard\Dashboard\Presenter\DashboardController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.Presenter.LogoutController" Collapsed="true">
+    <Position X="12.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAACAAAAAACAA=</HashCode>
+      <FileName>UI\SprintMateDashboard\Dashboard\Presenter\LogoutController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.View.DashboardForm" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IACEEBAAiSCwAFAAAAjAAIwSlABAAAAgiAgCAAAECAg=</HashCode>
+      <FileName>UI\SprintMateDashboard\Dashboard\View\DashboardForm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.View.LogoutForm" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACCAAAEAAACAIAQCBABAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>UI\SprintMateDashboard\Dashboard\View\LogoutForm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SoftwareTeamManagement.UI.SprintMateDashboard.Meetings.View.Meetings" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAACAAAAAAAACAAABCIABAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>UI\SprintMateDashboard\Meetings\View\Meetings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.UI.SprintMateDashboard.Projects.Presenter.ProjectSectionController" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAACAAAAAAAACAAAAAAAACAAAAAIAAA=</HashCode>
+      <FileName>UI\SprintMateDashboard\Projects\Presenter\ProjectSectionController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.UI.SprintMateDashboard.Projects.View.ProjectSection" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAgAACCAMJEgIEDIAQAiBEJAgAABAABAAAAIAAA=</HashCode>
+      <FileName>UI\SprintMateDashboard\Projects\View\ProjectSection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.Presenter.AddTaskController" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAgAAAIAACAAAAAAAAA=</HashCode>
+      <FileName>UI\SprintMateDashboard\Tasks\Presenter\AddTaskController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.Presenter.DeleteTaskController" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAgAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>UI\SprintMateDashboard\Tasks\Presenter\DeleteTaskController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.Presenter.EditTaskController" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAgAAAIAACAAAAAAAAA=</HashCode>
+      <FileName>UI\SprintMateDashboard\Tasks\Presenter\EditTaskController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.Presenter.TasksSectionController" Collapsed="true">
+    <Position X="4" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAIAAEAEAAAAAAAAAAAAAABIAAAACAAACAAAABAAAA=</HashCode>
+      <FileName>UI\SprintMateDashboard\Tasks\Presenter\TasksSectionController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.Presenter.TaskViewerController" Collapsed="true">
+    <Position X="5.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAQDAIAAIAAAAAAAAAgAAAQAACAIAQQAAhA=</HashCode>
+      <FileName>UI\SprintMateDashboard\Tasks\Presenter\TaskViewerController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.Presenter.TaskViewerDataSingleton" Collapsed="true">
+    <Position X="7.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAABABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UI\SprintMateDashboard\Tasks\Presenter\TaskViewerDataSingleton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.View.AddTaskFrame" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAQCBgAEAEICCBAAACBADAAAAIACgAAAAAIgA=</HashCode>
+      <FileName>UI\SprintMateDashboard\Tasks\View\AddTaskFrame.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.View.DeleteTaskFrame" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAACAAAAACCAAAAAACCABAACBABAAAAAAAgAAAAAEGA=</HashCode>
+      <FileName>UI\SprintMateDashboard\Tasks\View\DeleteTaskFrame.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.View.EditTaskFrame" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgACAAABACDgAEAAICCBAAASBABAAAAKAAggAAAAKAI=</HashCode>
+      <FileName>UI\SprintMateDashboard\Tasks\View\EditTaskFrame.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.View.TasksSection" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>OAgACAoVgLCACDEAQQCCAgACFAJhECAABAAAAQBIAgA=</HashCode>
+      <FileName>UI\SprintMateDashboard\Tasks\View\TasksSection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.View.TaskViewerFrame" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACCAhENUAACCAAAACBABAAAACAAoAAAFAAAA=</HashCode>
+      <FileName>UI\SprintMateDashboard\Tasks\View\TaskViewerFrame.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SoftwareTeamManagement.UI.SprintMateDashboard.Team.Presenter.TeamSectionController" Collapsed="true">
+    <Position X="7.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAAAQAAACACAAAAAAA=</HashCode>
+      <FileName>UI\SprintMateDashboard\Team\Presenter\TeamSectionController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftwareTeamManagement.UI.SprintMateDashboard.Team.View.TeamSection" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAAACCAAAkgAAHAAAACBABAAAAAEAQAAQAKAAA=</HashCode>
+      <FileName>UI\SprintMateDashboard\Team\View\TeamSection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember.TeamMemberContracts.ITeamMemberGeneralContract" Collapsed="true">
+    <Position X="2.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\BaseDataModel\TeamMember\TeamMemberContracts\ITeamMemberGeneralContract.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember.TeamMemberContracts.ITeamMemberProjectContract" Collapsed="true">
+    <Position X="4" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACCAAAAAAAAAAAAAAAABAACAAQAgAAAAAEAABACAAAI=</HashCode>
+      <FileName>BusinessLogic\BaseDataModel\TeamMember\TeamMemberContracts\ITeamMemberProjectContract.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SoftwareTeamManagement.BusinessLogic.BaseDataModel.TeamMember.TeamMemberContracts.ITeamMemberTaskContract" Collapsed="true">
+    <Position X="5.75" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACBAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\BaseDataModel\TeamMember\TeamMemberContracts\ITeamMemberTaskContract.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SoftwareTeamManagement.BusinessLogic.BaseDataModel.User.IUserContract" Collapsed="true">
+    <Position X="9.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACACAACAAAAAAAAAAAIAAAAAAAAAAACAAAAIAAIA=</HashCode>
+      <FileName>BusinessLogic\BaseDataModel\User\IUserContract.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SoftwareTeamManagement.BusinessLogic.Configuration.Permissions.ProjectPermission.IProjectPermissionSetContract" Collapsed="true">
+    <Position X="9.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAkIAAAIAAAAAACAAAAAQAAAAAAIAAQAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Configuration\Permissions\ProjectPermission\IProjectPermissionSetContract.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SoftwareTeamManagement.BusinessLogic.Configuration.Permissions.TaskPermission.ITaskPermissionSetContract" Collapsed="true">
+    <Position X="7.5" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAQACAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Configuration\Permissions\TaskPermission\ITaskPermissionSetContract.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SoftwareTeamManagement.BusinessLogic.Configuration.Roles.IRoleContract" Collapsed="true">
+    <Position X="2.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAABAAAAAAAAAAAAAAAAAAAgABAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Configuration\Roles\IRoleContract.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SoftwareTeamManagement.BusinessLogic.DataModel.Announcement.IAnnouncementContract" Collapsed="true">
+    <Position X="2.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAEAAAAAAAAAAAAIAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\DataModel\Announcement\IAnnouncementContract.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SoftwareTeamManagement.BusinessLogic.DataModel.Meeting.IMeetingContract" Collapsed="true">
+    <Position X="2.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAIAAAAQIAAgAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>BusinessLogic\DataModel\Meeting\IMeetingContract.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SoftwareTeamManagement.BusinessLogic.DataModel.Project.IProjectContract" Collapsed="true">
+    <Position X="5.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\DataModel\Project\IProjectContract.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SoftwareTeamManagement.BusinessLogic.DataModel.Task.ITaskContract" Collapsed="true">
+    <Position X="4" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAEAAIAAAAAAAAAAAAAAAAAAAAAAAAAM=</HashCode>
+      <FileName>BusinessLogic\DataModel\Task\ITaskContract.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SoftwareTeamManagement.BusinessLogic.DataModel.Team.ITeamContract" Collapsed="true">
+    <Position X="12.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\DataModel\Team\ITeamContract.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SoftwareTeamManagement.DataAccess.Dao.AnnouncementDao.IAnnouncementDaoContract" Collapsed="true">
+    <Position X="4" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAAAAAIABAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>DataAccess\Dao\AnnouncementDao\IAnnouncementDaoContract.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SoftwareTeamManagement.DataAccess.Dao.MeetingDao.IMeetingDaoContract" Collapsed="true">
+    <Position X="4" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAAAAAAUIAAAAAAAAAAA=</HashCode>
+      <FileName>DataAccess\Dao\MeetingDao\IMeetingDaoContract.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SoftwareTeamManagement.DataAccess.Dao.ProjectDao.IProjectDaoContract" Collapsed="true">
+    <Position X="7.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAgAAAAAAAAAAAAAIAAAIAAA=</HashCode>
+      <FileName>DataAccess\Dao\ProjectDao\IProjectDaoContract.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SoftwareTeamManagement.DataAccess.Dao.TaskDao.ITaskDaoContract" Collapsed="true">
+    <Position X="5.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACBAAAAAAAAAAAAAAABAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataAccess\Dao\TaskDao\ITaskDaoContract.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SoftwareTeamManagement.DataAccess.Dao.TeamDao.ITeamDaoContract" Collapsed="true">
+    <Position X="14.5" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAACAAAAAAAAAgAAAAAEAAAAAAA=</HashCode>
+      <FileName>DataAccess\Dao\TeamDao\ITeamDaoContract.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SoftwareTeamManagement.DataAccess.Dao.TeamMemberDao.ITeamMemberDaoContract" Collapsed="true">
+    <Position X="0.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAgAACAACAASAIAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>DataAccess\Dao\TeamMemberDao\ITeamMemberDaoContract.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SoftwareTeamManagement.UI.Login.View.ILoginForm" Collapsed="true">
+    <Position X="14.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAACIAAAAAACAAAAAAAAAAAAACAAIAAAAAAAA=</HashCode>
+      <FileName>UI\Login\View\ILoginForm.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SoftwareTeamManagement.UI.Register.View.IRegisterForm" Collapsed="true">
+    <Position X="12.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACIAAAAAACAAAAQAAAAAAAACAAAgAAAAIAA=</HashCode>
+      <FileName>UI\Register\View\IRegisterForm.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SoftwareTeamManagement.UI.Register.View.IRegisterRoleForm" Collapsed="true">
+    <Position X="14.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAECAAAAAAEAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>UI\Register\View\IRegisterRoleForm.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SoftwareTeamManagement.UI.ResetPassword.View.IForgotPasswordAuthenticationForm" Collapsed="true">
+    <Position X="11" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAEAACAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UI\ResetPassword\View\IForgotPasswordAuthenticationForm.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SoftwareTeamManagement.UI.ResetPassword.View.IForgotPasswordForm" Collapsed="true">
+    <Position X="12.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQACAAAAAAACAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>UI\ResetPassword\View\IForgotPasswordForm.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SoftwareTeamManagement.UI.ResetPassword.View.IResetPasswordForm" Collapsed="true">
+    <Position X="0.5" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAACAAAAAAAAAAAAACAAAAAACAACA=</HashCode>
+      <FileName>UI\ResetPassword\View\IResetPasswordForm.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.View.IDashboardForm" Collapsed="true">
+    <Position X="5.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAEAAAAAAAAAAAAAAAAIQQEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UI\SprintMateDashboard\Dashboard\View\IDashboardForm.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SoftwareTeamManagement.UI.SprintMateDashboard.Dashboard.View.ILogoutForm" Collapsed="true">
+    <Position X="0.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UI\SprintMateDashboard\Dashboard\View\ILogoutForm.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SoftwareTeamManagement.UI.SprintMateDashboard.Projects.View.IProjectSection" Collapsed="true">
+    <Position X="11" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAEAAgAAAAABAAAAAAAA=</HashCode>
+      <FileName>UI\SprintMateDashboard\Projects\View\IProjectSection.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.View.IAddTaskFrame" Collapsed="true">
+    <Position X="0.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAEAEACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UI\SprintMateDashboard\Tasks\View\IAddTaskFrame.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.View.IDeleteTaskFrame" Collapsed="true">
+    <Position X="7.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>UI\SprintMateDashboard\Tasks\View\IDeleteTaskFrame.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.View.IEditTaskFrame" Collapsed="true">
+    <Position X="9.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAEAAACAAAAAAAAAAAAAAAAAAAAAACAI=</HashCode>
+      <FileName>UI\SprintMateDashboard\Tasks\View\IEditTaskFrame.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.View.ITasksSection" Collapsed="true">
+    <Position X="9.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEABAAACAAAAAAAgAAEAABACAAAAAAAAAAAAA=</HashCode>
+      <FileName>UI\SprintMateDashboard\Tasks\View\ITasksSection.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SoftwareTeamManagement.UI.SprintMateDashboard.Tasks.View.ITaskViewerFrame" Collapsed="true">
+    <Position X="11" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAEEAACCAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>UI\SprintMateDashboard\Tasks\View\ITaskViewerFrame.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SoftwareTeamManagement.UI.SprintMateDashboard.Team.View.ITeamSection" Collapsed="true">
+    <Position X="7.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UI\SprintMateDashboard\Team\View\ITeamSection.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="SoftwareTeamManagement.BusinessLogic.Configuration.Roles.RoleDepartment" Collapsed="true">
+    <Position X="2.25" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAACAAAAAAAIAACJAAQAAQAAEAACABAQAAAAAA=</HashCode>
+      <FileName>BusinessLogic\Configuration\Roles\RoleDepartment.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SoftwareTeamManagement.BusinessLogic.Configuration.Roles.RoleType" Collapsed="true">
+    <Position X="4" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAABAAGIgIhAAAAQAAABACAAAAAgAAAKAIAACIDKA=</HashCode>
+      <FileName>BusinessLogic\Configuration\Roles\RoleType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SoftwareTeamManagement.BusinessLogic.DataModel.Enums.PriorityLevel" Collapsed="true">
+    <Position X="0.5" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAgAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>BusinessLogic\DataModel\Enums\PriorityLevel.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SoftwareTeamManagement.BusinessLogic.DataModel.Enums.TaskCatagory" Collapsed="true">
+    <Position X="5.75" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>BusinessLogic\DataModel\Enums\TaskCatagory.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

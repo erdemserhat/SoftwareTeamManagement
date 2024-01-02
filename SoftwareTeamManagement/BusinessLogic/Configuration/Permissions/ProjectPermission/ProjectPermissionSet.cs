@@ -1,4 +1,4 @@
-﻿namespace SoftwareTeamManagement.BusinessLogic.Role.Permissions.ProjectPermission
+﻿namespace SoftwareTeamManagement.BusinessLogic.Configuration.Permissions.ProjectPermission
 {
     public class ProjectPermissionSet : IProjectPermissionSetContract
     {
