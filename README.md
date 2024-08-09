@@ -1,41 +1,9 @@
 # Project Title
 
 ## About the Project
-This project is a platform designed to facilitate collaboration within a software development team and streamline project management. Its primary goal is to enable team members to assign, track tasks, and monitor project progress while enhancing intra-team communication.
-
-## Requirements
-- C# Programming Language and .NET Framework
-- MariaDB ( MySQL)
-- Figma (UI/UX Design)
-
-## Installation and Run Steps
-1. **Setup Requirements**: Install your C# development environment and set up a database management system like MariaDB.
-2. **Downloading the Project**: Download project files to a directory.
-3. **Configuring the Database**: Adjust database connections and configurations.
-4. **Running the Project**: Open project files in your C# development environment and run the application.
-
-## Project Layers and Structure
-This project utilizes the following layers:
-- Data Layer: Database operations and data management
-- Business Layer: Business logic and processes
-- User Interface (UI) Layer: User interface design and user interaction
-
-## Features
-- **Login and User Management**: User registration, login, and authorization
-- **Task Management**: Adding, editing, and removing tasks
-- **Dashboard**: A panel displaying the project's status
-- **Security and Authorization**: User access permissions and authorization processes
-
-## Key Points
-- **Announcements and Meetings Features**: These features are implemented but not activated due to time constraints. They will be enabled in future updates.
-
-## Contributing
-- If you want to contribute to the project, please FORK it and send a Pull Request.
-- If you have any issues or suggestions, please let us know by creating an ISSUE.
-
-
-## Contact
-For any questions or feedback, please email [me.serhaterdem@gmail.com].
+##Project Architecture
+##Project Network Overview
+(not ready yet)
 
 
 ## UI Summary
