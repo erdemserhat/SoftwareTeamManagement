@@ -1,9 +1,15 @@
 # Project Title
 
 ## About the Project
-##Project Architecture
+## Project Architecture
+### Businues
+![blogic](https://github.com/user-attachments/assets/37bfc20c-9356-4fa6-a629-486ebc6db62b)
+s Logic Layer
+
+
 ##Project Network Overview
-(not ready yet)
+
+
 
 
 ## UI Summary
