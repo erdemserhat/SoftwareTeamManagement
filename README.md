@@ -1,6 +1,7 @@
-# Project Title
+# SpringMate: Software Team Management
 
 ## About the Project
+Sprint Mate: Sprint Mate is a desktop application designed for project management. It facilitates task management, tracking, and organization. Users can create projects, add tasks, and monitor the progress of each task. The application allows for task prioritization and status updates. Sprint Mate aims to enhance team efficiency and ensure timely project completion.
 ## Project Architecture
 ### Businues
 ![blogic](https://github.com/user-attachments/assets/37bfc20c-9356-4fa6-a629-486ebc6db62b)
